@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lines</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../../dist/paper-full.js"></script>
+    <script type="text/paperscript" canvas="canvas">
+    // The amount of segment points we want to create:
+var amount = 5;
+
+// The maximum height of the wave:
+var height = 60;
+
+// Create a new path and style it:
+var glyphTexts = [];
+
+var path = new Path({
+	// 80% black:
+	strokeColor: [0.8],
+	strokeWidth: 30,
+	strokeCap: 'square'
+});
+
+// Add 5 segment points to the path spread out
+// over the width of the view:
+for (var i = 0; i <= amount; i++) {
+	path.add(new Point(i / amount, 1) * view.size);
+}
+
+// Select the path, so we can see how it is constructed:
+path.selected = true;
+
+
+        var createAlignedText = function(str, path, style) {
+            if (str && str.length > 0 && path) {
+                // create PointText object for each glyph
+                // var glyphTexts = [];
+                for (var i = 0; i < str.length; i++) {
+                    glyphTexts[i] = createPointText(str.substring(i, i+1), style);
+                    glyphTexts[i].justification = "center";
+                }
+                // for each glyph find center xOffset
+                var xOffsets = [100];
+                for (var i = 1; i < str.length; i++) {
+                    var pairText = createPointText(str.substring(i - 1, i + 1), style);
+                    pairText.remove();
+                    xOffsets[i] = xOffsets[i - 1] + pairText.bounds.width -
+                        glyphTexts[i - 1].bounds.width / 2 - glyphTexts[i].bounds.width / 2;
+                        // pairtextboundswidth.push(pairText.bounds.width);
+                }
+                // set point for each glyph and rotate glyph aorund the point
+                for (var i = 0; i < str.length; i++) {
+                    var centerOffs = xOffsets[i];
+                    if (path.length < centerOffs) {
+                        if (path.closed) {
+                            centerOffs = centerOffs % path.length;
+                        }  else {
+                            centerOffs = undefined;
+                        }
+                    }
+                    if (centerOffs === undefined) {
+                        glyphTexts[i].remove();
+                    } else {
+                        var pathPoint = path.getPointAt(centerOffs);
+                        glyphTexts[i].point = pathPoint;
+                        var tan = path.getTangentAt(centerOffs);
+                        glyphTexts[i].rotate(tan.angle, pathPoint);
+                    }
+                }
+            }
+        }
+
+        // create a PointText object for a string and a style
+        var createPointText = function(str, style) {
+            var text = new PointText();
+            text.content = str;
+            if (style) {
+                if (style.font) text.font = style.font;
+                if (style.fontFamily) text.fontFamily = style.fontFamily;
+                if (style.fontSize) text.fontSize = style.fontSize;
+                if (style.fontWieght) text.fontWeight = style.fontWeight;
+            }
+            return text;
+        }
+
+        createAlignedText("str", path, {fontSize: 18});
+
+function onFrame(event) {
+	// Loop through the segments of the path:
+	for (var i = 0; i <= amount; i++) {
+		var segment = path.segments[i];
+
+		// A cylic value between -1 and 1
+		var sinus = Math.sin(event.time * 3 + i);
+
+		// Change the y position of the segment point:
+		segment.point.y = sinus * height + 100;
+	}
+
+	// Uncomment the following line and run the script again
+	// to smooth the path:
+	path.smooth();
+}
+
+    </script>
+</head>
+<body >
+    <canvas id="canvas" resize></canvas>
+</body>
+</html>

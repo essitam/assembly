@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="Lettering.js-master/jquery.lettering.js"></script>
+    <style media="screen">
+    .char3 { display: inline-block; }
+    a:link {
+    text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: underline;
+    }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      $(function(){
+          //variable for rotation degree of the letters
+          var rotate = -45;
+          var rotatedangling = 90;
+          $("#slanting a").lettering('lines').children("span").css({'display':'inline-block', '-webkit-transform':'rotate('+rotate+'deg)'});
+
+           // jQuery methods go here...
+           $(document).mousemove(function(event){
+             //convert the range of the mouse X to -90 , 90 slant
+             //words only
+              rotate = convertToRange(event.pageX,  [0, $( document ).width()], [120, 0]);
+              console.log(rotate);
+              $("#slanting a").lettering('lines').children("span").css({'display':'inline-block', '-webkit-transform':'rotate('+rotate+'deg)'});
+              //sentences
+              // rotatedangling = convertToRange(event.pageX,  [0, $( document ).width()], [50, 150]);
+              // $(".dangling").lettering('lines').children("span").css({ 'display':'inline-block', '-webkit-transform':'rotate('+rotatedangling+'deg)'});
+
+            });
+
+        //function to convert range
+            function convertToRange(value, srcRange, dstRange){
+              // value is outside source range return
+              if (value < srcRange[0] || value > srcRange[1]){
+                return NaN;
+              }
+              var srcMax = srcRange[1] - srcRange[0],
+                  dstMax = dstRange[1] - dstRange[0],
+                  adjValue = value - srcRange[0];
+              return (adjValue * dstMax / srcMax) + dstRange[0];
+
+            }
+
+
+        });
+
+
+    </script>
+    <bR><Br><br>
+    <div id="slanting" class="demo">
+      <a href="#">pacing</a>
+      <a href="#">is</a>
+      <a href="#">the</a>
+      <a href="#">way</a>
+      <a href="#">of</a>
+      <a href="#">the</a>
+      <a href="#">relation</a>
+    </div>
+    <!-- <div class="dangling">
+      Slanting dangling in space but nevertheless phrases sparking new phrases...connecting.
+
+    </div> -->
+
+    <!-- <p>Mouse is at coordinates: <span></span>.</p> -->
+
+  </body>
+</html>
