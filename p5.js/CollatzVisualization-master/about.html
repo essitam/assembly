@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About -- Collatz Conjecture</title>
+  <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,700&display=swap" rel="stylesheet">
+
+  <style>
+    h1 {
+      margin-left: 15%;
+      margin-right: 15%;
+      font-family: "Helvetica Neue", "Hevletica", "Arial", "Calibri", sans-serif;
+
+    }
+
+    p {
+      font-family: "Zilla Slab", "Rockwell", serif;
+      margin-left: 17%;
+      margin-right: 15%;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <a href='/'>Back</a>
+  </p>
+  <h1>What is this?</h1>
+  <p>
+    This is a prorgram written in <a href="https://p5js.org/">p5.js</a> to explore the
+    <a href="#collatz">Collatz Conjecture.</a> It allows you to input a number and then it plots the number's
+    progression
+    through rules of the Collatz Conjecture (see below). Each step is represented by a point on the
+    canvas going from left to right. The hegiht of the point represents the value of the input
+    of the Collatz function at that point. The <code>y</code>-axis is labeled but the <code>x</code>-axis is not
+
+  </p>
+
+  <h1> What is the Collatz Conjecture?</h1>
+  <p id="collatz">
+    The Collatz Conjecture is a <a href="https://en.wikipedia.org/wiki/Conjecture">conjecture</a>
+    in Mathematics that states for any positive integer <i>n</i> such that
+    <i>n &gt; 1</i>, iterations through the Collatz function will eventually result in an output
+    of 1.
+  </p>
+
+  <p>
+    The Collatz function says that for any integer divisible by two, return that integer divided by 2;
+    For all other integers return 1 more than 3 times that integer. In a program, such as Javascript,
+    it would look something like this<br>
+    <br>
+    <code>
+      function collatz(n) {<br>
+        &nbsp;if (n % 2 === 0) {<br>
+          &nbsp;&nbsp;return n / 2;<br>
+          &nbsp;} else {<br>
+            &nbsp;&nbsp;return (3 * n) + 1;<br>
+            &nbsp;}<br>
+      }<br><br>
+    </code>
+  </p>
+  <p>
+    Because of how integers work, this function always returns an integer. Since it also
+    accepts integers as input, it is always possible to feed the results of the Collatz function
+    back into itself. This is what is meant by iterations through the Collatz function.
+  </p>
+  <p>
+    The conjecture can be summed up as follows. For any integer <i>n</i> where <i>n &gt; 1</i>
+    if you run <i>n</i> through the Collatz function and then take that result and run that
+    through the Collatz function and then take that result and run <b>that</b> through the Collatz
+    function, and so on and so on, eventually you will end up with 1.
+  </p>
+  <p>
+    This could happen quickly. For example if you start with 2, 2 is divisible by 2, so you return
+    2 / 2 which is 1. So that only takes one step.
+  </p>
+  <p>
+    For 3, 3 is not divisible by 2 so you return 3 * 3 + 1 or 10. Now you put 10 through the
+    Collatz function. Since 10 is divisible by 2 you return
+    10 / 2 or 5. Now 5 goes through the function. Since 5 is not divisble by 2 you get 3 * 5 + 1
+    or 16. Now 16 goes through the function and since it is divisble by 2 you get 8 which goes through
+    the function and is divisble by 2 giving 4 then 2 then 1. You can see that this takes many more steps
+    than 2 but still ends up at 1
+  </p>
+  <p>
+    You can do this process for any valid integer and that is what is supposed to be shown by this sketch.
+  </p>
+
+  <h1>This is pretty cool!</h1>
+  <p>
+    If you liked this you can find the code to it <a href="https://github.com/elunico/CollatzVisualization">here</a> on
+    my Github.
+  </p>
+  <p>
+    Please note that this was inspired by a as-of-yet-not-done Coding Challenge
+    by <a href="https://shiffman.net/">Daniel Shiffman</a> of
+    <a href="https://thecodingtrain.com/">The Coding Train</a>. You can
+    find more about that on <a href="https://www.youtube.com/user/shiffman/videos">YouTube</a>
+    and <a href="https://github.com/shiffman">Github</a>.
+  </p>
+</body>
+
+</html>

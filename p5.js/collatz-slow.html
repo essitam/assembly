@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function setup (){
+          // var n = 500;
+          var steps = 0;
+          var len = 60;
+          var angle = PI/6;
+          createCanvas(600, 600);
+          background(0);
+          // translate(width/2, height);
+          for (var i = 1; i< 10000; i++){
+              resetMatrix();
+              translate(width/2, height)
+              var n = i;
+              do {
+                n = collatz(n);
+                if (n % 2 ==0){
+                  rotate(angle);
+                } else {
+                  rotate(-angle);
+                }
+                stroke(255);
+                line(0, 0, 0, -len);
+                translate(0, -len);
+
+              } while (n != 1){
+                console.log(steps);
+              }
+            }
+
+      }
+
+      function draw(){
+
+      }
+
+      function collatz(n){
+        if (n % 2 == 0){
+          return n / 2;
+        }
+        else {
+          return n * 3 +1;
+        }
+      }
+    </script>
+
+  </body>
+</html>

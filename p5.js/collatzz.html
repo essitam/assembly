@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript">
+      let n;
+      let steps = 0;
+      function setup(){
+          createCanvas(windowWidth, windowHeight);
+      }
+
+      function draw(){
+              // background('red');
+
+                  var angle = PI/6;
+                  var length = 60;
+                  translate(width/2, height);
+                  // for (var i = 1; i < 10000; i++){
+                  // n =+ 500;
+                  n = 500;
+                  do {
+                    n = collatz(n);
+                      if(n % 2 == 0){
+                        rotate(angle);
+                      } else {
+                        rotate(-angle);
+                      }
+                      stroke(82, 180, 100);
+                      fill(255);
+                      ellipse(mouseY,mouseX,n*sin(millis()/1000),cos(millis()/1000)*-length);
+                      translate(0, -length);
+                      steps++;
+                  } while (n != 1);
+                  console.log("steps" + steps);
+                // }
+                console.log("finished");
+
+      }
+
+      function collatz(n) {
+          if(n % 2 == 0){
+            return n / 2;
+          } else {
+            return n * 3 + 1;
+          }
+      }
+    </script>
+
+  </body>
+</html>
