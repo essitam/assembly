@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #header{
+      width:500px;
+      background-color:#444444;
+      color:#fff;
+      text-align:center;
+      padding-top:40px;
+      padding-bottom:40px;
+    }
+    </style>
+  </head>
+  <body>
+      <div id="header">
+      </div>
+      <div class="" id="search">
+
+      </div>
+      <script type="text/javascript">
+        var arr = ['foo', 'bar', 'baz'];
+        var i = 0;
+        var search = document.getElementById('search');
+        function nextItem() {
+            i = i + 1; // increase i by one
+            i = i % arr.length; // if we've gone too high, start from `0` again
+            return arr[i]; // give us back the item of where we are now
+        }
+
+        window.addEventListener('load', function () {
+            search.textContent = arr[0]; // initial value
+            document.getElementById('header').addEventListener(
+                'click', // we want to listen for a click
+                function (e) { // the e here is the event itself
+                    search.value = nextItem();
+                }
+            );
+        });
+      </script>
+
+  </body>
+</html>
