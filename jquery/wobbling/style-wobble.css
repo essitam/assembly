@@ -16,8 +16,8 @@
 
 .contCentre {
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 10%;
+  left: 10%;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
 }

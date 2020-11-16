@@ -10,7 +10,6 @@
         var points = 10;
         var smooth = true;
         var path = new Path({
-            // fillColor: 'black'
 
         });
 
@@ -19,8 +18,8 @@
         var mousePos = view.center / 2;
         var pathHeight = mousePos.y;
         var glyphTexts = [];
-        var xOffsets = [0];
-        var str = "I laugh at watering words    with my typing finger    i am thinking water ";
+        var xOffsets = [400];
+        var str = "i want words of important movement to want the pace knowing wanting neurodiversity to question ways the people talk about autism";
 
         initializePath();
 
@@ -114,7 +113,7 @@
             }
 
             path.add(view.bounds.bottomRight);
-            path.fullySelected = true;
+            // path.fullySelected = true;
         }
 
         function onFrame(event) {
@@ -162,6 +161,7 @@
         function onResize(event) {
             initializePath();
         }
+
     </script>
 </head>
 <body>

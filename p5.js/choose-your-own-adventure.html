@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript">
+    // v1
+    // words over timeless tracks and watching
+    // timing tacit implosive breathing immaculate strides
+    // Hasting the last pace to face thinning possibilities
+    // mastering streams treasuring havoc to reassemble samples
+    //
+    // v2
+    // words over timeless tracks and watching
+    // timing tacit implosive breathing immaculate strides
+    // Hasting the last pace to face thinning possibilities
+    // messing vessels nesting hope to treasure motions teasing meanings timing modes tinted new
+    //
+    // v3
+    // words over timeless tracks and watching
+    // water wars with tools that statue time into place
+    // toying teaches to bring ease about waters warping easy thoughts
+    // wait
+    //
+    // v4
+    // words over timeless tracks and watching
+    // water wars with tools that statue time into place
+    // toying teaches to bring ease about waters warping easy thoughts
+    // thinking tears time of water. I love water
+    var arr = ['foo', 'timing tacit implosive breathing immaculate strides', 'Hasting the last pace to face thinning possibilities'];
+      var arr2 = ['foo2', 'bar2', 'baz2'];
+    var texti = "yo";
+
+    function setup(){
+      createCanvas(600, 600);
+    }
+    function draw(){
+      background(255);
+      fill(0);
+      text(texti, 10, 10);
+
+    }
+
+    function mousePressed() {
+      texti = nextItem(arr2);
+    }
+    var i = 0;
+    var search = document.getElementById('search');
+    function nextItem(arr) {
+        i = i + 1; // increase i by one
+        i = i % arr.length; // if we've gone too high, start from `0` again
+        return arr[i]; // give us back the item of where we are now
+    }
+    </script>
+  </body>
+</html>

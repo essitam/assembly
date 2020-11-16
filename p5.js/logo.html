@@ -25,9 +25,9 @@
       // }
       function draw() {
         background(204);
-        angleMode(DEGREES); // Change the mode to DEGREES
+        angleMode(RADIANS); // Change the mode to DEGREES
         let a = atan2(mouseY - height / 2, mouseX - width / 2);
-        let b = atan2(mouseX - height / 2, mouseX - width );
+        let b = atan2(mouseX - height, mouseX - width );
 
         translate(width / 2, height / 2);
         push();
