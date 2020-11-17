@@ -1,0 +1,35 @@
+/* .char3 { display: inline-block; } */
+a:link {
+text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: underline;
+}
+a{
+  /* padding: 10px; */
+}
+html, body{
+  line-height: 150%;
+  font-size: 12px;
+  font-family:Tahoma, Geneva, sans-serif
+}
+.menu{
+  position: absolute;
+  margin-top: 0;
+}
+#slanting{
+  margin-top:0;
+  text-align: center;
+}
+.disassembly{
+  text-align: left;
+}

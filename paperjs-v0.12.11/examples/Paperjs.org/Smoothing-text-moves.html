@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Smoothing</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../../css/footer.css">
     <script type="text/javascript" src="../../dist/paper-full.js"></script>
     <script type="text/paperscript" canvas="canvas">
         var width, height, center;
         var points = 10;
         var smooth = true;
         var path = new Path({
-            // fillColor: 'black'
 
         });
 
@@ -19,8 +19,8 @@
         var mousePos = view.center / 2;
         var pathHeight = mousePos.y;
         var glyphTexts = [];
-        var xOffsets = [0];
-        var str = "I laugh at watering words    with my typing finger    i am thinking water ";
+        var xOffsets = [400];
+        var str = "i want words of important movement to want the pace knowing wanting neurodiversity to question ways the people talk about autism";
 
         initializePath();
 
@@ -96,7 +96,7 @@
                         var pathPoint = path.getPointAt(centerOffs);
                         glyphTexts[i].point = pathPoint;
                         var tan = path.getTangentAt(centerOffs);
-                        console.log(tan);
+                        // console.log(tan);
                         glyphTexts[i].rotation = tan.angle;
                     }
                 }
@@ -114,7 +114,7 @@
             }
 
             path.add(view.bounds.bottomRight);
-            path.fullySelected = true;
+            // path.fullySelected = true;
         }
 
         function onFrame(event) {
@@ -162,9 +162,13 @@
         function onResize(event) {
             initializePath();
         }
+
     </script>
 </head>
 <body>
+  <a href="../../../p5.js/collatz-text2.html"><img id="footer" style="width:100px" src="../../../images/crab.png"/></a>
+
     <canvas id="canvas" resize></canvas>
+
 </body>
 </html>

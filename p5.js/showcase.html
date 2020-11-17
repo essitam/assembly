@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script type="text/javascript" src="cube.js">  </script>
+    <style media="screen">
+      html, body{
+        background-image: url('../images/yarn.png');
+      }
+    </style>
+    <link rel="stylesheet" href="/css/footer.css">
+  </head>
+  <body>
+    <a href="../p5.js/logo-image.html"><img id="footer" style="width:100px" src="../images/crab.png"/></a>
+
+    <script type="text/javascript">
+    let currentSlide = 0;
+  let cube = [];
+  let mousePressText = [];
+  let go;
+  let canvas;
+  let enter;
+  let slide1go;
+  let cubeHide;
+  let line1;
+  let index = 0;
+  let index10 = 0;
+  let line2;
+  let words = ['sitting', 'clicking', 'reading', 'waiting', 'thinking', 'clicking', 'breathing', 'waiting', 'blinking', 'waiting', 'listening', 'sitting', 'waiting', 'sitting', 'sitting', ];
+  let plane1;
+  let x;
+  let y;
+  let backgroundColor;
+  let line3;
+  let index2;
+  let rotateSize;
+  let line4;
+  let line4Pos;
+  let line4PosGrow;
+  let planeMove;
+  let planeM;
+  let planeMtext;
+  let line5;
+  let line6;
+  let index3 = 0;
+  let index4 = 0;
+  let index5 = 0;
+  let helvetica;
+  let leftarrow = 0;
+  let rightarrow = 0;
+  let indexStrings = 0;
+  let index6 = 0;
+  let blackText;
+  let rectX;
+  let rectY;
+  let boxes;
+  let mirror;
+  let light;
+  let mirrorMove;
+  let words2 = ['writing', 'writing this', 'writing this string', 'on yellow sticky notes', 'writing this array', 'in yellow setup sections', 'wondering', 'what it would mean to feel whole', 'what it could feel to be whole', 'what i could be when we were whole', 'wondering how you look at me naked', 'do you see a set of parts', 'of an ikea wardrobe', 'bleached birch and middle class', 'yearning for the ordinary', ];
+
+  // function preload() {
+  	// helvetica1 = loadFont('light.otf');
+  	// helvetica = loadImage('helvetica.png', 200, 200);
+
+  // }
+
+
+  function setup() {
+
+  	canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  	line4pos = 0;
+  	mirrorMove = false;
+  	line4posGrow = false;
+  	planeM = 0;
+  	rotateSize = HALF_PI;
+  	canvas.position(0, 0);
+  	// for (let i = 0; i < 10; i++) {
+  	// 	cube.push(new Cube())
+    //
+  	// }
+
+  }
+
+  function draw() {
+    orbitControl();
+    background(255, 0);
+    let words = ["Ball of thinking pacing", "A web of pliancy", "A dear thread read", "in all directions", "by the ear most of all", ];
+    // angleMode(DEGREES);
+    // rotateX(2);
+    // rotateY(30);
+
+
+  for (let i = 0; i < words.length; i++) {
+		let x = map(mouseX, 0, width, -15, 15);
+		let y = map(mouseY, 0, height, -15, 15);
+		translate(x, y);
+		let texts = createGraphics(200, 200);
+	//	texts.textFont(helvetica1);
+
+		texts.text(words[i], 10, 50);
+		texture(texts);
+    noStroke();
+		torus(100, 100);
+	}
+
+}
+
+
+
+    </script>
+
+  </body>
+</html>

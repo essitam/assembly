@@ -1,12 +1,13 @@
-.wobblyText {
-  line-height: 1;
+.wobblyTextt {
+  line-height: 2;
   font-weight: bold;
   font-size: 1em;
   margin: 0;
   letter-spacing: +.1em;
   text-shadow: 0.04em 0.035em 0 rgba(0, 0, 0, 0.7);
+
 }
-.wobblyText span {
+.wobblyTextt span {
   position: relative;
   top: 0;
   left: 0;
@@ -18,8 +19,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
+
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
+
 }
 
 body {
