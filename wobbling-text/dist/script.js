@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	var FLAG_wobblyness = 10; //range of movement from centre
 	var FLAG_intervalRate = 150;
-	var $wobblyText = $('.wobblyText');
-	var wobblyTextSpans = '.wobblyText span';
+	var $wobblyTextt = $('.wobblyTextt');
+	var wobblyTexttSpans = '.wobblyTextt span';
 
 	var interval = 0;
 
@@ -11,7 +11,7 @@ $(document).ready(function() {
 	/***** startup stuff ******/
 
 	function init() {
-		var wobbleHTML = addSpans(splitString($wobblyText.text()));
+		var wobbleHTML = addSpans(splitString($wobblyTextt.text()));
 		replaceWobbleTextHTML(wobbleHTML);
 
 		interval = setInterval(intervalFunction, FLAG_intervalRate);
@@ -43,7 +43,7 @@ $(document).ready(function() {
 	}
 
 	function replaceWobbleTextHTML(strInputHTML) {
-		$wobblyText.html(strInputHTML);
+		$wobblyTextt.html(strInputHTML);
 	}
 
 	/***** maths ******/
@@ -56,7 +56,7 @@ $(document).ready(function() {
 	/***** main loop ******/
 
 	function intervalFunction() {
-		$(wobblyTextSpans).each(function(index) {
+		$(wobblyTexttSpans).each(function(index) {
 			setWobbleCSS(
 				$(this),
 				intRandomRange(FLAG_wobblyness),

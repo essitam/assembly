@@ -9,7 +9,7 @@
   <body>
     <script type="text/javascript">
       function setup(){
-        createCanvas(600,600);
+        createCanvas(150,150);
         // angleMode(DEGREES);
       }
       // function draw(){
@@ -24,11 +24,12 @@
       //   rect(10, 20, 10, 100);
       // }
       function draw() {
-        background(204);
+        background(252, 248, 182);
         angleMode(RADIANS); // Change the mode to DEGREES
         let a = atan2(mouseY - height / 2, mouseX - width / 2);
         let b = atan2(mouseX - height, mouseX - width );
-
+        fill('orange');
+        noStroke();
         translate(width / 2, height / 2);
         push();
         rotate(a/3);
