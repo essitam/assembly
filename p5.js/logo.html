@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function setup(){
+        createCanvas(150,150);
+        // angleMode(DEGREES);
+      }
+      // function draw(){
+      //   // background(0);
+      //   // fill(255);
+      //   translate(width / 2, height / 2);
+      //
+      //   rotate(45);
+      //
+      //   rect(10, 20, 10, 100);
+      //   rotate(180);
+      //   rect(10, 20, 10, 100);
+      // }
+      function draw() {
+        background(252, 248, 182);
+        angleMode(RADIANS); // Change the mode to DEGREES
+        let a = atan2(mouseY - height / 2, mouseX - width / 2);
+        let b = atan2(mouseX - height, mouseX - width );
+        fill('orange');
+        noStroke();
+        translate(width / 2, height / 2);
+        push();
+        rotate(a/3);
+        rect(-20, -5, 100, 10); // Larger rectangle is rotating in degrees
+        pop();
+        angleMode(RADIANS); // Change the mode to RADIANS
+        rotate(a); // variable a stays the same
+        rect(-40, -5, 100, 10); // Smaller rectangle is rotating in radians
+        push();
+        rotate(b);
+        rect(-30, -5, 10, 50); // Larger rectangle is rotating in degrees
+        pop();
+      }
+    </script>
+
+  </body>
+</html>

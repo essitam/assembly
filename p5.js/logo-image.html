@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js"></script>
+  </head>
+  <body>
+    <a href="collatzz.html"><img id="footer" style="width:100px" src="../images/snail.png"/></a>
+
+    <script type="text/javascript">
+    var img;
+      function setup(){
+        createCanvas(windowWidth,windowHeight);
+        img= loadImage('6696.jpg');
+        // angleMode(DEGREES);
+      }
+      // function draw(){
+      //   // background(0);
+      //   // fill(255);
+      //   translate(width / 2, height / 2);
+      //
+      //   rotate(45);
+      //
+      //   rect(10, 20, 10, 100);
+      //   rotate(180);
+      //   rect(10, 20, 10, 100);
+      // }
+      function draw() {
+        background(204, 200, 0);
+        angleMode(RADIANS); // Change the mode to DEGREES
+        let a = atan2(mouseY - height / 2, mouseX - width / 2);
+        let b = atan2(mouseX - height / 2, mouseX - width );
+
+        translate(width / 2, height / 2);
+        push();
+        rotate(a/3);
+        // rect(-20, -5, 100, 10); // Larger rectangle is rotating in degrees
+        image(img, -20, -5, 300, 40);
+        pop();
+        angleMode(RADIANS); // Change the mode to RADIANS
+        rotate(a); // variable a stays the same
+        image(img, -40, -5, 300, 40); // Smaller rectangle is rotating in radians
+        push();
+        rotate(b);
+        image(img, -30, -5, 40, 100); // Larger rectangle is rotating in degrees
+        pop();
+      }
+    </script>
+
+  </body>
+</html>
