@@ -51,6 +51,7 @@
   width: 20rem;
   height: 2rem;
   border-radius: 50%;
+  color: #285e0a;
   /* background-color: salmon; */
 }
 .mover3{
@@ -59,6 +60,7 @@
   animation: move 70000ms infinite alternate;
   width: 50rem;
   height: 2rem;
+  color:#1d455c;
   border-radius: 50%;
 }
 .mover4{

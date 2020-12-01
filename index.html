@@ -5,7 +5,8 @@
     <title>disassembly</title>
     <style media="screen">
     html,body{
-      background: linear-gradient(#f5fcfb, #f5fbfc);
+      /* background: linear-gradient(#f5fcfb, #f5fbfc); */
+      background-image: url('images/11-_MG_0064.jpg');
     }
     iframe{
       /* position: sticky; */
@@ -18,8 +19,12 @@
       clip-path: ellipse(60px 60px at 80px 80px);
 
     }
+    .wobblyText{
+      margin-left: 200px;
+    }
     .disassembly{
-      text-align: left;
+
+      /* text-align:left; */
     }
     .blogs{
       position:absolute;
@@ -32,7 +37,9 @@
       padding: 0.5em;
       font-size: 15px;
     }
-
+    /* #logo{
+      margin-left: 200px;
+    } */
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -41,12 +48,14 @@
 
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/move.css">
+    <script type="text/javascript" src="js/logo.js">  </script>
   </head>
   <body>
     <a id="footer" href="paperjs-v0.12.11/examples/Paperjs.org/Swerve.html"><img alt="snail for navigation" id="footer" style="width:100px" src="images/snail.png"/></a>
 
     <script type="text/javascript" src="js/index.js"></script>
-    <iframe class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;"></iframe>
+    <img id="logo" height="190" onclick="nextLogo();" src="images/logo/logo1.png">
+    <!-- <iframe class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;"></iframe> -->
 <div class="">
 
 
@@ -57,10 +66,11 @@
     </div>
     <div class="menu">
     <div id="slanting" class="demo">
-      <a href="scrub.html">sound experiments</a>
+
       <a href="lexicon.html">palette</a>
       <a href="array-next-item.html">images</a>
       <a href="blog.html">blog</a>
+      <a href="scrub.html">sound experiments</a>
       <a href="jquery/wobbling/index.html">history & mission</a>
 
     </div>
