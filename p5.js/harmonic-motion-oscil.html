@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      // function setup(){
+      //   createCanvas(640, 360);
+      // }
+      // function draw(){
+      //   // background(115, 168, 50);
+      //   // translate(width/2, height/2);
+      //   // var x = amp * sin(angle);
+      //   // fill(169, 199, 52);
+      //   // stroke(32, 189, 189);
+      //   // line(0, 0, x, 0);
+      //   // ellipse(x, 0, 36,36);
+      //   // angle += 0.2;
+      // }
+
+      class Oscillator {
+      constructor( angle, velocity, amplitude) {
+        this.angle= createVector();
+        this.velocity = createVector(random(-0.05, 0.05),random(-0.05, 0.05));
+        this.amplitude = createVector(random(20, width/2),random(20, height/2));
+      }
+      oscillate(){
+        this.angle.add(this.velocity);
+      }
+      display(){
+       let x = sin(this.angle.x) * this.amplitude.x;
+       let y = sin(this.angle.y) * this.amplitude.y;
+        push();
+        translate(width/2, height/2);
+        stroke(255);
+        fill(127, 127);
+        line(0,0,x,y);
+        ellipse(x,y,32,32);
+        pop();
+      }
+    }
+
+    class SoundBall {
+      constructor() {
+        this.x = random(width);
+        this.y = random(height);
+        this.osc = new p5.Oscillator();
+        this.osc.freq(random(100, 500));
+        this.osc.amp(random(0.05, 0.2));
+        this.osc.start();
+      }
+      display() {
+        ellipse(this.x, this.y, 50, 50);
+        this.x += random(-1, 1);
+        this.y += random(-1, 1);
+      }
+    }
+
+// let soundballs = new Oscillator[10];
+//
+// function setup() {
+//   createCanvas(400, 400);
+// }
+//
+// function draw() {
+//   background(220);
+//   for (let i = 0; i < soundballs.length; i++) {
+//     soundballs[i].display();
+//   }
+// }
+//
+// function mouseClicked() {
+//   soundballs.push(new Oscillator());
+// }
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
+// An array of objects
+let oscillators = [];
+
+function setup() {
+  createCanvas(640, 360);
+  // Initialize all objects
+  for (let i = 0; i < 10; i++) {
+    oscillators.push(new Oscillator());
+  }
+}
+
+function draw() {
+  background(51);
+  // Run all objects
+  for (let i = 0; i < oscillators.length; i++) {
+    oscillators[i].oscillate();
+    oscillators[i].display();
+  }
+}
+
+function changeBG() {
+  let val = random(255);
+  background(val);
+}
+    </script>
+  </body>
+</html>
