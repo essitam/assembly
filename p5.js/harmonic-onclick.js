@@ -40,14 +40,17 @@ class DanceSpan {
     this.y = sin(this.angle.y) * this.amplitude.y;
     push();
     translate(width/2, height/2);
-    line(0,0,this.x,this.y);
+    strokeWeight(4);
+    line(0-this.x,0-this.x,this.x,this.y);
     this.element.position(this.x+width/2, this.y+height/2);
+    this.element.style('background-color','lightgrey');
+    this.element.style('padding', '0.2em')
     pop();
   }
 
 }
 function setup() {
-createCanvas(800,800);
+createCanvas(100, 100);
 frameRate(20);
 const words = [ 'Pacing', 'All Ways', 'Relation'];
 const links = ['google.com', 'facebook.com', 'instagram.com'];
