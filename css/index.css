@@ -24,11 +24,3 @@ html, body{
   font-size: 17px;
   font-family:Tahoma, Geneva, sans-serif
 }
-.menu{
-  position: absolute;
-  margin-top: 0;
-}
-#slanting{
-  margin-top:0;
-  text-align: center;
-}

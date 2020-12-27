@@ -9,7 +9,7 @@ $(function(){
        //convert the range of the mouse X to -90 , 90 slant
        //words only
         rotate = convertToRange(event.pageX,  [0, $( document ).width()], [120, 0]);
-        console.log(rotate);
+        // console.log(rotate);
         $("#slanting a").lettering('lines').children("span").css({'display':'inline-block', '-webkit-transform':'rotate('+rotate+'deg)', 'background-color': 'black', 'color':'white', 'border-radius':'10px'});
         //sentences
         // rotatedangling = convertToRange(event.pageX,  [0, $( document ).width()], [50, 150]);
