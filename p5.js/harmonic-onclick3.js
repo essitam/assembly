@@ -67,18 +67,15 @@ var eld1 = false;
 var eld2 = false;;
 var list = ["1", "2", "3"];
 var links = ['#', '#', '#'];
-var a = function(){ console.log("this is function: a") }
- var b = function(){ console.log("this is function: b") }
- var c = function(){ console.log("this is function: c") }
-
- var foo = [a,b,c];
+var funct = [activate0(), activate1(), activate2()];
 function setup() {
 createCanvas(windowWidth, 100);
 frameRate(15);
 const words = [ 'Pacing', 'All Ways', 'Relation'];
   for (let o = 0; o < words.length; o++) {
     const spannedWord = createButton(words[o]);
-    spannedWord.mousePressed(foo[o]);
+    spannedWord.id('yourElId'+o);
+    spannedWord.mousePressed(activate0);
     const dw = new DanceSpan(spannedWord, random(600), random(200));
     dancingWords.push(dw);
   }
@@ -92,43 +89,43 @@ for (let i = 0; i < dancingWords.length; i++) {
   dancingWords[i].brownian();
   }
 
-  // if (eld0==true){
-  //   eld1=false;
-  //   eld2=false;
-  //   for (let i = 0; i < dancing.length; i++) {
-  //     dancing[i].oscillate();
-  //     document.getElementById('yourElId0').style.backgroundColor= 'lightgrey';
-  //     var a = getOffset( document.getElementById('yourElId0') ).right;
-  //     var b = getOffset( document.getElementById('yourElId0') ).top;
-  //     dancing[i].around(a , b);
-  //     }
-  // }
-  // if (eld1==true){
-  //   eld0=false;
-  //   eld2=false;
-  //   for (let i = 0; i < dancing.length; i++) {
-  //     dancing[i].oscillate();
-  //     document.getElementById('yourElId1').style.backgroundColor= 'lightgrey';
-  //     var a = getOffset( document.getElementById('yourElId1') ).right;
-  //     var b = getOffset( document.getElementById('yourElId1') ).top;
-  //     dancing[i].around(a , b);
-  //     }
-  // }
-  // if (eld2==true){
-  //   eld1=false;
-  //   eld0=false;
-  //   for (let i = 0; i < dancing.length; i++) {
-  //     dancing[i].oscillate();
-  //     document.getElementById('yourElId2').style.backgroundColor= 'lightgrey';
-  //     var a = getOffset( document.getElementById('yourElId2') ).right;
-  //     var b = getOffset( document.getElementById('yourElId2') ).top;
-  //     dancing[i].around(a , b);
-  //     }
-  // }
+  if (eld0==true){
+    eld1=false;
+    eld2=false;
+    for (let i = 0; i < dancing.length; i++) {
+      dancing[i].oscillate();
+      document.getElementById('yourElId0').style.backgroundColor= 'lightgrey';
+      var a = getOffset( document.getElementById('yourElId0') ).right;
+      var b = getOffset( document.getElementById('yourElId0') ).top;
+      dancing[i].around(a , b);
+      }
+  }
+  if (eld1==true){
+    eld0=false;
+    eld2=false;
+    for (let i = 0; i < dancing.length; i++) {
+      dancing[i].oscillate();
+      document.getElementById('yourElId1').style.backgroundColor= 'lightgrey';
+      var a = getOffset( document.getElementById('yourElId1') ).right;
+      var b = getOffset( document.getElementById('yourElId1') ).top;
+      dancing[i].around(a , b);
+      }
+  }
+  if (eld2==true){
+    eld1=false;
+    eld0=false;
+    for (let i = 0; i < dancing.length; i++) {
+      dancing[i].oscillate();
+      document.getElementById('yourElId2').style.backgroundColor= 'lightgrey';
+      var a = getOffset( document.getElementById('yourElId2') ).right;
+      var b = getOffset( document.getElementById('yourElId2') ).top;
+      dancing[i].around(a , b);
+      }
+  }
 
 }
 
-function activate(i){
+function activate0(i){
   for (let j = 0; j < list.length; j++) {
     const spannedWord = createA(links[j], list[j]);
     const dw = new DanceSpan(spannedWord, random(600), random(200));
