@@ -2,100 +2,87 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>disassembly</title>
+    <title></title>
     <style media="screen">
     html,body{
-      /* background: linear-gradient(#f5fcfb, #f5fbfc); */
       background-image: url('images/11-_MG_0064.jpg');
     }
-    iframe{
-      /* position: sticky; */
-      margin-top:0;
-      border: none;
 
-      z-index: -999;
-    }
-    .circ{
-      clip-path: ellipse(60px 60px at 80px 80px);
+      .palette{
+        position: absolute;
 
-    }
-    .wobblyText{
-      margin-left: 200px;
-    }
-    .disassembly{
+      }
+      #canv{
+        position: absolute;
+        margin-top: 0px;
 
-      /* text-align:left; */
-    }
-    .blogs{
-      position:absolute;
-      margin-top:20px;
-    }
-    .blog{
-      background: black;
-      color:white;
-      margin: 0.5em;
-      padding: 0.5em;
-      font-size: 15px;
-    }
-    /* #logo{
-      margin-left: 200px;
-    } */
+      }
+      #circ{
+    
+          position: absolute;
+          margin-top: 0px;
+
+      }
+      .circ{
+        clip-path: ellipse(60px 60px at 80px 80px);
+
+      }
+      a{
+        font-family: arial;
+        color: white;
+        background: black;
+        border-radius: 25px;
+      }
+      button{
+        margin-left: 200px;
+        border-radius: 20%;
+      }
+      .menu{
+        position: absolute;
+        margin-top: 100px;
+      }
     </style>
+    <!-- <link rel="stylesheet" href="/css/style-paper.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="jquery/wobbling/style-wobble.css">
     <link rel="stylesheet" href="css/index.css">
-
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/move.css">
-    <script type="text/javascript" src="js/logo.js">  </script>
+    <link rel="stylesheet" href="css/dropdown.css">
+    <!-- <link rel="stylesheet" href="css/move.css"> -->
   </head>
   <body>
-
     <script type="text/javascript" src="js/index.js"></script>
-    <!-- <img id="logo" height="190" onclick="nextLogo();" src="images/logo/logo1.png"> -->
-    <iframe class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;"></iframe>
-<div class="">
-
+    <div id="cav">
+    </div>
+    <iframe id="circ" class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;"></iframe>
 
     <div class="contCentre">
       <p class="wobblyText disassembly" style="font-size: 28px">
         dis assembly
       </p>
     </div>
+    <div class="dropdown" id="dropd">
+
+      <div id="myDropdown" class="dropdown-content">
+
+      </div>
+    </div>
     <div class="menu">
     <div id="slanting" class="demo">
-
-      <a href="lexicon.html">palette</a>
-      <a href="array-next-item.html">images</a>
-      <a href="blog.html">blog</a>
-      <a href="scrub.html">sound experiments</a>
-      <a href="jquery/wobbling/index.html">history & mission</a>
-
+        <!-- a href for menu go here-->
     </div>
     </div>
-    </div>
+    <script type="text/javascript">
 
-<br><br><br><br><br>
-
-  <!-- <div class="linemovers">
-        <div class="mover">
-      Assemblages assembling… dendrites blossoming
-        </div>
-        <div class="mover2">
-          Becoming more than
-        </div>
-        <div class="mover3">
-          We are more than individual. We individuate in relation. We are our own surplus
-        </div>
-        <div class="mover4">
-          Transforming identities
-        </div>
-    </div> -->
-    <a id="footer" href="paperjs-v0.12.11/examples/Paperjs.org/Swerve.html"><img alt="snail for navigation" id="footer" style="width:100px" src="images/snail.png"/></a>
-
+    </script>
+    <script type="text/javascript" src="p5.js/harmonic-onclick2.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
     <script  src="jquery/wobbling/script-wobble.js"></script>
     <script src="jquery/Lettering.js-master/jquery.lettering.js"></script>
+    <script type="text/javascript" src="js/dropdown.js"></script>
+    <a id="footer" href="paperjs-v0.12.11/examples/Paperjs.org/Swerve.html"><img alt="snail for navigation" id="footer" style="width:100px" src="images/snail.png"/></a>
+
   </body>
 </html>
