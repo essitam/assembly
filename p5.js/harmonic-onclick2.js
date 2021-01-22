@@ -49,18 +49,20 @@ var list = ["1", "2", "3"];
 var links = ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'];
 
 var pacingProjects=["walking-drawing machines", "algo-rhythms", "the film S/Pace", "Poetry chapbooks", "Painting on Film", "Tic and Stick", "S/Pace","Improvisation Work in Studio"]
+var pacingLinks=["#walkingdrawing", "#algo", "#filmspace", "#poetry", "#paintingfilm", "#ticstick", "#space", "#improvisation"];
 var allwaysProjects = ["Water and Repetition Experiments", "Biograms", "Reforming DX", "The Movement of Thought", "Like Water I Am", "Painting and Movement", "Drawing Affect", "Water and Ice", "Duration and Detail", "Notebooks", "Mobile Writing", "Poetry", "Improvisation Work in Studio"];
-var relationProjects =["Relationshapes", "Biograms", "Autism to Inclusion Film, Recipes for the Open", "Drawing Affect", "Painting and Movement", "Like Water I Am", "Repetition", "Poetry", "Film (S/Pace)", "Tic and Stick", "Access is Love and Love is Complicated"];
+var relationProjects =["Relationshapes", "Biograms", "Autism to Inclusion Film", "Recipes for the Open", "Drawing Affect", "Painting and Movement", "Like Water I Am", "Repetition", "Poetry", "Film (S/Pace)", "Tic and Stick", "Access is Love and Love is Complicated"];
 
-  var a = function(){ createSticks(pacingProjects)};
+  var a = function(){ createSticks(pacingProjects, pacingLinks)};
   var b = function(){ createSticks(allwaysProjects) }
   var c = function(){ createSticks(relationProjects) }
+    var d = function(){  }
 
  var foo = [a,b,c];
 
 
 
-
+//menu at the top
 function setup() {
 createCanvas(windowWidth, 100);
 frameRate(15);
@@ -78,8 +80,9 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
-
+//dropdown menu
 function createSticks(aText, bHref){
+
   //a is array of text
   //b is array of href
   const container = document.querySelector('#myDropdown');
@@ -87,7 +90,7 @@ function createSticks(aText, bHref){
 
   for (let c = 0; c < aText.length; c++) {
     var stickelement = document.createElement('a');
-    stickelement.setAttribute('href', '#');
+    stickelement.setAttribute('href', bHref[c]);
     stickelement.textContent = aText[c];
     var slant = document.getElementById('myDropdown');
     slant.appendChild(stickelement);
@@ -107,7 +110,7 @@ function createSticks(aText, bHref){
 //   }
 // }
 function draw() {
-  background(210);
+  // background(210);
 
 for (let i = 0; i < dancingWords.length; i++) {
   dancingWords[i].oscillate();
@@ -128,6 +131,10 @@ function activate(i){
 
 }
 
+// function changeId(){
+//   var element = document.getElementById('hellohi');
+//   element.setAttribute('id', 'like_button_container');
+// }
 
 function pal(t){
   const currentDiv = document.getElementById("newContent");

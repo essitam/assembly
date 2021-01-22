@@ -24,11 +24,13 @@
       //   rect(10, 20, 10, 100);
       // }
       function draw() {
-        background(252, 248, 182);
+        // background(252, 248, 182);
+        background(249, 249, 249)
         angleMode(RADIANS); // Change the mode to DEGREES
         let a = atan2(mouseY - height / 2, mouseX - width / 2);
         let b = atan2(mouseX - height, mouseX - width );
-        fill('orange');
+        // fill('orange');
+        fill('black');
         noStroke();
         translate(width / 2, height / 2);
         push();

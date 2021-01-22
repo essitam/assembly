@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+        <style media="screen">
+        body{
+          overflow-x: hidden;
+        }
+      .box {
+        width: 100vh;
+        height: 100vh;
+      }
+      .a{
+        background-color: blue;
+      }
+      .b{
+        background-color: orange;
+      }
+      .c{
+        background-color: yellow;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+    <div class="box a">
+      Soften the link between the animation and the the scrollbar so that takes a certain amount of time to "catch up", like scrub: 1 would take one second to catch up.
+      Snap to certain points in the animation based on velocity. In fact, you can getVelocity() of the scrolling anytime. Snap to the closest label in a timeline or progress value in an Array, or run your own custom function-based logic for snapping
+      Embed scroll triggers directly into any GSAP animation (including timelines) or create standalone instances and tap into the rich callback system to do anything you want.
+      Advanced pinning capabilities can lock an element in place between certain scroll positions. Padding is automatically added to push other elements down accordingly, so they catch up when the element gets unpinned (disable this with pinSpacing: false). You can even pin the same element multiple times at different points.
+      Incredible flexibility for defining scroll positions - like "start when the center of this element hits the center of the viewport, and end when the bottom of that other element hits the bottom of the viewport", use keywords (top, center, bottom, left, right), percentages, pixels, or even relative values like "+=300px". Once you get the hang of the syntax, it's remarkably intuitive.
+      Accommodates vertical or horizontal scrolling.
+      Rich callback system including onEnter, onLeave, onEnterBack, onLeaveBack, onToggle, onUpdate, onScrubComplete, and onRefresh.
+      Automatically recalculates positions when the window resizes.
+      Enable visual markers during development to see exactly where the start/end/trigger points are. Customization options abound, like markers: {startColor: "green", endColor: "red", fontSize: "12px"}.
+      Toggle a CSS class. Fo
+    </div>
+    <div class="box b">
+      Soften the link between the animation and the the scrollbar so that takes a certain amount of time to "catch up", like scrub: 1 would take one second to catch up.
+      Snap to certain points in the animation based on velocity. In fact, you can getVelocity() of the scrolling anytime. Snap to the closest label in a timeline or progress value in an Array, or run your own custom function-based logic for snapping
+      Embed scroll triggers directly into any GSAP animation (including timelines) or create standalone instances and tap into the rich callback system to do anything you want.
+      Advanced pinning capabilities can lock an element in place between certain scroll positions. Padding is automatically added to push other elements down accordingly, so they catch up when the element gets unpinned (disable this with pinSpacing: false). You can even pin the same element multiple times at different points.
+      Incredible flexibility for defining scroll positions - like "start when the center of this element hits the center of the viewport, and end when the bottom of that other element hits the bottom of the viewport", use keywords (top, center, bottom, left, right), percentages, pixels, or even relative values like "+=300px". Once you get the hang of the syntax, it's remarkably intuitive.
+      Accommodates vertical or horizontal scrolling.
+      Rich callback system including onEnter, onLeave, onEnterBack, onLeaveBack, onToggle, onUpdate, onScrubComplete, and onRefresh.
+      Automatically recalculates positions when the window resizes.
+      Enable visual markers during development to see exactly where the start/end/trigger points are. Customization options abound, like markers: {startColor: "green", endColor: "red", fontSize: "12px"}.
+      Toggle a CSS class. Fo
+    </div>
+    <div class="box c">
+      Soften the link between the animation and the the scrollbar so that takes a certain amount of time to "catch up", like scrub: 1 would take one second to catch up.
+      Snap to certain points in the animation based on velocity. In fact, you can getVelocity() of the scrolling anytime. Snap to the closest label in a timeline or progress value in an Array, or run your own custom function-based logic for snapping
+      Embed scroll triggers directly into any GSAP animation (including timelines) or create standalone instances and tap into the rich callback system to do anything you want.
+      Advanced pinning capabilities can lock an element in place between certain scroll positions. Padding is automatically added to push other elements down accordingly, so they catch up when the element gets unpinned (disable this with pinSpacing: false). You can even pin the same element multiple times at different points.
+      Incredible flexibility for defining scroll positions - like "start when the center of this element hits the center of the viewport, and end when the bottom of that other element hits the bottom of the viewport", use keywords (top, center, bottom, left, right), percentages, pixels, or even relative values like "+=300px". Once you get the hang of the syntax, it's remarkably intuitive.
+      Accommodates vertical or horizontal scrolling.
+      Rich callback system including onEnter, onLeave, onEnterBack, onLeaveBack, onToggle, onUpdate, onScrubComplete, and onRefresh.
+      Automatically recalculates positions when the window resizes.
+      Enable visual markers during development to see exactly where the start/end/trigger points are. Customization options abound, like markers: {startColor: "green", endColor: "red", fontSize: "12px"}.
+      Toggle a CSS class. Fo
+    </div>
+  </div>
+    <script type="text/javascript">
+      gsap.registerPlugin(ScrollTrigger);
+
+      let sections = gsap.utils.toArray(".box");
+
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".container",
+          pin: "true",
+          scrub: 1,
+          snap: 1 / (sections.length - 1),
+          end: () => "+=" +
+          document.querySelector(".container").offsetWidth
+        }
+      });
+//scrolltriggercreate
+            // ScrollTrigger.create({
+            //   trigger: ".b",
+            //   start: "top top",
+            //   end: "+=1300",
+            //   markers: true,
+            //   pinSpacing: false,
+            //   pin: true
+            // });
+
+//timeline
+      // let tl = gsap.timeline({
+      //     scrollTrigger: {
+      //       trigger: ".c",
+      //       start: "top center",
+      //       markers: true,
+      //       // toggleActions: "restart pause reverse pause",
+      //       // endTrigger:".c",
+      //       end: "top 100px",
+      //       scrub: 3
+      //     },
+      //
+      // });
+      //
+      // tl.to(".c", {
+      //   x: 400,
+      //    //bottom of element hits top of viewport
+      //    // relative prefix +=
+      //    ease: "none",
+      //    rotation: 360,
+      //    duration: 3
+      // });
+
+
+//one way
+      // gsap.to(".c", {
+      //   scrollTrigger: {
+      //     trigger: ".c",
+      //     //top center bottom or pixels percentages (relative to the top)
+      //     //top of the viewport hits the center
+      //     start: "top center",
+      //     markers: true,
+      //     //toggle Actions:
+      //     //play pause resume reverse restart reset complete none
+      //     //1 bring into view
+      //     //2 past view port
+      //     //3 when it comes back in
+      //     //4 scroll all the way back past the start (improves performance)
+      //     toggleActions: "restart pause reverse pause",
+      //     endTrigger:".c",
+      //     end: "bottom 80%",
+      //     //true = trigger , or a class
+      //     //adds the end as padding
+      //      // pinspacing false makes things overlap
+      //     pin: ".b",
+      //     //scrub: true or false or a number
+      //     scrub: 1
+      //   },
+      //   x: 400,
+      //   //bottom of element hits top of viewport
+      //   // relative prefix +=
+      //   ease: "none",
+      //   rotation: 360,
+      //   duration: 3
+      // });
+
+
+    </script>
+
+  </body>
+</html>
