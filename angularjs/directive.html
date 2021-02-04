@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp">
+
+<div class="w3-test-directive"></div>
+
+
+<script>
+var app = angular.module("myApp", []);
+var myArray = [
+  "Apples",
+  "Bananas",
+  "Pears"
+  ];
+
+  var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+  console.log(randomItem);
+app.directive("w3TestDirective", function() {
+    return {
+        template : '../pacing.html'
+    };
+});
+// angular.module('ngRepeat', ['ngAnimate']).controller('repeatController', function($scope) {
+//   var friends = [
+//     {name:'John', age:25},
+//     {name:'Mary', age:40},
+//     {name:'Peter', age:85}
+//   ];
+</script>
+
+</body>
+</html>

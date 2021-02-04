@@ -1,107 +1,174 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="jquery/wobbling/style-wobble.css">
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/dropdown.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/circ.css">
-    <style media="screen">
-    html,body{
-      background-image: url('images/11-_MG_0064.jpg');
-    }
-      .palette{
-        position: absolute;
-      }
-      #canv{
-        position: absolute; top: 12pt; left: 24pt;
-      }
-      a{
-        font-family: arial;
-        color: white;
-        background: black;
-        border-radius: 25px;
-      }
-      button{
-        margin-left: 200px;
-        border-radius: 20%;
-      }
-      .menu{
-        position: absolute;
-        margin-top: 100px;
-      }
-      #canvas{
-        position:absolute;
-        top:0;
-        width: 100vw;
-        height:100vh;
-      }
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>dis assembly</title>
+  <link rel="stylesheet" href="css/circ.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="./planez/style.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+  <link rel="stylesheet" href="jquery/wobbling/style-wobble.css">
+  <link rel="stylesheet" href="css/margin.css">
+  <link rel="stylesheet" href="css/footer.css">
 
-      #dropd{
-        position: absolute; top: 12pt; left: 24pt;
-      }
-      .break{
-        height:150px;
-      }
-      .walkingdrawing{
-        background-image: url("assets/assets/walking-drawing-machines/16427780_10154144552241218_566497657003523939_n(1).jpg");
-      }
-      iframe{
-        overflow: hidden;
-      }
-    </style>
-  </head>
-  <body>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+<style media="screen">
+  iframe{
+    height: 100vh;        /* Viewport-relative units */
+   width: 100vw;
+  }
+</style>
+</head>
+<body>
+  <div class="topper" style="position:fixed;">
+      <iframe id="circ" class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;"></iframe>
+      <div id="logo" class="contCentre">
+        <!-- <iframe id="circ" class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;"></iframe> -->
+        <p class="wobblyText disassembly" style="font-size: 28px">
+          dis assembly
+        </p>
+      </div>
+      <div id="canvasParent" style="position:fixed;">  </div>
+</div>
+<div class="controls">
+  <!-- <div id="canvasParent" style="position:fixed;">  </div> -->
+  <!-- <div class="zoom-in">zoom in</div>
+  <div class="zoom-out">zoom-out</div> -->
+  <br><br><br>
+  <div class="dropd go-to-pacing">snail</div>
+  <div class="dropd go-to-start-screen">new Work</div>
+  <div class=" dropd go-to-random">lexicon</div>
+  <div onclick="drop()" class="dropd dropbtn">projects</div>
 
-    <script type="text/javascript" src="js/index.js"></script>
-    <div id="cav">
+  <div class="dropdown dropd" id="dropd">
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#walkingdrawing">Walking-Drawing Machines</a>
+      <a href="#filmspace">the film S/Pace</a>
+      <a href="#poetry">Poetry</a>
+      <a href="#paintingfilm">Painting on Flim</a>
+      <a href="#ticstick">Tic and Stick</a>
+      <a href="#improvisaton">Improvisation Work in Studio</a>
+      <a href="#waterrepetition">Water and Repetition Experiments</a>
+      <a href="#biograms">Biograms</a>
+      <a href="#reformingdx">Reforming DX</a>
+      <a href="#movementofthought">The Movement of Thought</a>
+      <a href="#likewateriam">Like Water I Am</a>
+      <a href="#paintingandmovement">Painting and Movement</a>
+      <a href="#drawingaffect">Drawing Affects</a>
+      <a href="#waterandice">Water and Ice</a>
+      <a href="#durationanddetail">Duration and Detail</a>
+      <a href="#notebooks">Notebooks</a>
+      <a href="#mobilewriting">Mobile Writing</a>
+      <a href="#relationshapes">Relationshapes</a>
+      <a href="#rubberbath">rubber bath toys</a>
+      <a href="#autismtoinclusion">Autism to Inclusion Film</a>
+      <a href="#recipesfortheopen">Recipes for the Open</a>
+      <a href="#repetition">Repetition</a>
+      <a href="#accessislove">Access is Love and Loce is Complicated</a>
+      <a href="#artclass">Process Photos from Art Class</a>
     </div>
-    <div class="">
-            <div class="sidebar2">
-              <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Smoothing-text-moves-nologo.html" width="" height="1000px"></iframe>
+  </div>
+</div>
+
+<div class="planeWrapper">
+  <div class="plane" data-zoom="10">
+      <div class="planeContent">
+        <div class="startScreen">
+          <div id="app"></div>
+        </div>
+        <div class="pacingistheway ball">
+          <p style="color:green;">pacing </p>
+          <p style="color:blue;margin-left:20%;">is </p>
+          <p style="color:blue;margin-left:20%;">the</p>
+          <p style="color:red;margin-left:40%;">way</p>
+          <p style="color:blue;margin-left:67%;">of</p>
+          <p style="color:blue;margin-left:67%;">the</p>
+          <p style="color:yellow;margin-left:79%;">relation</p>
+          <br/>
+        </div>
+        <div class="newWork">
+          <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Smoothing-text-moves-nologo.html" width="" height="1000px" frameBorder="0"></iframe>
+          <video width="320" height="240" controls>
+            <source src="assets/assets/water_book/IMG_2861.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="ball">
+                  <div class="">
+                    Learning to be
+                  </div>
+                  <br>
+                  <img src="assets/assets/pacingimages/image21.png" alt="" width="100px">
+                  <div class="">
+                    a ball of thinking
+                  </div>
+                  <div class="">
+                    we answer by
+                  </div>
+                  <div class="">
+                    pacing open
+                  </div>
+                  <div class="">
+                    facing each  but not really facing… joining and dis-jointing
+                  </div>
+                  <div class="">
+                    Like breathing in and out
+                  </div>
+                  <div class="">
+                    assembly
+                  </div>
             </div>
+        </div>
+        <div class="importantmov" style="font-family:impact">
+          <span>i</span> want words of important movement to want the pace knowing wanting neurodiversity to question ways the people talk about autism
 
-            <div class="sidebar">
-              <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Chain2-textwave-nologo.html" width="auto" height="1000px" allowTransparency="true" background="transparent"></iframe>
-            </div>
+        </div>
+        <div class="chooseadventure" style="background-color:blue;">
+          <!-- <iframe class="chooseadv" src="chooseadventure.html"></iframe> -->
+        </div>
+        <div class="pacingsnail">
+          <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Chain2-text.html" width="" height=""></iframe>
+        </div>
+        <div class="lexicon" id="parentChild">
+        </div>
+      </div>
+      <div class="planeBackground">
+        <!-- <canvas id="canvas" resize></canvas> -->
 
-            <div class="content" >
-              <div class="break">
-
-              </div>
-              <div id="app">
-
-              </div>
-            </div>
-    </div>
-    <iframe id="circ" class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;"></iframe>
-
-    <div id="logo" class="contCentre">
-      <!-- <iframe id="circ" class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;"></iframe> -->
-
-      <p class="wobblyText disassembly" style="font-size: 28px">
-        dis assembly
-      </p>
-    </div>
-         <div class="dropdown" id="dropd">
-              <div id="myDropdown" class="dropdown-content">
-              </div>
-            </div>
-
-    <script type="text/javascript" src="js/main.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-    <script src="jquery/Lettering.js-master/jquery.lettering.js"></script>
-    <script  src="jquery/wobbling/script-wobble.js"></script>
-    <script type="text/javascript" src="js/dropdown.js"></script>
-    <script type="text/javascript" src="p5.js/harmonic-onclick2.js"></script>
-    <script type='text/javascript' src='paperjs-v0.12.11/dist/paper-full.js'></script>
-
-    <a id="footer" href="paperjs-v0.12.11/examples/Paperjs.org/Chain2-text.html"><img alt="snail for navigation" id="footer" style="width:100px" src="images/snail.png"/></a>
-  </body>
+      </div>
+  </div>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/Draggable.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script  src="./planez/script.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script src="jquery/Lettering.js-master/jquery.lettering.js"></script>
+<script type="text/javascript" src="js/randomPosition.js"></script>
+<script  src="jquery/wobbling/script-wobble.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/randomPosition.js"></script>
+<script type="text/javascript" src="js/main-map.js"></script>
+<script type="text/javascript" src="p5.js/harmonic-onclick2.js"></script>
+<script type="text/javascript">
+var tl = gsap.timeline ()
+.to('.ball',{
+  // x: "random(-20, 20, 5)", //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
+  // y: "random(-20, 10, 3)",
+  skewY: "random(-20, 20, 5)"+"deg",
+  duration:1,
+  ease:"none",
+  repeat:-1,
+  repeatRefresh:true // gets a new random x and y value on each repeat
+})
+</script>
+</body>
 </html>

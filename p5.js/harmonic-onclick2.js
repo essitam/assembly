@@ -64,13 +64,16 @@ var relationProjects =["Relationshapes", "Biograms", "Autism to Inclusion Film",
 
 //menu at the top
 function setup() {
-createCanvas(windowWidth, 100);
+var canvas= createCanvas(600, 100);
+canvas.parent('canvasParent');
 frameRate(15);
-const words = [ 'Pacing', 'All Ways', 'Relation'];
+const words = ['Pacing', 'The Way', 'All Ways', 'Always', 'Water', 'Easy', 'Rally', 'Really', 'Dance', 'Languaging', 'Relation', 'Questions', 'Think', 'Stick', 'Patter', 'Pattern', 'Wanting', 'Open', 'SpaceTime', 'WaysWaves', 'Atmospheres']
+// const words = [ 'Pacing', 'All Ways', 'Relation'];
   for (let o = 0; o < words.length; o++) {
     const spannedWord = createButton(words[o]);
     spannedWord.mousePressed(foo[o]);
     spannedWord.addClass('dropbtn');
+    spannedWord.parent('canvasParent');
     const dw = new DanceSpan(spannedWord, random(600), random(200));
     dancingWords.push(dw);
   }

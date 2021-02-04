@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js">  </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/Draggable.min.js">  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+  <style media="screen">
+
+  body
+  {
+  	background:#000;
+  	margin:0;
+  }
+
+  #parent
+  {
+  	height:2000px;
+    width:4200px;
+    /* margin-left:14%; */
+  	/* margin-top:100px; */
+  	background:#444;
+  	/* padding:10px; */
+  	/* border:solid 1px #fff; */
+  	position:relative;
+  }
+  #parent:after
+  {
+  	content:'';
+  	clear:both;
+  	display:block;
+  }
+
+  .child
+  {
+  	/* margin:20px;
+  	background:#00f; */
+  	width:100px;
+  	height:100px;
+  	position:relative;
+
+  }
+
+    </style>
+
+  </head>
+  <body>
+    <div id="parent">
+
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+
+    </div>
+    <script type="text/javascript">
+        gsap.registerPlugin(Draggable);
+        const parent = document.querySelector('#parent');
+         var parentDrag = Draggable.create(parent, {
+  	        type:'x, y'
+          });
+
+          // $("#child1").click(function() {
+          // 	console.log(parentDrag[0]);
+          //
+          // 	parentDrag[0].disable();
+          // });
+          //
+          // Draggable.create(child4, {
+          // 	type:'x',
+          // 	onDragStart:function() {
+          // 		parentDrag[0].disable();
+          // 	},
+          // 	onDragEnd:function() {
+          // 		parentDrag[0].enable();
+          // 	}
+          // });
+    </script>
+
+  </body>
+</html>

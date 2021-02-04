@@ -7,6 +7,7 @@ function drop() {
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
+    
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
@@ -33,7 +34,7 @@ $(function(){
         rotate = convertToRange(event.pageX,  [0, $( document ).width()], [0, 10]);
         // console.log(rotate);
         // $("#slanting a").lettering('lines').children("span").css({'display':'inline-block', '-webkit-transform':'rotate('+rotate+'deg)', 'background-color': 'black', 'color':'white', 'border-radius':'10px'});
-        $( "#dropd" ).css( {'display':'inline-block', '-webkit-transform':'rotate('+rotate+'deg)'});
+        $( ".dropd" ).css( {'display':'inline-block', '-webkit-transform':'rotate('+rotate+'deg)'});
 
         //sentences
         // rotatedangling = convertToRange(event.pageX,  [0, $( document ).width()], [50, 150]);

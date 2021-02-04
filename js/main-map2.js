@@ -37,23 +37,37 @@ function getContent(fragmentId, callback){
   callback(pages[fragmentId]);
 }
 
+// if(!location.hash) {
+//   location.hash = "#historymission";
+// }
 
+function loadContent(app, defaultfill){
 
-function loadContent(){
-
-  var contentDiv = document.getElementById("app"),
+  var contentDiv = document.getElementById(app),
       fragmentId = location.hash.substr(1);
 
   getContent(fragmentId, function (content) {
     contentDiv.innerHTML = content;
   });
-
+  if(!location.hash) {
+    location.hash = defaultfill;
+  }
 }
 
-if(!location.hash) {
-  location.hash = "#historymission";
+// var photos_of_artworks = ["<img src=\"assets/assets/photos_of_artworks/003ED716-4808-42D1-B33A-DE1E735FFAD0 (1).JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/10-_MG_0101.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/11-_MG_0064.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/13-_MG_0056.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/14-_MG_0061.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/16830834_10154197022171218_7116116036917948393_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/16831176_10154186550276218_2541505808634143748_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/2-_MG_0042.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/20139998_10154622090711218_340566215691348324_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/20180614_103313.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/21432871_10154756075851218_1578062184075167317_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/29982800_10155307741206218_6490099152925835360_o.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/3-_MG_0075.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/30167860_10155346131556218_5981872894091277852_o.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/33181655_10155420611196218_3057575647380504576_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/35431374_10155475161561218_3485935039575752704_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/36367616_10155510215106218_2899886472863678464_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/4-_MG_0076.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/42547260_10155728768361218_8759379929524600832_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/42573059_10155733748961218_6789263965399547904_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/43750736_10155772184916218_3368855257583976448_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/44723296_10155798101716218_5520515404797050880_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/46271280_10155845655806218_5953963555848978432_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/47324585_10155886984421218_5779121299859177472_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/47338995_10155886984361218_7515572819535593472_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/47389856_10155886984086218_3007957333318828032_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/47433506_10155886983956218_251662693881085952_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/48388453_10155921140261218_3058861813991997440_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/50301914_10155974437261218_2361104081373626368_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/6-_MG_0078.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/7-_MG_0079.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/71201454_687547195091360_2011442929721147392_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/71578367_431254844184614_1701949746739937280_n.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/8-_MG_0086.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/9-_MG_0087.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/A03E8987-E119-4B2B-8D5B-C4E7BB931075.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/Affective drawing.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/C057FB99-2C72-4D96-A237-669DE0F9BDC1.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/F19B013C-BA62-4A2C-9138-C7AC14E900E8.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/I Am Able to Scatter (2).mov\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG-1387.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG-4783.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG-8835.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_0092.png\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_0216.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_0302.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_1234.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_2616.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_2623.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_2688.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_3057.MOV\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_3177.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_3301.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_3435.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_5365.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_5788.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_6233.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_6234.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_6682.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_6684.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_6686.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_6694.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_6696.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_6698 (1).jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/IMG_7671.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/SenseLab.jpg\"/>", "<img src=\"assets/assets/photos_of_artworks/Take a Walk.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/no wordtime to spare.JPG\"/>", "<img src=\"assets/assets/photos_of_artworks/not a pale version.JPG\"/>"]
+// var photos_of_artworks=["#walkingdrawing", "#algo", "#filmspace", "#poetry", "#paintingfilm", "#ticstick", "#space", "#improvisation"];
+var photos_of_artworks=["<img src=\"assets/assets/accesislove/1-_MG_0071.jpg\"/>", "<img src=\"assets/assets/accesislove/13-_MG_0056.jpg\"/>", "<img src=\"assets/assets/accesislove/17-_MG_0054.jpg\"/>", "<img src=\"assets/assets/accesislove/3-_MG_0075.jpg\"/>", "<img src=\"assets/assets/accesislove/7-_MG_0079.jpg\"/>", "<img src=\"assets/assets/accesislove/10-_MG_0101.jpg\"/>", "<img src=\"assets/assets/accesislove/14-_MG_0061.jpg\"/>", "<img src=\"assets/assets/accesislove/18-_MG_0067.jpg\"/>", "<img src=\"assets/assets/accesislove/4-_MG_0076.jpg\"/>", "<img src=\"assets/assets/accesislove/8-_MG_0086.jpg\"/>", "<img src=\"assets/assets/accesislove/11-_MG_0064.jpg\"/>", "<img src=\"assets/assets/accesislove/15-_MG_0050.jpg\"/>", "<img src=\"assets/assets/accesislove/19-_MG_0070.jpg\"/>", "<img src=\"assets/assets/accesislove/5-_MG_0077.jpg\"/>", "<img src=\"assets/assets/accesislove/9-_MG_0087.jpg\"/>", "<img src=\"assets/assets/accesislove/12-_MG_0066.jpg\"/>", "<img src=\"assets/assets/accesislove/16-_MG_0052.jpg\"/>", "<img src=\"assets/assets/accesislove/2-_MG_0042.jpg\"/>", "<img src=\"assets/assets/accesislove/6-_MG_0078.jpg\"/>"]
+for (var i = 0; i< photos_of_artworks.length; i++){
+  const newDiv = document.createElement("div");
+  newDiv.setAttribute("id", "app"+i);
+  newDiv.setAttribute("class", "child");
+  newDiv.innerHTML = photos_of_artworks[i];
+  document.getElementById("parent").appendChild(newDiv);
+  // randomPosition();
+  // loadContent("app"+i, photos_of_artworks[i]);
+  // console.log("app"+i, photos_of_artworks[i])
 }
+//
+loadContent("app", "#historymission");
 
-loadContent();
-
-window.addEventListener("hashchange", loadContent)
+window.addEventListener("hashchange", loadContent);
