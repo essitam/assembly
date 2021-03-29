@@ -55,12 +55,12 @@ loadContent();
 
 
 window.addEventListener("hashchange", loadContent);
-
-$("button").click(function() {
-  $(".sidebar").toggleClass("open");
-  if ($(".sidebar").hasClass("open")) {
-    resizeBounds(true);
-  } else {
-    resizeBounds(false);
-  }
-});
+//
+// $("button").click(function() {
+//   $(".sidebar").toggleClass("open");
+//   if ($(".sidebar").hasClass("open")) {
+//     resizeBounds(true);
+//   } else {
+//     resizeBounds(false);
+//   }
+// });

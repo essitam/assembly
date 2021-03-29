@@ -67,8 +67,9 @@ function setup() {
 var canvas= createCanvas(600, 100);
 canvas.parent('canvasParent');
 frameRate(15);
-const words = ['Pacing', 'The Way', 'All Ways', 'Always', 'Water', 'Easy', 'Rally', 'Really', 'Dance', 'Languaging', 'Relation', 'Questions', 'Think', 'Stick', 'Patter', 'Pattern', 'Wanting', 'Open', 'SpaceTime', 'WaysWaves', 'Atmospheres']
+// const words = ['Pacing', 'The Way', 'All Ways', 'Always', 'Water', 'Easy', 'Rally', 'Really', 'Dance', 'Languaging', 'Relation', 'Questions', 'Think', 'Stick', 'Patter', 'Pattern', 'Wanting', 'Open', 'SpaceTime', 'WaysWaves', 'Atmospheres']
 // const words = [ 'Pacing', 'All Ways', 'Relation'];
+const words = ['Pace', 'Water', 'Languaging', 'Treasure', 'Rally', 'Truths', 'Twallowing', 'Tressing', 'Relation', 'Rhythm'];
   for (let o = 0; o < words.length; o++) {
     const spannedWord = createButton(words[o]);
     spannedWord.mousePressed(foo[o]);
