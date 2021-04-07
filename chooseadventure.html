@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <style media="screen">
+    html, body {
+      height:100%;
+      /* Disable Scroll */
+      overflow:hidden;
+      font-family: verdana;
+      text-align:center;
+      background-image:linear-gradient(#d7f542, #f5da42);
+
+    }
+
+    div {
+      height: 100%;
+    }
+
+    a{
+      border-style:solid;
+      padding: 0.5em;
+      background: lightgreen;
+    }
+
+  @keyframes pulse {
+    0%, 100% {
+      letter-spacing: 1px;
+    }
+    50% {
+      letter-spacing: 4px;
+    }
+  }
+/* The element to apply the animation to */
+p {
+  animation-name: pulse;
+  animation-duration: 9s ;
+  animation-iteration-count: infinite;
+}
+    </style>
+
+  </head>
+  <body>
+    <!-- trials of time
+
+    v1
+    words over timeless tracks and watching
+    timing tacit implosive breathing immaculate strides
+    Hasting the last pace to face thinning possibilities
+    mastering streams treasuring havoc to reassemble samples
+
+    v2
+    words over timeless tracks and watching
+    timing tacit implosive breathing immaculate strides
+    Hasting the last pace to face thinning possibilities
+    messing vessels nesting hope to treasure motions teasing meanings timing modes tinted new
+
+    v3
+    words over timeless tracks and watching
+    water wars with tools that statue time into place
+    toying teaches to bring ease about waters warping easy thoughts
+    wait
+
+    v4
+    words over timeless tracks and watching
+    water wars with tools that statue time into place
+    toying teaches to bring ease about waters warping easy thoughts
+    thinking tears time of water. I love water -->
+  <script type="text/javascript">
+    var secondpart;
+    var thirdpart;
+    var fourthpart;
+    function setup(){
+      createCanvas(600,600);
+    }
+    function draw(){
+      background(0);
+      fill(255);
+      text('words over timeless tracks and watching', 10, 10);
+      text(secondpart, 20, 10);
+      createButton()
+
+    }
+  </script>
+<br>
+<div id="sleep" class="step" data-x="-1000" data-y="-1500">
+<h1>trials of time</h1>
+    <p> words over timeless tracks and watching</p>
+    <a href="#wakeup">timing tacit implosive breathing immaculate strides</a>
+    <a href="#water">water wars with tools that statue time into place</a>
+</div>
+
+<div id="wakeup" class="step" data-x="0" data-y="-1500">
+  <h1>trials of time</h1>
+  <p>words over timeless tracks and watching</p>
+  <p>timing tacit implosive breathing immaculate strides</p>
+  <p>Hasting the last pace to face thinning possibilities</p>
+  <a href="#more">  mastering streams treasuring havoc to reassemble samples</a>
+  <a href="#vessels">    messing vessels nesting hope to treasure motions teasing meanings timing modes tinted new</a>
+</div>
+
+<div id="vessels" class="step" data-x="0" data-y="-1500">
+  <h1>trials of time</h1>
+<p>words over timeless tracks and watching</p>
+<p>timing tacit implosive breathing immaculate strides</p>
+<p>Hasting the last pace to face thinning possibilities</p>
+<p>messing vessels nesting hope to treasure motions teasing meanings timing modes tinted new</p>
+</div>
+<div id="more" class="step" data-x="0" data-y="-1500" data-z="4500">
+  <h1>trials of time</h1>
+  <p>words over timeless tracks and watching</p>
+  <p>timing tacit implosive breathing immaculate strides</p>
+  <p>Hasting the last pace to face thinning possibilities</p>
+  <p>  mastering streams treasuring havoc to reassemble samples</p>
+</div>
+
+<div id="water" class="step" data-x="0" data-y="-2500">
+  <h1>trials of time</h1>
+  <p>words over timeless tracks and watching</p>
+  <p>water wars with tools that statue time into place</p>
+  <p>toying teaches to bring ease about waters warping easy thoughts</p>
+  <a href="#wait"> wait </a>
+  <a href="#love">thinking tears time of water. I love water</a>
+</div>
+<div id="wait" class="step" data-x="0" data-y="-1500" data-z="1500">
+  <h1>trials of time</h1>
+  <p>words over timeless tracks and watching</p>
+  <p>water wars with tools that statue time into place</p>
+  <p>toying teaches to bring ease about waters warping easy thoughts</p>
+  <p>wait</p>
+</div>
+<div id="love"  class="step" data-x="850" data-y="3000" data-z="1000" data-rotate="90">
+  <h1>trials of time</h1>
+  <p>words over timeless tracks and watching</p>
+  <p>water wars with tools that statue time into place</p>
+  <p>toying teaches to bring ease about waters warping easy thoughts</p>
+  <p>thinking tears time of water. I love water</p>
+</div>
+<!-- <div id="oak" class="step" data-x="850" data-y="3000" data-z="1000" data-rotate="90">
+  <H1>Hiya Link! You're off to save Princess Zelda eh? Why not take a Pokemon with you!</h1>
+
+  <a href="#empty">Choose Bulbasaur</a>
+  <a href="#empty">Choose Charmander</a>
+  <a href="#empty">Choose Squirtle</a>
+  <a href="#sleep">Go back to sleep</a>
+</div>
+
+<div id="empty">
+  <h1>The Pokeball is empty</h1>
+  <p>I'm sorry Ash. It looks like that one is already chosen.</p>
+
+  <a href="#oak">Choose again.</a>
+  <a href="#pika">What else you got?</a>
+</div>
+
+<div id="pika">
+  <h1>I think there is one more Pokemon..</h1>
+  <p>Here is one more Pokeball. But I must warn you he is a fiesty little fella</p>
+
+  <a href="#open-pika">Open Pokeball</a>
+    <a href="#oak">Nah.</a>
+</div>
+
+<div id="open-pika">
+  <h1>Pikachu!</h1>
+  <p>Congratuations! You recieved a Lv 5 Pikachu! Fork this pen to continue the adventure!</p>
+
+  <a href="#sleep">Start over</a>
+</div>
+
+<div id="grass">
+  <h1>You recieved Bulbasaur</h1>
+  <P> Go grass type! I hope we don't enounter a Charmander..</p>
+
+  <a href="#leave-town">Start our journey as a Pokemon trainer</a>
+</div> -->
+  </body>
+</html>

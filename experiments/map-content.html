@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js">  </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/Draggable.min.js">  </script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+  <style media="screen">
+  body
+  {
+  	/* background:#000; */
+  	margin:0;
+  }
+  .map-container{
+    background-color:#bbb;
+    height:200%;
+    width:100%;
+    overflow: hidden;
+    position:relative;
+  }
+  #parent
+  {
+  	height:4000px;
+    width:5200px;
+  	/* background:#444; */
+  	position:relative;
+    background-image: url('images/11-_MG_0064.jpg');
+  }
+  #parent:after
+  {
+  	content:'';
+  	clear:both;
+  	display:block;
+  }
+  .child
+  {
+
+  	width:100px;
+  	height:100px;
+  	position:relative;
+
+  }
+    </style>
+
+  </head>
+  <body>
+<div class="map-container">
+    <div id="parent">
+      <div id="parentChild">
+
+      </div>
+      <!-- <div id="app">
+
+      </div> -->
+        <!-- <div class="child ball" id="app1">
+        </div>
+        <div class="child ball" id="app2">
+          <img src="assets/assets/improvisaton-work-in-studio/thumbnails/35649189_10155486773811218_4130941524303151104_n.jpg"/>
+        </div>
+        <div class="child ball" id="app3">
+          <img src="assets/assets/thumbnails/reforming-dx/IMG_6686.jpg"/>
+        </div>
+        <div class="child ball" id="app4">
+          <img src="assets/assets/waterandice/20180614_103349.jpg"/>
+        </div>
+        <div class="child ball" id="app5">
+          <img src="assets/assets/durationdetail/thumbnails/33621387_10155429879596218_2811378831959523328_n.jpg"/>
+        </div>
+        <div class="child ball" id="app6">
+          <img src="assets/assets/mobile-writing/thumbnails/IMG_7692.jpg"/>
+        </div>
+        <div class="child ball" id="app7">
+          <img src="assets/assets/relationshapes/thumbnails/22384253_10154837347886218_7027855923325760774_o.jpg"/>
+        </div> -->
+
+    </div>
+  </div>
+
+    <script type="text/javascript">
+const mapContainer = document.querySelector('.map-container');
+        gsap.registerPlugin(Draggable);
+        const parent = document.querySelector('#parent');
+         var parentDrag = Draggable.create(parent, {
+           bounds: mapContainer,
+           type:"xy"
+          });
+//wobble
+          var tl = gsap.timeline ()
+          .to('.ball',{
+            x: "random(-20, 20, 5)", //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
+            y: "random(-20, 10, 3)",
+            duration:1,
+            ease:"none",
+            repeat:-1,
+            repeatRefresh:true // gets a new random x and y value on each repeat
+          })
+
+
+//random position
+  function randomPosition(){
+          const divs = document.querySelectorAll('.child');
+
+          // get window width and height
+      //     var winWidth = window.innerWidth;
+      // var winHeight = window.innerHeight;
+        var winWidth = 4000;
+        var winHeight = 2000;
+          // i stands for "index". you could also call this banana or haircut. it's a variable
+          for ( var i=0; i < divs.length; i++ ) {
+
+              // shortcut! the current div in the list
+              var thisDiv = divs[i];
+
+              // get random numbers for each element
+              randomTop = getRandomNumber(0, winHeight);
+              randomLeft = getRandomNumber(0, winWidth);
+
+              // update top and left position
+              thisDiv.style.top = randomTop +"px";
+              thisDiv.style.left = randomLeft +"px";
+
+          }
+        }
+
+          // function that returns a random number between a min and max
+          function getRandomNumber(min, max) {
+
+            return Math.random() * (max - min) + min;
+
+          }
+
+
+    </script>
+<script type="text/javascript" src="js/main-map.js"></script>
+  </body>
+</html>

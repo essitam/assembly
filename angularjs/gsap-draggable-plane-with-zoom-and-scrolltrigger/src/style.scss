@@ -1,0 +1,80 @@
+body { 
+  font-family: "Helvetica", sans-serif; 
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+.planeWrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: grey;
+  overflow: scroll;
+  z-index: 0;
+}
+.plane {
+  position: relative;
+  width: 406.25em;
+  height: 406.25em;
+  z-index: 0;
+  overflow: hidden;
+  font-size: 1em;
+  margin: auto;
+  > * {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.planeContent {
+  z-index: 1;
+}
+.startScreen {
+  position: absolute;
+  top: 200em;
+  left: 200em;
+  width: 60em;
+  height: 30em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: white 1px solid;
+  h1 {
+    font-size: 2em;
+    color: white;
+  }
+}
+.planeBackground {
+  z-index: 0;
+  background: url("https://mfru.markodamis.com/assets/css/img/grid.png") repeat;
+  background-size: 6.25em 6.26em;
+  .randomElement {
+    position: absolute;
+    width: 35em;
+    height: 35em;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 70%);
+    opacity: 0.13;
+    will-change: opacity;
+  }
+}
+.controls {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  z-index: 1;
+  padding: 0 0 0 1em;
+  > * {
+    padding: 1em;
+    margin: 1em 1em 0 0;
+    border: 1px grey solid;
+    cursor: pointer;
+    color: white;
+    background: black;
+  }
+}

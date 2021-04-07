@@ -17,7 +17,15 @@
 .contCentre {
   position: absolute;
   top: 10%;
-  left: 25%;
+  left: 10%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+.contCentre2 {
+  position: absolute;
+  top: 10%;
+  /* left: 25%; */
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js">  </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/Draggable.min.js">  </script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <style media="screen">
+      .map{
+        background-color: blue;
+      }
+      .map-container{
+        background-color:#bbb;height:100%;width:100%;overflow:hidden;position:relative;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="map-container" id="container" >
+      <div class="map">
+        <div id="map-canvas" class="map-canvas" width="4000" height="2500">
+          hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel  hllelelelel
+
+
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+        gsap.registerPlugin(Draggable);
+      const mapContainer = document.querySelector('.map-container');
+      const map = document.querySelector('.map');
+      const mapCanvas = document.querySelector('.map-canvas');
+      const mapWidth = map.clientWidth;
+      const mapHeight = map.clientHeight;
+
+      let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+      let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+      function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      const randomX = -1*(getRandomArbitrary(0,4000 - vw));
+      const randomY = -1*(getRandomArbitrary(0,2500 - vh));
+
+
+
+      Draggable.create('.map', {
+             bounds: mapContainer,
+             edgeResistance:0.65,
+             type:"x,y",
+             zIndexBoost: false
+         });
+
+         const windowHeight = window.innerHeight;
+
+         // $('.mobile-wrapper').css('height', windowHeight)
+
+         gsap.set(map, { x: randomX, y: randomY, force3D: true, transformOrigin: "left top" });
+         resizeBounds(true);
+         TweenMax.set(".draggable", {x: 125});
+         TweenLite.from(draggable.target, 0.3, {x:x, y:y});
+
+        function setup(){
+          var canv = createCanvas(4000, 2500);
+          canv.parent(mapCanvas);
+          background('green');
+        }
+        function draw(){
+          ellipse(100, 100, 100, 100);
+        }
+
+    </script>
+
+  </body>
+</html>

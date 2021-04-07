@@ -1,6 +1,12 @@
-#footer {
-position: absolute;
+#footer{
+position: fixed;
 bottom: 30px;
 width: 100%;
-z-index: 999999;
+z-index: 9999999999;
+}
+.topper{
+position: fixed;
+top: 30px;
+width: 100%;
+z-index: 9999999999;
 }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js">  </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/Draggable.min.js">  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+  <style media="screen">
+
+body {
+  background: #333;
+  color:#EEE;
+  margin:0;
+  padding:0;
+}
+
+#wrapper {
+  width:100%; /* fit width of viewport */
+  height:100%; /* fit height of viewport */
+  overflow:hidden;
+  margin:0;
+  padding:0;
+  border:1px solid #777;
+  position:absolute;
+}
+
+#map {
+  position:relative; /* what #map img is relative to */
+}
+
+#map-canvas{
+  position:absolute; /* need this to make dragging easy */
+  top:0;
+  left:0;
+  border:0 none transparent;
+  /* makes the image resize */
+  width:100%; /* maybe remove this width once you add the big image ? */
+  max-width:100%;
+  height:auto;
+}
+
+    </style>
+
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="map">
+        <div id="map-canvas" width="4200" height="2000">
+          <!-- <img src="assets/assets/photos_of_artworks/7-_MG_0079.jpg"> -->
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+        gsap.registerPlugin(Draggable);
+
+        Draggable.create("#map-canvas", {
+           type:"x,y",
+             bounds:"#wrapper",
+             edgeResistance:0.5
+        });
+        // Draggable.create('img');
+
+        // TweenMax.set( "#map-canvas img" , { x:this.x , y:this.y } )
+
+
+                function setup(){
+                  var canv = createCanvas(4000, 2500);
+                  canv.parent('map-canvas');
+                  // background('green');
+                }
+                function draw(){
+                  ellipse(mouseX, mouseY, 100, 100);
+
+                }
+    </script>
+
+  </body>
+</html>
