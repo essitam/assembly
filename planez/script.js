@@ -47,6 +47,8 @@ $(".go-to-start-screen").click({placewheretogo: ".newWork"}, goToPlace);
 $(".go-to-random").click({placewheretogo: ".lexicon"}, goToPlace);
 $(".dropbtn").click({placewheretogo: ".startScreen"}, goToPlace);
 $(".go-to-pacing").click({placewheretogo: ".pacingsnail"}, goToPlace);
+$(".go-to-publications").click({placewheretogo: ".publications"}, goToPlace);
+$(".go-to-participants").click({placewheretogo: ".participants"}, goToPlace);
 
 
 $(".zoom-in").click(function() {

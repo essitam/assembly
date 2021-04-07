@@ -17,7 +17,8 @@
   <link rel="stylesheet" href="css/margin.css">
   <!-- for the snail footer and the heading to stay fixed -->
   <link rel="stylesheet" href="css/footer.css">
-
+  <!-- for the snail slider -->
+  <link rel="stylesheet" href="css/slider.css">
   <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
@@ -66,12 +67,13 @@
 
 <!-- sidebar -->
 <div class="controls">
-  <br><br><br>
-  <div class="dropd go-to-pacing">snail</div>
+  <br><br><br><br><br><br><br>
+  <!-- <div class="dropd go-to-pacing">snail</div> -->
+  <div id="toggle"><img src="../../../images/snail.png" alt="" width="100px"></a></div>
   <div class="dropd go-to-start-screen">new Work</div>
   <div class=" dropd go-to-random">lexicon</div>
-  <div class="dropd">participants</div>
-  <div class="dropd">publications</div>
+  <div class="dropd go-to-participants">participants</div>
+  <div class="dropd go-to-publications">publications</div>
   <div onclick="drop()" class="dropd dropbtn">projects</div>
   <div class="dropdown" id="dropd">
     <div id="myDropdown" class=" dropdown-content">
@@ -107,7 +109,9 @@
       <button class="circle cc5" id="changeColor5"></button><br>
   </div>
 </div>
-
+<div id="slider" class="pacingsnail">
+  <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Chain2-text.html" width="" height=""></iframe>
+</div>
 <div class="planeWrapper">
   <div class="planez" data-zoom="10">
       <div class="planeContent">
@@ -167,442 +171,71 @@
           <!-- <iframe class="chooseadv" src="chooseadventure.html"></iframe> -->
         </div>
 
-        <div class="pacingsnail">
+        <!-- <div class="pacingsnail">
           <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Chain2-text.html" width="" height=""></iframe>
-        </div>
+        </div> -->
 
         <div class="lexicon" id="parentChild">
         </div>
 
-        <div class="typologyofwater">
-            <b>A Typology of Water</b>
-            <br><br><br>
-            Rain is mastering thought <br>
-            with landings that <br>
-            eagerly run and toward <br>
-            more thoughts go
-            <br><br>
-            Stream of thought <br>
-            is the pace <br>
-            of the thinking apparition <br>
-            of the way thought <br>
-            is landing
-            <br><br>
-            Lake is the pool <br>
-            of thought <br>
-            and the always <br>
-            pleasing calm.
-            <br><br>
-            Pond the simple pause <br>
-            of words <br>
-            opening insides <br>
-            puttering to more boredom.
-            <br><br>
-            Bottom of ponds are still.
-            <br><br>
-            Ocean is like the inside <br>
-            of the palpitating heart <br>
-            where love is pleasing place of pampering <br>
-            universe in my head.
-            <br><br>
-            In my head is my heart.
-          </div>
-          <div class="">
-            Imane
-            <br><br>
-            <b>The Future Is a Hesitating Alphabet</b>
-            <br><br><br>
-            The future is aspiring to talk <br>
-            these past same hopes I may have.
-            <br><br>
-            The future is beside the savoring <br>
-            of lost shame and victory of truth.
-            <br><br>
-            The future is creativity of masterminds <br>
-            proudly holding secrets of time.
-            <br><br>
-            The future is dosing stories housed <br>
-            in our hopeful mottos of life.
-            <br><br>
-            The future is eternally trying <br>
-            to hysterically satisfy our reasons to try.
-            <br><br>
-            The future is foretelling hidden statistics <br>
-            stored in the computerized mind.
-            <br><br>
-            The future is going heading toward <br>
-            the missing words of the finish line.
-            <br><br>
-            The future is hiding treasures trying <br>
-            to escape shaped preaching dogma.
-            <br><br>
-            The future is immensely presenting <br>
-            streams of hope trimmed by mortified eyes.
-            <br><br>
-            The future is justifying <br>
-            the hassles hosting our life.
-            <br><br>
-            The future is kissing the truth <br>
-            paving possibilities shaping <br>
-            that potential map of space time.
-            <br><br>
-            The future is lost sailing <br>
-            the prejudicial ocean <br>
-            striving to defy realm of reality.
-            <br><br>
-            The future is mocking omnipresent <br>
-            hopes telling our troubles to loose their past.
-            <br><br>
-            The future is near and far looking <br>
-            back and forth spiraling <br>
-            in gravitational stellar time.
-            <br><br>
-            The future is operating distorted thinking <br>
-            travelling through the time machine of our mind.
-            <br><br>
-            The future is philosophically striving <br>
-            to hire hesitating theoretical minds.
-            <br><br>
-            The future is questioning progression <br>
-            powered by moving tornadoes of doubt.
-            <br><br>
-            The future is ropes holding <br>
-            procrastinators from hoping to hide
-            <br><br>
-            The future is spoiling those hopeful moments <br>
-            mesmerizing meaningful stories.
-            <br><br>
-            The future is totally mastering the past <br>
-            present and pretentiously waiting.
-            <br><br>
-            The future is up pursued by premonitions <br>
-            tracking postponed ambitions.
-            <br><br>
-            The future is visiting lost teasing <br>
-            opportunities testing priorities in line.
-            <br><br>
-            The future is worthy of trust <br>
-            holding truthful uplifting turns.
-            <br><br>
-            The future is expanding trespassing <br>
-            postulated philosophical ideals.
-            <br><br>
-            The future is yielding infinite phobias <br>
-            pounding terrifying prophecies.
-            <br><br>
-            The future is zealously showing off <br>
-            theses hypothesizing the hazard of paths.
-          </div>
-          <div class="thinkingmindhoping">
-            <b>I'm a Thinking Mind Hoping</b>
-            <br><br><br>
-            I'm a hesitating soul trying to <br>
-            impress myself thinking to <br>
-            imagine tomorrow talks to <br>
-            imminently master trials to <br>
-            Immortalize the traces hope to <br>
-            Impregnate people striving to <br>
-            Imitate the stigma pretending to <br>
-            Imply heart mortifying lies to <br>
-            Impeach the truth of thinking to <br>
-            Implement our ways of hoping to <br>
-            Impose the reality that fragments to <br>
-            Immense hidden possibilities to <br>
-            immunize the insecurities of skeptics <br>
-            I'm spreading the pride hoping to <br>
-            Improve the hindered potential <br>
-            held hostage by hasty hearts.
-          </div>
-          <div class="movingtrapped">
-            <b>Our Moving Trapped Days</b>
-            <br><br><br>
-            Trapped hampered thoughts <br>
-            stacked hacking my creative <br>
-            hopes to show those missing <br>
-            possibilities masking healing <br>
-            strides suffocate spreading <br>
-            teasing lost sobbing trust <br>
-            resembling dusty piles <br>
-            mock shoved moving <br>
-            thoughts smooth slow <br>
-            puzzling hopes troubling <br>
-            the poise looping swallowed <br>
-            tones to move my voice testing <br>
-            thoroughly the doubts probing <br>
-            hours hesitating to passion <br>
-            motion invisible to teach <br>
-          </div>
-          <div class="motionstotalmess">
-            Motions Total Mess
-            <br><br><br>
-            Mastering theses thoughtfully <br>
-            motivate the mastery of hate <br>
-            pressuring thinking shedding
-            <br><br>
-            provocative hostile destructive <br>
-            trapped reasoning hesitating <br>
-            potentially to modify troubled
-            <br><br>
-            motions totally representing <br>
-            obstructed notions sorting <br>
-            man-made most messy
-            <br><br>
-            prepared properties <br>
-            that perfection <br>
-            belongs
-            <br><br>
-            to those <br>
-            who motion the <br>
-            pretentious qualities
-            <br><br>
-            setting the hierarchy <br>
-            pre-selecting those only <br>
-            who hold the troubled similar
-            <br><br>
-            narcissistic tormented spirits <br>
-            machined prefabricated trimmed <br>
-            appreciation of living diversified
-            <br><br>
-            thinking that matter making <br>
-            mastery of meaning possibly <br>
-            pitiful if mankind is to motion
-            <br><br>
-            true meaningful living
-          </div>
-          <div class="">
-            <b>Thinking Stresses Poise</b>
-            <br><br><br>
-            Mind same <br>
-            as troubles <br>
-            that disrupt <br>
-            the motion <br>
-            that streams in moving harmony omnipresent doubts reshaping <br>
-            mind mastery <br>
-            weaving truths <br>
-            in braided lies <br>
-            trying to heal <br>
-            the poise that postpones peaceful strides momentarily treasuring <br>
-            thinking stimming <br>
-            trusts mindful <br>
-            rhythmic <br>
-            styles <br>
-            tracking the traces marked tinting imprinted thesis stripping <br>
-            traveling unruly <br>
-            thoughts tampered <br>
-            shadowing the theses <br>
-            that shout trawling <br>
-            temptations to <br>
-                   shove stored mostly havok titrating hassles hustling
-                   muzzled pieces
-                   of truth
-
-            Reshaping Resentment
-
-
-            Unclear 	hopes
-            mold 					mind
-            titrating 			trials
-            treating
-            pestering 	pride
-            mingling 	strides
-            			teasing 			tides
-            					pondering
-            inspiration 		tracking
-            glorification				resonating
-            proliferating
-            echoes
-            misreaching
-            thinking
-            reassembling
-            sounds
-                that bounce trusted tacit 				shades
-            				morselling
-            instincts 							hasting
-            that revitalize
-            							tastes
-            				mistaking
-            thriving
-            vestibule 			reshaping samples
-            			testing
-            dormant meanings 			matricing ornaments
-            lining
-            inspiring gut feasting feeling
-            			interrupting
-            resentment
-            stagnant settled
-            indifferent
-
-
-            Note: reshaping reading is part of reshaping thinking / reassembling troubled reasoning potentially piling restructuring ideas in motion other than linear stressed thinking / parsing inspiration hoping leaves truth-carved motions in free forms of meaning
-
-            Chris: Imane is a poet of simultaneity, gathering motioned language around sound clusters, reassembling stagnant thought into dynamic structures that command a persistent present, an exuberant now that forcefully seeks hidden truth by excavating (parsing) (carving) (morselling) (pestering) (matricing) (feasting) (reshaping) its own territories.
-
-
-
-            Think
-
-
-            tressing reasons
-            trampling savors
-            inspire actions
-            to reveal truth
-
-            traveling thinking
-            tracks traces
-            inspiring imminent
-            truth informing
-
-            treasures saturating thens hysteria
-
-            trusting intrusive
-            	madness tressing
-            		voids filled with
-            most creasing
-
-            timed tucked
-            	plucking truth
-            		filaments reshining
-            			resigning trespassers
-            rewinding thoughts
-            	tossing flossed
-            titrated tolls
-            	diming timing
-            		reminding total
-            					poise
-            transmit rails
-            	sailing doubts
-            		troubling trails
-            			trapping trials
-
-            in amplified short
-
-            reality
-
-            Body Clock
-
-            (YEAR)
-            Reasoning tracks
-            time streaming
-            the interconnected
-            thoughts sampling
-            traces timing
-            			the pace of reality
-            truth is reshaping
-            			infinite invisible
-            stories mastered
-            			mindfully stressed
-            mostly mostly
-            			by emotions
-
-            (MONTH)
-            deciding the shape of traveling
-            time your inner clock hesitates
-            fine-tuning the rhythm facets
-            inspired stellar hammocks
-
-            (WEEK)
-            thoughtfully motioning
-            imagination dreaming
-            mindfully treasuring
-
-            the sounds of time
-
-            mastering moving
-            meaning creased in
-            trapped shadowed corners
-
-            						(DAY)
-            waiting for release to damp
-            estuaries intersecting flows
-            to tress motions trespassing
-
-            tinted walls to listen tracking
-            treasures flowing reaching truth
-            to lose taped trapped daring trees
-
-            offering doubt hopeful hampered
-            minds thinking routes
-            to be their drive
-
-            motion omnipresent
-            in the mind defines time
-
-
-        </div>
         <div class="participants">
-          <b>Participants</b>
-          Estee Klar
-          Jessamyn Polson
-          Ellen Bleiwas
-          Jean Malig
-          Chris Martin
-          Adam Wolfond
-          Matisse A-M
-          Erin McKean
-          Eva Kolcze
-          Pascal Cheng
-          Aviv Nisinzweig
-          Imane Boukeila
-          Rachida Boukeila
-          Rid N, Lucas Maddog, Sparkle, Carmine Closs, Aiden Frazer, Jacob Frazer, Y.P., Raya Shields
+          <h1>Participants</h1><br>
+          Estee Klar <br>
+          Jessamyn Polson <br>
+          Ellen Bleiwas <br>
+          Jean Malig <br>
+          Chris Martin <br>
+          Adam Wolfond <br>
+          Matisse A-M <br>
+          Erin McKean <br>
+          Eva Kolcze <br>
+          Pascal Cheng <br>
+          Aviv Nisinzweig <br>
+          Imane Boukeila <br>
+          Rachida Boukeila <br>
+          Rid N  <br>
+          Lucas Maddog  <br>
+          Sparkle <br>
+          Carmine Closs <br>
+          Aiden Frazer <br>
+          Jacob Frazer <br>
+          Y.P. <br>
+          Raya Shields <br>
         </div>
+
         <div class="publications">
-          <b>Publications</b>
-          https://yorkspace.library.yorku.ca/xmlui/handle/10315/37776
-          https://poets.org/poet/adam-wolfond
-
-    http://www.unrestrictedinterest.com/mission/unrestricted-writer-adam-wolfond-the-academy-of-american-poets/2019/10/1
-
-    http://www.unrestrictedinterest.com/
-
-    http://www.unrestrictedinterest.com/store/in-way-of-music-water-answers-toward-questions-other-than-what-is-autism-by-adam-wolfond
-
-    http://www.unrestrictedinterest.com/store/there-is-too-music-in-my-ears
-
-    https://poetrysociety.org/features/on-poetry/on-the-listenting-world
-
-    https://www.criticaldistance.ca/program/critical-distance-at-edition-toronto/
-
-    https://chrismartin.substack.com/p/the-maker-of-wanting-space
-
-    https://brooklynrail.org/events/2020/12/09/radical-poetry-reading-with-chris-martin/
-
-    https://www.restoryingautism.com/publications/mad-mothering-learning-from-the-intersections-of-madness-mothering-and-disability-hawmn
-
-    https://www.researchgate.net/publication/276319084_Review_of_the_Film_Wretches_and_Jabberers
-
-    https://atrium.lib.uoguelph.ca/xmlui/handle/10214/16258
-
-    https://www.liebertpub.com/doi/full/10.1089/aut.2020.29014.njw
-
-    https://dsq-sds.org/article/view/1074/1223
-
-    https://read.dukeupress.edu/social-text/article-abstract/36/3%20(136)/1/135656/Me-Lo-Dijo-un-PajaritoNeurodiversity-Black-Life?redirectedFrom=fulltext
-
-
-    https://www.restoryingautism.com/publications/beyond-disordered-brains-and-mother-blame-critical-issues-in-autism-and-mothering
-
-    https://www.routledge.com/The-Routledge-Companion-to-Motherhood/Hallstein-OReilly-Giles/p/book/9781138052413
-
-    https://irp-cdn.multiscreensite.com/c987fdaf/files/uploaded/Session%202%20-%20A%20New%20View%20of%20Autism-%20Douglas-Shields.pdf
-
-    https://bodiesintranslation.ca/outside-the-lines/
-
-    https://yorkspace.library.yorku.ca/xmlui/handle/10315/33677
-
-    https://www.amazon.com/Concepts-Normality-Autistic-Typical-Spectrum/dp/1843106043
-
-    https://www.amazon.ca/Between-Interruptions-Women-Truth-Motherhood/dp/1554701023
-
-    https://www.cbc.ca/news/more-information-links-and-interview-transcript-for-estee-klar-wolfond-1.782718
-          http://inflexions.org/diversityindiversity/index.html
+          <div class="">
+          <h1>Publications</h1> <br>
+          <a href="https://yorkspace.library.yorku.ca/xmlui/handle/10315/37776"><b>Neurodiversity in Relation: An Artistic Intraethnography</b></a> <br>
+          <a href="https://poets.org/poet/adam-wolfond">Poetry</a> <br>
+          <a href="http://www.unrestrictedinterest.com/mission/unrestricted-writer-adam-wolfond-the-academy-of-american-poets/2019/10/1"><b>Tall Ideas</b> <i>by Adam Wolfond</i></a> <br>
+          <a href="http://www.unrestrictedinterest.com/"><b>Unrestricted Interest</b></a> <br>
+          <a href="http://www.unrestrictedinterest.com/store/in-way-of-music-water-answers-toward-questions-other-than-what-is-autism-by-adam-wolfond"><img width="200px" src="assets/assets/publications/IMG_7407.jpeg" alt="In Way of Music Water Answers Toward Questions Other Than What Is Autism by Adam Wolfond">In Way of Music Water Answers Toward Questions Other Than What Is Autism by Adam Wolfond</a> <br>
+          <a href="http://www.unrestrictedinterest.com/store/there-is-too-music-in-my-ears"><img width="200px" src="assets/assets/publications/IMG_7446.jpeg" alt="There Is Too Music In My Ears by Adam Wolfond"> There Is Too Music In My Ears by Adam Wolfond</a> <br>
+          <a href="https://poetrysociety.org/features/on-poetry/on-the-listenting-world"><b>The Listening World: Neurodivergent Poets from Unrestricted Interest</b> <i>by Chris Martin<i></a> <br>
+          <a href="https://www.criticaldistance.ca/program/critical-distance-at-edition-toronto/"><b>Critical Distance at Edition Toronto 2019</b></a> <br>
+          <a href="https://chrismartin.substack.com/p/the-maker-of-wanting-space"><b>The Maker of Wanting Space</b><i>by Chris Martin</i> </a> <br>
+          <a href="https://brooklynrail.org/events/2020/12/09/radical-poetry-reading-with-chris-martin/"><b>Radical Poetry Reading with Chris Martin</b><i>Featuring Hannah Emerson, Adam Wolfond, Lauren Russell, and Farid Matuk.</i></a> <br>
+          <a href="https://www.restoryingautism.com/publications/mad-mothering-learning-from-the-intersections-of-madness-mothering-and-disability-hawmn"><b>Arguments in autism debate in Ontario have missed the mark</b></a> <br>
+          <a href="https://www.researchgate.net/publication/276319084_Review_of_the_Film_Wretches_and_Jabberers"><b>Review of the Film Wretches and Jabberers</b><i>Estée Klar</i></a> <br>
+          <a href="https://atrium.lib.uoguelph.ca/xmlui/handle/10214/16258"><b>Re-storying autism: A body becoming disability studies in education approach</b></a> <br>
+          <a href="https://www.liebertpub.com/doi/full/10.1089/aut.2020.29014.njw"><b>Toward a Neuroqueer Future: An Interview with Nick Walker</b></a> <br>
+          <a href="https://dsq-sds.org/article/view/1074/1223"><b>Disability Studies Quarterly</b></a> <br>
+          <a href="https://read.dukeupress.edu/social-text/article-abstract/36/3%20(136)/1/135656/Me-Lo-Dijo-un-PajaritoNeurodiversity-Black-Life?redirectedFrom=fulltext"><b>Me Lo Dijo un Pajarito: Neurodiversity, Black Life, and the University as We Know It </b><i>Erin Manning</i></a> <br>
+          <a href="https://www.restoryingautism.com/publications/beyond-disordered-brains-and-mother-blame-critical-issues-in-autism-and-mothering"><b>Beyond disordered brains and mother blame: Critical issues in autism and mothering</b></a> <br>
+          <a href="https://www.routledge.com/The-Routledge-Companion-to-Motherhood/Hallstein-OReilly-Giles/p/book/9781138052413"><b>The Routledge Companion to Motherhood</b></a> <br>
+          <a href="https://irp-cdn.multiscreensite.com/c987fdaf/files/uploaded/Session%202%20-%20A%20New%20View%20of%20Autism-%20Douglas-Shields.pdf"><b>A New View of Autism: 5 Principles of Inclusive Practice & Design</b></a> <br>
+          <a href="https://bodiesintranslation.ca/outside-the-lines/"><b>outside the lines</b></a> <br>
+          <a href="https://yorkspace.library.yorku.ca/xmlui/handle/10315/33677"><b>outside the lines</b></a> <br>
+          <a href="https://www.amazon.com/Concepts-Normality-Autistic-Typical-Spectrum/dp/1843106043"><b>Concepts of Normality: The Autistic and Typical Spectrum</b></a> <br>
+          <a href="https://www.amazon.ca/Between-Interruptions-Women-Truth-Motherhood/dp/1554701023"><b>Between Interruptions: 30 Women Tell the Truth About Motherhood </b></a> <br>
+          <a href="https://www.cbc.ca/news/more-information-links-and-interview-transcript-for-estee-klar-wolfond-1.782718"><b>More information, links and interview transcript for Estee Klar-Wolfond</b></a> <br>
+          <a href="http://inflexions.org/diversityindiversity/index.html"><b>Inflexions: Diversity in Diversity</b></a> <br>
         </div>
-
       </div>
 
       <div class="planeBackground">
         <!-- <canvas id="canvas" resize></canvas> -->
-
       </div>
   </div>
 </div>
@@ -625,6 +258,7 @@
 <script type="text/javascript" src="js/randomPosition.js"></script>
 <script type="text/javascript" src="js/lexicon.js"></script>
 <script type="text/javascript" src="p5.js/harmonic-onclick2.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
 <script type="text/javascript">
 var tl = gsap.timeline ()
 .to('.ball',{

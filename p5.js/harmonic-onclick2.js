@@ -48,17 +48,24 @@ var eld2 = false;;
 var list = ["1", "2", "3"];
 var links = ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'];
 
-var pacingProjects=["walking-drawing machines", "algo-rhythms", "the film S/Pace", "Poetry chapbooks", "Painting on Film", "Tic and Stick", "S/Pace","Improvisation Work in Studio"]
-var pacingLinks=["#walkingdrawing", "#algo", "#filmspace", "#poetry", "#paintingfilm", "#ticstick", "#space", "#improvisation"];
-var allwaysProjects = ["Water and Repetition Experiments", "Biograms", "Reforming DX", "The Movement of Thought", "Like Water I Am", "Painting and Movement", "Drawing Affect", "Water and Ice", "Duration and Detail", "Notebooks", "Mobile Writing", "Poetry", "Improvisation Work in Studio"];
-var relationProjects =["Relationshapes", "Biograms", "Autism to Inclusion Film", "Recipes for the Open", "Drawing Affect", "Painting and Movement", "Like Water I Am", "Repetition", "Poetry", "Film (S/Pace)", "Tic and Stick", "Access is Love and Love is Complicated"];
+// var pacingProjects=["walking-drawing machines", "algo-rhythms", "the film S/Pace", "Poetry chapbooks", "Painting on Film", "Tic and Stick", "S/Pace","Improvisation Work in Studio"]
+// var pacingLinks=["#walkingdrawing", "#algo", "#filmspace", "#poetry", "#paintingfilm", "#ticstick", "#space", "#improvisation"];
+// var allwaysProjects = ["Water and Repetition Experiments", "Biograms", "Reforming DX", "The Movement of Thought", "Like Water I Am", "Painting and Movement", "Drawing Affect", "Water and Ice", "Duration and Detail", "Notebooks", "Mobile Writing", "Poetry", "Improvisation Work in Studio"];
+// var relationProjects =["Relationshapes", "Biograms", "Autism to Inclusion Film", "Recipes for the Open", "Drawing Affect", "Painting and Movement", "Like Water I Am", "Repetition", "Poetry", "Film (S/Pace)", "Tic and Stick", "Access is Love and Love is Complicated"];
 
-  var a = function(){ createSticks(pacingProjects, pacingLinks)};
-  var b = function(){ createSticks(allwaysProjects) }
-  var c = function(){ createSticks(relationProjects) }
-    var d = function(){  }
+  var a = function(){ lexicon(pace)};
+  var b = function(){ lexicon(water) }
+  var c = function(){ lexicon(languaging) }
+  var d = function(){ lexicon(treasure)};
+  var e = function(){ lexicon(rally)};
+  var f = function(){ lexicon(truths)};
+  var g = function(){ lexicon(twallowing)};
+  var h = function(){ lexicon(tressing)};
+  var i = function(){ lexicon(relation)};
+  var j = function(){ lexicon(rhythm)};
 
- var foo = [a,b,c];
+
+ var foo = [a,b,c,d,e,f,g,h,i,j];
 
 
 
@@ -85,22 +92,22 @@ function removeAllChildNodes(parent) {
     }
 }
 //dropdown menu
-function createSticks(aText, bHref){
-
-  //a is array of text
-  //b is array of href
-  const container = document.querySelector('#myDropdown');
-  removeAllChildNodes(container);
-
-  for (let c = 0; c < aText.length; c++) {
-    var stickelement = document.createElement('a');
-    stickelement.setAttribute('href', bHref[c]);
-    stickelement.textContent = aText[c];
-    var slant = document.getElementById('myDropdown');
-    slant.appendChild(stickelement);
-  }
-  drop();
-}
+// function createSticks(aText, bHref){
+//
+//   //a is array of text
+//   //b is array of href
+//   const container = document.querySelector('#myDropdown');
+//   removeAllChildNodes(container);
+//
+//   for (let c = 0; c < aText.length; c++) {
+//     var stickelement = document.createElement('a');
+//     stickelement.setAttribute('href', bHref[c]);
+//     stickelement.textContent = aText[c];
+//     var slant = document.getElementById('myDropdown');
+//     slant.appendChild(stickelement);
+//   }
+//   drop();
+// }
 // function createSticks(aText, bHref){
 //   //a is array of text
 //   //b is array of href

@@ -1,7 +1,28 @@
 @font-face {
     font-family: OpenDyslexic;
-    src: url("../OpenDyslexicMono-Regular.otf") format("opentype");
+    font-style:normal;
+    font-weight: 400;
+    src: url("../OpenDyslexic-Regular.otf") format("opentype");
 }
+@font-face {
+    font-family: OpenDyslexic;
+    font-style:normal;
+    font-weight: 700;
+    src: url("../OpenDyslexic-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: OpenDyslexic;
+    font-style:italic;
+    font-weight: 400;
+    src: url("../OpenDyslexic-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: OpenDyslexic;
+    font-style:italic;
+    font-weight: 700;
+    src: url("../OpenDyslexic-BoldItalic.otf") format("opentype");
+}
+
 
 body {
   /* font-family: "Spectral", sans-serif; */
@@ -69,6 +90,24 @@ body {
   display: flex;
 }
 
+.participants{
+  position: absolute;
+  top: 200em;
+  left: 350em;
+  width: 60em;
+  height: 30em;
+  display: flex;
+}
+
+.publications{
+  position: absolute;
+  top: 50em;
+  left: 300em;
+  width: 60em;
+  height: 30em;
+  display: flex;
+}
+
 .planeBackground {
   z-index: 0;
   /* background-image: url("../images/11-_MG_0064.jpg"); */
@@ -90,7 +129,7 @@ body {
   top: 0;
   bottom:0;
   display: flex;
-  z-index: 1;
+  z-index: 2;
   padding: 0 0 0 1em;
   flex-direction: column;
   overflow-y: scroll;
