@@ -157,8 +157,9 @@ body {
 .importantmov{
   position: absolute;
   top: 240em;
-  left: 170em;
-  font-family: impact;
+  left: 160em;
+  color:white;
+  /* font-family: impact; */
 }
 .chooseadventure{
   position: absolute;
@@ -175,7 +176,7 @@ body {
   position: absolute;
   top: 150em;
   left: 170em;
-  color: #6aa84f;
+  color: white;
 }
 
 .spiral{

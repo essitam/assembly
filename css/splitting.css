@@ -44,6 +44,13 @@
   position: absolute;
   animation: move 15000ms infinite alternate forwards var(--delay, 0ms);
 }
+.importantmov .char {
+  --offset: calc(var(--char-index) * 0.5rem);
+  offset-path: path("M 100 300 Q 150 200 250 150 Q 250 450 350 250 Q 350 50 400 300 C 450 550 450 50 400 300 C 550 50 550 550 550 250 A 50 50 0 1 1 800 350 ");
+  offset-distance: var(--offset);
+  position: absolute;
+  animation: move 15000ms infinite alternate forwards var(--delay, 0ms);
+}
 
 /* h2:nth-child(2) .char {
   --delay: calc(var(--char-index) * 30ms);
