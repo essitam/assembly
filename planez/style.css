@@ -170,3 +170,24 @@ body {
   top: 200em;
   left: 50em;
 }
+
+.answeropenly{
+  position: absolute;
+  top: 150em;
+  left: 170em;
+  color: #6aa84f;
+}
+
+.spiral{
+  position: absolute;
+  top: 300em;
+  left: 40em;
+  color: white;
+}
+
+.planedroplets{
+  position: absolute;
+  top: 200em;
+  left: 40em;
+  color: #c27ba0;
+}

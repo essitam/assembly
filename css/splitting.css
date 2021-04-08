@@ -1,0 +1,56 @@
+/* @import url("https://fonts.googleapis.com/css?family=Inconsolata:700"); */
+/* * {
+  box-sizing: border-box;
+} */
+
+/* body {
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: coral;
+} */
+
+.datasplit {
+  /* font-family: Inconsolata, monospace; */
+  font-size: 1rem;
+  /* text-transform: uppercase; */
+  width: 1000px;
+  height: 100px;
+}
+
+.answeropenly .char {
+  --offset: calc(var(--char-index) * 1rem);
+  offset-path: path("M 100 300 Q 150 50 200 150 Q 250 450 300 150 Q 350 50 400 300 C 450 550 450 50 500 300 C 550 50 550 550 700 300 A 50 50 0 1 1 800 300  ");
+  offset-distance: var(--offset);
+  position: absolute;
+  animation: move 1700ms infinite alternate forwards var(--delay, 0ms);
+}
+
+.planedroplets .char {
+  --offset: calc(var(--char-index) * 1rem);
+  offset-path: path("M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z");
+  offset-distance: var(--offset);
+  position: absolute;
+  animation: move 15000ms infinite alternate forwards var(--delay, 0ms);
+}
+
+.spiral .char {
+  --offset: calc(var(--char-index) * 1rem);
+  offset-path: path("m 167.14285,363.79074 c 10.67232,9.31143 -7.28627,18.97999 -15.4762,17.73809 -22.1942,-3.36549 -27.61602,-31.13071 -19.99997,-48.69049 13.62332,-31.41033 54.12375,-37.73942 81.90477,-22.26186 40.76978,22.71395 48.13708,77.41939 24.52375,115.11906 C 206.62234,475.94328 137.27398,484.34557 89.761851,452.48117 29.972685,412.38308 20.539547,328.20781 60.714337,270.93354 109.37139,201.56672 208.46813,191.10466 275.47626,239.62414 c 78.96676,57.17853 90.45697,171.25184 33.57128,247.9762 C 243.37076,576.18166 114.28589,588.69978 27.857049,523.43352 -70.348897,449.27384 -83.894891,305.15379 -10.238008,209.02874 72.393883,101.19095 231.56582,86.616998 337.38106,168.67179 c 117.47497,91.09638 133.077,265.33248 42.61883,380.83336");
+  offset-distance: var(--offset);
+  position: absolute;
+  animation: move 15000ms infinite alternate forwards var(--delay, 0ms);
+}
+
+/* h2:nth-child(2) .char {
+  --delay: calc(var(--char-index) * 30ms);
+} */
+
+@keyframes move {
+  100% {
+    offset-distance: calc(var(--offset) + 12rem);
+  }
+}
