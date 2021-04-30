@@ -52,7 +52,7 @@ body {
   width: 406.25em;
   height: 406.25em;
   z-index: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-size: 1em;
   margin: auto;
   background-image: linear-gradient(to bottom right, #98f542, #42f566, #4269f5, #5de8bc, #5da669);
