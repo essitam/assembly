@@ -187,7 +187,6 @@ $(".go-to-pacing").click({placewheretogo: ".pacingsnail"}, goToPlace);
 $(".go-to-publications").click({placewheretogo: ".publications"}, goToPlace);
 $(".go-to-participants").click({placewheretogo: ".participants"}, goToPlace);
 
-
 $(".zoom-in").click(function() {
   var zoomLvl = parseInt(planez.data("zoom"));
   var zoomLvlNew = zoomLvl + 1;
@@ -223,3 +222,22 @@ $(".zoom-out").click(function() {
     planez.data("zoom",zoomLvlNew);
   }
 });
+
+var currentZoom = 1.0;
+
+
+      $('#btn_ZoomIn').click(
+          function () {
+            console.log('hi')
+              $('.planez').animate({ 'zoom': currentZoom += .1 }, 'slow');
+          });
+      $('#btn_ZoomOut').click(
+          function () {
+              $('.planez').animate({ 'zoom': currentZoom -= .1 }, 'slow');
+          });
+      $('#btn_ZoomReset').click(
+          function () {
+              currentZoom = 1.0
+              $('.planez').animate({ 'zoom': 1 }, 'slow');
+          });
+  // });
