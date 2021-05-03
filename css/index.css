@@ -16,14 +16,21 @@ a:hover {
 a:active {
   text-decoration: underline;
 }
-a{
-  /* padding: 10px; */
-}
+
 html, body{
   line-height: 150%;
   font-size: 18px;
-  /* font-family:Tahoma, Geneva, sans-serif */
 }
+/* css for logo */
+#circ{
+  position: fixed;
+  top: 12pt; left: 24pt;
+}
+.circ{
+  clip-path: ellipse(60px 60px at 80px 80px);
+ -webkit-clip-path: ellipse(60px 60px at 80px 80px);
+}
+
 
 /*
 .sidebar {

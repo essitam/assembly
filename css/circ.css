@@ -1,8 +1,0 @@
-#circ{
-  position: fixed;
-  top: 12pt; left: 24pt;
-}
-.circ{
-  clip-path: ellipse(60px 60px at 80px 80px);
-
-}
