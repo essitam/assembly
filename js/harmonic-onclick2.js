@@ -47,27 +47,19 @@ var eld2 = false;;
 var list = ["1", "2", "3"];
 var links = ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'];
 
-// var pacingProjects=["walking-drawing machines", "algo-rhythms", "the film S/Pace", "Poetry chapbooks", "Painting on Film", "Tic and Stick", "S/Pace","Improvisation Work in Studio"]
-// var pacingLinks=["#walkingdrawing", "#algo", "#filmspace", "#poetry", "#paintingfilm", "#ticstick", "#space", "#improvisation"];
-// var allwaysProjects = ["Water and Repetition Experiments", "Biograms", "Reforming DX", "The Movement of Thought", "Like Water I Am", "Painting and Movement", "Drawing Affect", "Water and Ice", "Duration and Detail", "Notebooks", "Mobile Writing", "Poetry", "Improvisation Work in Studio"];
-// var relationProjects =["Relationshapes", "Biograms", "Autism to Inclusion Film", "Recipes for the Open", "Drawing Affect", "Painting and Movement", "Like Water I Am", "Repetition", "Poetry", "Film (S/Pace)", "Tic and Stick", "Access is Love and Love is Complicated"];
-
-  var a = function(){ lexicon(pace)};
+  var a = function(){ lexicon(pace);playSound(paceAudio);};
   var b = function(){ lexicon(water) }
   var c = function(){ lexicon(languaging) }
-  var d = function(){ lexicon(treasure)};
+  var d = function(){ lexicon(treasure);playSound(treasuringAudio);};
   var e = function(){ lexicon(rally)};
   var f = function(){ lexicon(truths)};
-  var g = function(){ lexicon(twallowing)};
-  var h = function(){ lexicon(tressing)};
+  var g = function(){ lexicon(twallowing);};
+  var h = function(){ lexicon(tressing);playSound(tressingAudio);};
   var i = function(){ lexicon(relation)};
   var j = function(){ lexicon(rhythm)};
-  var k = function(){ lexicon(motioning)};
-
+  var k = function(){ lexicon(motioning);playSound(motioningAudio);};
 
  var foo = [a,b,c,d,e,f,g,h,i,j,k];
-
-
 
 //menu at the top
 function setup() {
@@ -90,35 +82,22 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
-//dropdown menu
-// function createSticks(aText, bHref){
-//
-//   //a is array of text
-//   //b is array of href
-//   const container = document.querySelector('#myDropdown');
-//   removeAllChildNodes(container);
-//
-//   for (let c = 0; c < aText.length; c++) {
-//     var stickelement = document.createElement('a');
-//     stickelement.setAttribute('href', bHref[c]);
-//     stickelement.textContent = aText[c];
-//     var slant = document.getElementById('myDropdown');
-//     slant.appendChild(stickelement);
-//   }
-//   drop();
-// }
-// function createSticks(aText, bHref){
-//   //a is array of text
-//   //b is array of href
-//
-//   for (let c = 0; c < aText.length; c++) {
-//     var stickelement = document.createElement('a');
-//     stickelement.setAttribute('href', '#');
-//     stickelement.textContent = aText[c];
-//     var slant = document.getElementById('slanting');
-//     slant.appendChild(stickelement);
-//   }
-// }
+var motioningSound = ["assets/assets/lexicon-words/motioning/motioning_1.mp3", "assets/assets/lexicon-words/motioning/motioning.mp3", "assets/assets/lexicon-words/motioning/motioning_2.mp3", "assets/assets/lexicon-words/motioning/motioning_3.mp3"]
+var paceSound = ["assets/assets/lexicon-words/pace/pace_1.mp3", "assets/assets/lexicon-words/pace/pace.mp3", "assets/assets/lexicon-words/pace/pace_2.mp3", "assets/assets/lexicon-words/pace/pace_3.mp3", "assets/assets/lexicon-words/pace/pace_4.mp3"];
+var treasuringSound = ["assets/assets/lexicon-words/treasuring/treasuring_1.mp3", "assets/assets/lexicon-words/treasuring/treasuring.mp3", "assets/assets/lexicon-words/treasuring/treasuring_2.mp3", "assets/assets/lexicon-words/treasuring/treasuring_3.mp3"];
+var tressingSound = ["assets/assets/lexicon-words/tressing/tressing_2.mp3", "assets/assets/lexicon-words/tressing/tressing_3.mp3", "assets/assets/lexicon-words/tressing/tressing_4.mp3", "assets/assets/lexicon-words/tressing/tressing_5.mp3", "assets/assets/lexicon-words/tressing/tressing_1.mp3", "assets/assets/lexicon-words/tressing/tressing.mp3"];
+function randFromArray(array){
+  const randomThing = Math.floor(Math.random() * array.length);
+  return(array[randomThing]);
+  }
+  var motioningAudio = new Audio(randFromArray(motioningSound));
+  var paceAudio = new Audio(randFromArray(paceSound));
+  var treasuringAudio = new Audio(randFromArray(treasuringSound));
+  var tressingAudio = new Audio(randFromArray(tressingSound));
+function playSound(letter) {
+        letter.play();
+}
+
 function draw() {
   // background(210);
 
