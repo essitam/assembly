@@ -3,6 +3,32 @@
 var planez = $(".planez");
 var playn = $("#playn");
 var planeWrapper = $(".planeWrapper");
+
+document.querySelector('.go-to-start-screen').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.newWork').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;' });
+    });
+document.querySelector('.go-to-random').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.lexicon').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;' });
+    });
+document.querySelector('.dropbtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.startScreen').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;' });
+    });
+// document.querySelector('.go-to-pacing').addEventListener('click', function(e) {
+//       e.preventDefault();
+//       document.querySelector('.pacingsnail').scrollIntoView({ behavior: 'smooth' });
+//     });
+document.querySelector('.go-to-publications').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.publications').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;' });
+    });
+document.querySelector('.go-to-participants').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.participants').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;' });
+    });
+
 // var draggablePlane = new Draggable(planeWrapper, {
 //   type: "scroll",
 //   // throwProps: true,
@@ -180,12 +206,13 @@ function goToPlace(event){
 $( document ).ready(function() {
   goToStartScreen('.startScreen');
 });
-$(".go-to-start-screen").click({placewheretogo: ".newWork"}, goToPlace);
-$(".go-to-random").click({placewheretogo: ".lexicon"}, goToPlace);
-$(".dropbtn").click({placewheretogo: ".startScreen"}, goToPlace);
-$(".go-to-pacing").click({placewheretogo: ".pacingsnail"}, goToPlace);
-$(".go-to-publications").click({placewheretogo: ".publications"}, goToPlace);
-$(".go-to-participants").click({placewheretogo: ".participants"}, goToPlace);
+// $(".go-to-start-screen").click({placewheretogo: ".newWork"}, goToPlace);
+// $(".go-to-random").click({placewheretogo: ".lexicon"}, goToPlace);
+// $(".dropbtn").click({placewheretogo: ".startScreen"}, goToPlace);
+// $(".go-to-pacing").click({placewheretogo: ".pacingsnail"}, goToPlace);
+// $(".go-to-publications").click({placewheretogo: ".publications"}, goToPlace);
+// $(".go-to-participants").click({placewheretogo: ".participants"}, goToPlace);
+
 
 $(".zoom-in").click(function() {
   var zoomLvl = parseInt(planez.data("zoom"));

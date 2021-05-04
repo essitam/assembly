@@ -46,7 +46,6 @@
   <div class="dropd go-to-start-screen">new Work</div>
   <div class=" dropd go-to-random">lexicon</div>
   <div class="dropd go-to-participants">participants</div>
-  <div class="js-scroll-into-hello">hello</div>
   <div class="dropd go-to-publications">publications</div>
   <div onclick="drop()" class="dropd dropbtn">projects</div>
   <div class="dropdown" id="dropd">
@@ -312,10 +311,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/3.3.0/js/blueimp-gallery.min.js" integrity="sha512-ou+HAocCH7k3ASCmn1jxK14HyDl7Ff0jci4skAEWcGKoLx32MPNOnLWaLh08XodPcaG59N9YsDyYN5+qPrR7Ag==" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-document.querySelector('.js-scroll-into-hello').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector('.participants').scrollIntoView({ behavior: 'smooth' });
-    });
+
 var tl = gsap.timeline ()
 .to('.ball',{
   // x: "random(-20, 20, 5)", //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
