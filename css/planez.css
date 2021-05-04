@@ -2,27 +2,26 @@
     font-family: OpenDyslexic;
     font-style:normal;
     font-weight: 400;
-    src: url("../OpenDyslexic-Regular.otf") format("opentype");
+    src: url("../assets/font/OpenDyslexic-Regular.otf") format("opentype");
 }
 @font-face {
     font-family: OpenDyslexic;
     font-style:normal;
     font-weight: 700;
-    src: url("../OpenDyslexic-Bold.otf") format("opentype");
+    src: url("../assets/font/OpenDyslexic-Bold.otf") format("opentype");
 }
 @font-face {
     font-family: OpenDyslexic;
     font-style:italic;
     font-weight: 400;
-    src: url("../OpenDyslexic-Italic.otf") format("opentype");
+    src: url("../assets/font/OpenDyslexic-Italic.otf") format("opentype");
 }
 @font-face {
     font-family: OpenDyslexic;
     font-style:italic;
     font-weight: 700;
-    src: url("../OpenDyslexic-BoldItalic.otf") format("opentype");
+    src: url("../assets/font/OpenDyslexic-BoldItalic.otf") format("opentype");
 }
-
 
 body {
   font-family: 'OpenDyslexic';
@@ -38,7 +37,10 @@ body {
   width: 100%;
   height: 100%;
   overflow: scroll;
-  /* -webkit-overflow-scrolling: touch; */
+  z-index: 0;
+}
+
+.planeBackground {
   z-index: 0;
 }
 
@@ -70,6 +72,29 @@ body {
 .planeContent {
   z-index: 1;
 }
+
+
+/* controls */
+.controls {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom:0;
+  display: flex;
+  z-index: 2;
+  padding: 0 0 0 1em;
+  flex-direction: column;
+  overflow-y: scroll;
+
+}
+.controls > * {
+  padding: 1em;
+  margin: 1em 1em 0 0;
+  border: 1px grey solid;
+  cursor: pointer;
+  color: white;
+}
+/* positioning for different sections */
 
 .startScreen {
   position: absolute;
@@ -107,49 +132,10 @@ body {
   display: flex;
 }
 
-.planeBackground {
-  z-index: 0;
-  /* background-image: url("../images/11-_MG_0064.jpg"); */
-  /* background-size: 6.25em 6.26em; */
-}
-/* .planeBackground .randomElement {
-  position: absolute;
-  width: 35em;
-  height: 35em;
-  border-radius: 50%;
-  background: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 70%);
-  opacity: 0.13;
-  will-change: opacity;
-} */
-
-.controls {
-  position: fixed;
-  right: 0;
-  top: 0;
-  bottom:0;
-  display: flex;
-  z-index: 2;
-  padding: 0 0 0 1em;
-  flex-direction: column;
-  overflow-y: scroll;
-
-}
-.controls > * {
-  padding: 1em;
-  margin: 1em 1em 0 0;
-  border: 1px grey solid;
-  cursor: pointer;
-  color: white;
-
-  /* background: black; */
-
-}
-
 .pacingistheway{
   position: absolute;
   top: 200em;
   left: 170em;
-  /* font-family: 'Sora', sans-serif; */
 }
 .importantmov{
   position: absolute;
