@@ -14,7 +14,6 @@ class DanceSpan {
   oscillate(){
     this.angle.add(this.velocity);
   }
-
   brownian() {
     this.x = sin(this.angle.x) * this.amplitude.x;
     this.y = sin(this.angle.y) * this.amplitude.y;
@@ -37,7 +36,7 @@ class DanceSpan {
     line(a,b,this.x,this.y);
     this.element.position(this.x+width/2, this.y+height/2);
     this.element.style('background-color','lightgrey');
-    this.element.style('padding', '0.2em')
+    this.element.style('padding', '0.2em');
     pop();
   }
 
@@ -66,7 +65,7 @@ var links = ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'];
   var k = function(){ lexicon(motioning)};
 
 
- var foo = [a,b,c,d,e,f,g,h,i,j];
+ var foo = [a,b,c,d,e,f,g,h,i,j,k];
 
 
 
@@ -75,13 +74,12 @@ function setup() {
 var canvas= createCanvas(600, 100);
 canvas.parent('canvasParent');
 frameRate(15);
-// const words = ['Pacing', 'The Way', 'All Ways', 'Always', 'Water', 'Easy', 'Rally', 'Really', 'Dance', 'Languaging', 'Relation', 'Questions', 'Think', 'Stick', 'Patter', 'Pattern', 'Wanting', 'Open', 'SpaceTime', 'WaysWaves', 'Atmospheres']
-// const words = [ 'Pacing', 'All Ways', 'Relation'];
 const words = ['Pace', 'Water', 'Languaging', 'Treasure', 'Rally', 'Truths', 'Twallowing', 'Tressing', 'Relation', 'Rhythm', 'Motioning'];
   for (let o = 0; o < words.length; o++) {
     const spannedWord = createButton(words[o]);
     spannedWord.mousePressed(foo[o]);
     spannedWord.addClass('dropbtn');
+    spannedWord.addClass('dropbtnn');
     spannedWord.parent('canvasParent');
     const dw = new DanceSpan(spannedWord, random(600), random(200));
     dancingWords.push(dw);
@@ -142,11 +140,6 @@ function activate(i){
   }
 
 }
-
-// function changeId(){
-//   var element = document.getElementById('hellohi');
-//   element.setAttribute('id', 'like_button_container');
-// }
 
 function pal(t){
   const currentDiv = document.getElementById("newContent");

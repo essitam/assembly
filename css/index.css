@@ -1,4 +1,7 @@
 html, body{
+  background-image: url('../images/11-_MG_0064.jpg');
+  background-size: cover;
+  background-color: black;
   line-height: 150%;
   font-size: 18px;
   user-select:none;
@@ -114,4 +117,12 @@ background-image: linear-gradient(to bottom right, #f2f542, #e0c71f, #e3dc07);
 /* image gallery for projects*/
 #links img{
   width:100px;
+}
+/* lexicon words */
+.dropbtnn{
+  /* background-color: red; */
+  font-size: 18px;
+}
+.child{
+  background-color: blue;
 }

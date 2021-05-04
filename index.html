@@ -26,7 +26,7 @@
 </head>
 <body>
   <!-- top bar  -->
-  <!-- <div class="topper" style="position:fixed;">
+  <div class="topper" style="position:fixed;">
       <div class="contCentre">
         <p class="wobblyText disassembly" style="font-size: 28px">
           dis assembly
@@ -36,7 +36,7 @@
       </div>
       <div id="canvasParent" style="position:fixed;left:200px">  </div>
       <br><br><br><br><br><br><br>
-</div> -->
+</div>
 
 <!-- sidebar -->
 <div class="controls">
@@ -46,6 +46,7 @@
   <div class="dropd go-to-start-screen">new Work</div>
   <div class=" dropd go-to-random">lexicon</div>
   <div class="dropd go-to-participants">participants</div>
+  <div class="js-scroll-into-hello">hello</div>
   <div class="dropd go-to-publications">publications</div>
   <div onclick="drop()" class="dropd dropbtn">projects</div>
   <div class="dropdown" id="dropd">
@@ -107,7 +108,7 @@
             </div>
 
             <div class="newWork">
-              <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Smoothing-text-moves-nologo.html" width="" height="1000px" frameBorder="0"></iframe>
+              <!-- <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Smoothing-text-moves-nologo.html" width="" height="1000px" frameBorder="0"></iframe> -->
               <video width="320" height="240" controls>
                 <source src="assets/assets/water_book/IMG_2861.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -295,7 +296,7 @@
 <script type="text/javascript" src="js/draggable.js"></script>
 <script  src="./js/planez.js"></script>
 <!-- project replacement script -->
-<script type="text/javascript" src="main.js"></script>
+<!-- <script type="text/javascript" src="main.js"></script> -->
 <script src="jquery/Lettering.js-master/jquery.lettering.js"></script>
 <script type="text/javascript" src="js/randomPosition.js"></script>
 <script  src="jquery/wobbling/script-wobble.js"></script>
@@ -303,13 +304,17 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/randomPosition.js"></script>
 <script type="text/javascript" src="js/lexicon.js"></script>
-<script type="text/javascript" src="p5.js/harmonic-onclick2.js"></script>
+<script type="text/javascript" src="js/harmonic-onclick2.js"></script>
 <script type="text/javascript" src="js/slider.js"></script>
 <script src='https://unpkg.com/splitting@1.0.6/dist/splitting.min.js'></script>
 <script type="text/javascript" src="js/splitting.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/3.3.0/js/blueimp-gallery.min.js" integrity="sha512-ou+HAocCH7k3ASCmn1jxK14HyDl7Ff0jci4skAEWcGKoLx32MPNOnLWaLh08XodPcaG59N9YsDyYN5+qPrR7Ag==" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
+document.querySelector('.js-scroll-into-hello').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.participants').scrollIntoView({ behavior: 'smooth' });
+    });
 var tl = gsap.timeline ()
 .to('.ball',{
   // x: "random(-20, 20, 5)", //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
