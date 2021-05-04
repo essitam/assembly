@@ -1,4 +1,3 @@
-// gsap.registerPlugin(ThrowPropsPlugin);
 
 var planez = $(".planez");
 var playn = $("#playn");
@@ -28,145 +27,6 @@ document.querySelector('.go-to-participants').addEventListener('click', function
       e.preventDefault();
       document.querySelector('.participants').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;' });
     });
-
-// var draggablePlane = new Draggable(planeWrapper, {
-//   type: "scroll",
-//   // throwProps: true,
-//   // inertia: true,
-// });
-/*
-This content is released under the MIT License.
-http://opensource.org/licenses/MIT
-*/
-//
-// var planeObject = {
-//     elem: playn[0],
-//     x: 0,
-//     y: 0,
-//     vx: 0,
-//     vy: 0,
-//     ax: 0,
-//     ay: 0,
-//     mass: 10,
-//     friction: 0
-// }
-//
-// var friction = 1.0;
-// //
-// var mouse = {
-//   x: 0,
-//   y: 0,
-//   vx: 0,
-//   vy: 0
-// }
-//
-// console.log(planeObject.elem);
-//
-// var mouseIsDown = false;
-//
-// window.addEventListener('mousedown', (e) => {
-//   mouseIsDown = true;
-//   mouse.x = e.pageX;
-//   mouse.y = e.pageY;
-// });
-// window.addEventListener('mouseup', () => {
-//   mouseIsDown = false;
-//
-// });
-//
-// var timer;
-//
-// window.addEventListener('mousemove', (e) => {
-//   clearTimeout(timer);
-//   timer = setTimeout(function() {
-//     if(mouseIsDown) {
-//       // mouse.x = e.pageX;
-//       // mouse.y = e.pageY;
-//       // mouse.vx = e.movementX;
-//       // mouse.vy = e.movementY;
-//       // planeObject.vx = mouse.vx;
-//       // planeObject.vy = mouse.vy;
-//       planeObject.elem.style.left = e.pageX - mouse.x+'px';
-//       planeObject.elem.style.top = e.pageY - mouse.y+'px';
-//     }
-//   }, 10);
-// });
-//
-//
-// function draggable(element) {
-// 	var isMouseDown = false;
-//
-//     // initial mouse X and Y for `mousedown`
-//     var mouseX;
-//     var mouseY;
-//
-//     // element X and Y before and after move
-//     var elementX = 0;
-//     var elementY = 0;
-//
-// 	// mouse button down over the element
-//     element.addEventListener('mousedown', onMouseDown);
-//
-// 	/**
-//      * Listens to `mousedown` event.
-//      *
-//      * @param {Object} event - The event.
-//      */
-// 	function onMouseDown(event) {
-//         mouseX = event.clientX;
-//         mouseY = event.clientY;
-//         isMouseDown = true;
-//     }
-//
-// 	// mouse button released
-//     element.addEventListener('mouseup', onMouseUp);
-//
-// 	/**
-//      * Listens to `mouseup` event.
-//      *
-//      * @param {Object} event - The event.
-//      */
-// 	function onMouseUp(event) {
-//         isMouseDown = false;
-//         dispX = (planeObject.vx * planeObject.vx) / (2 * friction * Math.sign(planeObject.vx) * -1);
-//         dispY = (planeObject.vy * planeObject.vy) / (2 * friction * Math.sign(planeObject.vy) * -1);
-//         elementX = parseInt(element.style.left) - Math.max(Math.min(dispX, 200), -200) || 0;
-//         elementY = parseInt(element.style.top) - Math.max(Math.min(dispY, 200), -200) || 0;
-//         element.style.left = elementX +'px';
-//         element.style.top = elementY +'px';
-//     }
-//
-// 	// need to attach to the entire document
-//     // in order to take full width and height
-//     // this ensures the element keeps up with the mouse
-//     document.addEventListener('mousemove', onMouseMove);
-//
-// 	/**
-//      * Listens to `mousemove` event.
-//      *
-//      * @param {Object} event - The event.
-//      */
-// 	function onMouseMove(event) {
-//     	if (!isMouseDown) return;
-//         var deltaX = event.clientX - mouseX;
-//         var deltaY = event.clientY - mouseY;
-//         planeObject.vx = event.movementX * 2;
-//         planeObject.vy = event.movementY * 2;
-//         element.style.left = elementX + deltaX + 'px';
-//         element.style.top = elementY + deltaY + 'px';
-//     }
-// }
-//
-//  draggable(document.getElementById('playn'));
-// // function throw () {
-// //
-// }
-//
-//
-//
-// requestAnimationFrame()
-//
-
 
 ScrollTrigger.batch(".randomElement", {
   scroller: planeWrapper,
@@ -251,8 +111,6 @@ $(".zoom-out").click(function() {
 });
 
 var currentZoom = 1.0;
-
-
       $('#btn_ZoomIn').click(
           function () {
             console.log('hi')
