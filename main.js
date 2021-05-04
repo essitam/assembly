@@ -61,13 +61,13 @@ function gallery(){
       blueimp.Gallery(links, options)
     }
 }
-gallery();
 
 loadContent();
 
-
 window.addEventListener("hashchange", loadContent);
-window.addEventListener("hashchange", gallery);
+
+gallery();
+// window.addEventListener("hashchange", gallery);
 //
 // $("button").click(function() {
 //   $(".sidebar").toggleClass("open");

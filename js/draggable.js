@@ -2,6 +2,7 @@ var nav = $(".planez");
 
 nav.draggable({
   axis: "xy",
+  // containment: [-7312.5, -7312.5, 0, 0]
   containment: "planeWrapper"
   // distance: 10
 });
