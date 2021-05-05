@@ -61,6 +61,11 @@ body {
   background-image: linear-gradient(to bottom right, #98f542, #42f566, #4269f5, #5de8bc, #5da669);
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: -webkit-grab; cursor: grab;
+}
+.planez:active{
+  cursor: -webkit-grabbing; cursor: grabbing;
+
 }
 .planez > * {
   position: absolute;
@@ -74,7 +79,6 @@ body {
   z-index: 1;
 }
 
-
 /* controls */
 .controls {
   position: fixed;
@@ -86,6 +90,7 @@ body {
   padding: 0 0 0 1em;
   flex-direction: column;
   overflow-y: scroll;
+  cursor: pointer;
 
 }
 .controls > * {
@@ -97,6 +102,14 @@ body {
 }
 /* positioning for different sections */
 
+.newstartScreen {
+  position: absolute;
+  top: 125em;
+  left: 130em;
+  width: 80vmin;
+  max-height: 30em;
+  display: flex;
+}
 .startScreen {
   position: absolute;
   top: 100em;

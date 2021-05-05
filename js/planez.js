@@ -2,6 +2,11 @@
 var planez = $(".planez");
 var playn = $("#playn");
 var planeWrapper = $(".planeWrapper");
+document.querySelector('#rectsnail').addEventListener('click', function(e) {
+      e.preventDefault();
+      console.log('hello there')
+      // document.querySelector('.lexicon').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;' });
+    });
 
 document.querySelector('.go-to-start-screen').addEventListener('click', function(e) {
       e.preventDefault();
@@ -64,7 +69,7 @@ function goToPlace(event){
   gsap.to(planeWrapper, {duration: 3, scrollTo: {y: y, x: x}, ease: "power2"});
 }
 $( document ).ready(function() {
-  goToStartScreen('.startScreen');
+  goToStartScreen('.newstartScreen');
 });
 // $(".go-to-start-screen").click({placewheretogo: ".newWork"}, goToPlace);
 // $(".go-to-random").click({placewheretogo: ".lexicon"}, goToPlace);
