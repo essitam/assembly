@@ -65,7 +65,7 @@ function gallery(){
 loadContent();
 
 window.addEventListener("hashchange", loadContent);
-
+window.addEventListener("hashchange", gallery);
 gallery();
 // window.addEventListener("hashchange", gallery);
 //
