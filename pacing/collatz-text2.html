@@ -45,11 +45,12 @@
             var canvas = createCanvas(windowWidth, windowHeight);
             canvas.parent('canvas');
             // background('white');
+              background(255);
       }
 
       function draw(){
               // background('black');
-              background(255);
+
                   var angle = PI/6;
                   var length = 60;
                   translate(width/2, height);
@@ -74,8 +75,9 @@
                 // console.log("finished");
 
       }
+      document.body.addEventListener("click", bgWhite);
 
-      function mousePressed(){
+      function bgWhite(){
         background(255);
       }
 
@@ -143,6 +145,6 @@
       <br>
       really about to love myself with them
     </div>
-  <script type="text/javascript" src="../js/randomSnail.js"></script>
+  <!-- <script type="text/javascript" src="../js/randomSnail.js"></script> -->
   </body>
 </html>

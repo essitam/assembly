@@ -86,14 +86,30 @@ var motioningSound = ["assets/assets/lexicon-words/motioning/motioning_1.mp3", "
 var paceSound = ["assets/assets/lexicon-words/pace/pace_1.mp3", "assets/assets/lexicon-words/pace/pace.mp3", "assets/assets/lexicon-words/pace/pace_2.mp3", "assets/assets/lexicon-words/pace/pace_3.mp3", "assets/assets/lexicon-words/pace/pace_4.mp3"];
 var treasuringSound = ["assets/assets/lexicon-words/treasuring/treasuring_1.mp3", "assets/assets/lexicon-words/treasuring/treasuring.mp3", "assets/assets/lexicon-words/treasuring/treasuring_2.mp3", "assets/assets/lexicon-words/treasuring/treasuring_3.mp3"];
 var tressingSound = ["assets/assets/lexicon-words/tressing/tressing_2.mp3", "assets/assets/lexicon-words/tressing/tressing_3.mp3", "assets/assets/lexicon-words/tressing/tressing_4.mp3", "assets/assets/lexicon-words/tressing/tressing_5.mp3", "assets/assets/lexicon-words/tressing/tressing_1.mp3", "assets/assets/lexicon-words/tressing/tressing.mp3"];
+var languagingSound = ["assets/assets/lexicon-words/languaging/languaging_2.mp3", "assets/assets/lexicon-words/languaging/languaging_3.mp3", "assets/assets/lexicon-words/languaging/languaging.mp3"];
+var rallySound = ["assets/assets/lexicon-words/rally/rally_1.mp3", "assets/assets/lexicon-words/rally/rally_2.mp3", "assets/assets/lexicon-words/rally/rally_3.mp3", "assets/assets/lexicon-words/rally/rally.mp3"];
+var relationSound = ["assets/assets/lexicon-words/relation/relation_1.mp3", "assets/assets/lexicon-words/relation/relation_2.mp3", "assets/assets/lexicon-words/relation/relation_3.mp3", "assets/assets/lexicon-words/relation/relation.mp3"];
+var rhythmSound = ["assets/assets/lexicon-words/rhythm/rhythm_1.mp3", "assets/assets/lexicon-words/rhythm/rhythm_2.mp3", "assets/assets/lexicon-words/rhythm/rhythm_3.mp3", "assets/assets/lexicon-words/rhythm/rhythm_4.mp3", "assets/assets/lexicon-words/rhythm/rhythm_5.mp3", "assets/assets/lexicon-words/rhythm/rhythm.mp3"];
+var truthsSound = ["assets/assets/lexicon-words/truths/truths_1.mp3", "assets/assets/lexicon-words/truths/truths_2.mp3", "assets/assets/lexicon-words/truths/truths_3.mp3", "assets/assets/lexicon-words/truths/truths.mp3"];
+var twallowingSound = ["assets/assets/lexicon-words/twallowing/twallowing_1.mp3", "assets/assets/lexicon-words/twallowing/twallowing.mp3", "assets/assets/lexicon-words/twallowing/twallowing_2.mp3", "assets/assets/lexicon-words/twallowing/twallowing_3.mp3"];
+var waterSound = ["assets/assets/lexicon-words/water/water_1.mp3", "assets/assets/lexicon-words/water/water_2.mp3", "assets/assets/lexicon-words/water/water_3.mp3", "assets/assets/lexicon-words/water/water_4.mp3", "assets/assets/lexicon-words/water/water.mp3"];
 function randFromArray(array){
   const randomThing = Math.floor(Math.random() * array.length);
   return(array[randomThing]);
   }
+
+
   var motioningAudio = new Audio(randFromArray(motioningSound));
   var paceAudio = new Audio(randFromArray(paceSound));
   var treasuringAudio = new Audio(randFromArray(treasuringSound));
   var tressingAudio = new Audio(randFromArray(tressingSound));
+  var languagingAudio = new Audio(randFromArray(languagingSound));
+  var rallyAudio = new Audio(randFromArray(rallySound));
+  var relationAudio = new Audio(randFromArray(relationSound));
+  var rhythmAudio = new Audio(randFromArray(rhythmSound));
+  var truthsAudio = new Audio(randFromArray(truthsSound));
+  var twallowingAudio = new Audio(randFromArray(twallowingSound));
+  var waterAudio = new Audio(randFromArray(waterSound));
 function playSound(letter) {
         letter.play();
 }

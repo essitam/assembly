@@ -115,7 +115,7 @@ body {
   top: 100em;
   left: 200em;
   width: 80vmin;
-  max-height: 30em;
+  max-width: 60em;
   display: flex;
 }
 
@@ -153,8 +153,8 @@ body {
 }
 .importantmov{
   position: absolute;
-  top: 240em;
-  left: 160em;
+  top: 255em;
+  left: 80em;
   color:white;
   /* font-family: impact; */
 }
@@ -188,4 +188,65 @@ body {
   top: 200em;
   left: 40em;
   color: #c27ba0;
+}
+.joy{
+    position: absolute;
+    top: 278em;
+    left:75em;
+}
+.pacing1{
+    position: absolute;
+    top: 358em;
+    left:111em;
+}
+
+.pacing2{
+  position:absolute;
+  top: 6410px;
+  left: 300px;
+}
+
+.pacing3{
+  position: absolute;
+  top:3040px;
+  left:5040px;
+}
+
+.pacing4{
+  position:absolute;
+  top: 20px;
+  left: 6900px;
+}
+.pacing5{
+position: absolute;
+top: 4000px;
+left: 5400px;
+}
+.pacing6{
+  position:absolute;
+  top: 5000px;
+  left:5800px;
+}
+
+.pacing7{
+    position:absolute;
+  top: 500px;
+  left:5000px;
+}
+
+.pacing9{
+  position:absolute;
+  top: 2500px;
+  left: 6000px;
+}
+
+.pacing10{
+  position:absolute;
+  top:4000px;
+  left: 2000px;
+}
+.pacing11{
+  position: absolute;
+  top: 278em;
+  left:125em;
 }

@@ -81,6 +81,13 @@
   width:100%;
   visibility: hidden;
   animation-delay: calc(200ms * var(--char-index));
+}
+.pacing5 .char {
+  position:absolute;
+  animation: translateBig 10s alternate infinite ease-in-out;
+  width:100%;
+  visibility: hidden;
+  animation-delay: calc(200ms * var(--char-index));
 
 }
 .planedroplets .char {
@@ -91,14 +98,14 @@
   animation-delay: calc(200ms * var(--char-index));
 
 }
-.importantmov .char {
+/* .importantmov .char {
   position:absolute;
   animation: translateBig 10s reverse infinite ease-in-out;
   width:100%;
   visibility: hidden;
   animation-delay: calc(200ms * var(--char-index));
 
-}
+} */
 .spiral .char {
   position:absolute;
   animation: translate 10s alternate infinite ease-in-out;
