@@ -110,6 +110,14 @@ body {
   max-height: 30em;
   display: flex;
 }
+.pacing12{
+  position: absolute;
+  top: 115em;
+  left: 160em;
+  /* width: 80vmin; */
+  max-height: 30em;
+  display: flex;
+}
 .startScreen {
   position: absolute;
   top: 100em;
@@ -249,4 +257,22 @@ left: 5400px;
   position: absolute;
   top: 278em;
   left:125em;
+}
+
+.lexicon{
+  position: absolute;
+  top: 0em;
+  left: 0em;
+}
+
+.pacing13{
+  position: absolute;
+  top:2240px;
+  left:4590px;
+}
+
+.pacing14{
+  position: absolute;
+  top: 125em;
+  left: 100em;
 }

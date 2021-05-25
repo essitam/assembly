@@ -22,7 +22,7 @@ for (var i = 0; i< photos_of_artworks.length; i++){
   newDiv.setAttribute("class", "child");
   newDiv.innerHTML = photos_of_artworks[i];
   document.getElementById("parentChild").appendChild(newDiv);
-  randomPosition();
+  // randomPosition();
 }
  $( ".child" ).draggable({containment: "planez", stack: ".lexicon div" });
 }

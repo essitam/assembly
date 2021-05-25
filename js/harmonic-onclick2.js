@@ -48,15 +48,15 @@ var list = ["1", "2", "3"];
 var links = ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'];
 
   var a = function(){ lexicon(pace);playSound(paceAudio);};
-  var b = function(){ lexicon(water) }
-  var c = function(){ lexicon(languaging) }
+  var b = function(){ lexicon(water);playSound(waterAudio);};
+  var c = function(){ lexicon(languaging);playSound(languagingAudio);};
   var d = function(){ lexicon(treasure);playSound(treasuringAudio);};
-  var e = function(){ lexicon(rally)};
-  var f = function(){ lexicon(truths)};
-  var g = function(){ lexicon(twallowing);};
+  var e = function(){ lexicon(rally);playSound(rallyAudio);};
+  var f = function(){ lexicon(truths);playSound(truthsAudio);};
+  var g = function(){ lexicon(twallowing);playSound(twallowingAudio);};
   var h = function(){ lexicon(tressing);playSound(tressingAudio);};
-  var i = function(){ lexicon(relation)};
-  var j = function(){ lexicon(rhythm)};
+  var i = function(){ lexicon(relation);playSound(relationAudio);};
+  var j = function(){ lexicon(rhythm);playSound(rhythmAudio);};
   var k = function(){ lexicon(motioning);playSound(motioningAudio);};
 
  var foo = [a,b,c,d,e,f,g,h,i,j,k];

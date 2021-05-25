@@ -119,8 +119,13 @@ var currentZoom = 1.0;
       $('#btn_ZoomIn').click(
           function () {
             console.log('hi')
-              $('.planez').animate({ 'zoom': currentZoom += .1 }, 'slow');
+              $('.planez').animate({ 'zoom': currentZoom = 0.10 }, 'slow');
           });
+          // $('#btn_ZoomIn').click(
+          //     function () {
+          //       console.log('hi')
+          //         $('.planez').animate({ 'zoom': currentZoom += .1 }, 'slow');
+          //     });
       $('#btn_ZoomOut').click(
           function () {
               $('.planez').animate({ 'zoom': currentZoom -= .1 }, 'slow');
