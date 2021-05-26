@@ -7,7 +7,10 @@ document.querySelector('#rectsnail').addEventListener('click', function(e) {
       console.log('hello there')
       // document.querySelector('.lexicon').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;' });
     });
-
+    document.querySelector('.topper').addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector('.newstartScreen').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'center', inline: 'center' });
+        });
 document.querySelector('.go-to-start-screen').addEventListener('click', function(e) {
       e.preventDefault();
       document.querySelector('.newWork').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'center', inline: 'center' });
