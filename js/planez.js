@@ -13,7 +13,7 @@ document.querySelector('.go-to-start-screen').addEventListener('click', function
     });
 document.querySelector('.go-to-random').addEventListener('click', function(e) {
       e.preventDefault();
-      document.querySelector('#canvasParent').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'center', inline: 'center' });
+      document.querySelector('#canvasParent').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
 document.querySelector('.projects').addEventListener('click', function(e) {
       e.preventDefault();
