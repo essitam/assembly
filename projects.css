@@ -1,0 +1,103 @@
+/* projects index css */
+.wrapper {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px;
+grid-auto-rows: minmax(100px, auto);
+}
+.projectsquares{
+  text-decoration:none;
+  border-style:solid;
+  text-align:center;
+  background: black;
+}
+.projectsquares span{
+  mix-blend-mode: exclusion;
+  color:white;
+}
+.proj1{
+  background-image: url('assets/assets/walking-drawing-machines/thumbnails/16427780_10154144552241218_566497657003523939_n.jpg');
+}
+.proj2{
+  /* s/pace film */
+  background-image: url('');
+}
+.proj3{
+  background-image: url('assets/assets/poetry/thumbnails/48380563_10155919141881218_668926072426856448_n.jpg');
+}
+.proj4{
+  /* painting on film */
+  background-image: url('');
+}
+.proj5{
+  background-image: url('assets/assets/tic-and-stick/thumbnails/IMG_6713.jpg');
+}
+.proj6{
+  background-image: url('assets/assets/improvisation-work-in-studio/thumbnails/35649189_10155486773811218_4130941524303151104_n.jpg');
+}
+.proj7{
+  /* water and repetition */
+  background-image: url('');
+}
+.proj8{
+  /* biograms */
+  background-image: url('');
+}
+.proj9{
+  background-image: url('assets/assets/reforming-dx/thumbnails/IMG_6696.jpg');
+}
+.proj10{
+  background-image: url('assets/assets/movement-of-thought/54520199_10156103580086218_3876153528749654016_n.jpg');
+}
+.proj11{
+  background-image: url('assets/assets/water-stim/thumbnails/32661369_10155404949111218_1986520050546245632_o.jpg');
+}
+.proj12{
+  background-image: url('assets/assets/paintingmovement/thumbnails/15326477_10153988280986218_2800554865591172869_n.jpg');
+}
+.proj13{
+  background-image: url('assets/assets/drawingaffect/thumbnails/15621900_10154026536986218_1117940413096827122_n.jpg');
+}
+.proj14{
+  background-image: url('assets/assets/waterandice/20180614_103409.jpg');
+}
+.proj15{
+  background-image: url('assets/assets/durationdetail/thumbnails/18921857_10154486369201218_2300152043995781852_n.jpg');
+}
+.proj16{
+  background-image: url('assets/assets/notebooks/thumbnails/47052888_10155877067806218_5625087516173402112_n.jpg');
+}
+.proj17{
+  background-image: url('assets/assets/mobile-writing/thumbnails/F19B013C-BA62-4A2C-9138-C7AC14E900E8.jpeg');
+}
+.proj18{
+  background-image: url('assets/assets/relationshapes/thumbnails/21557934_10154761019581218_9071784418639769561_n.jpg');
+}
+.proj19{
+  background-image: url('assets/assets/bathtoys/thumbnails/29573215_10155288911431218_2535219005489214085_n.jpg');
+}
+.proj20{
+  /* autism to inclusion */
+  background-image: url('');
+}
+.proj21{
+  background-image: url('assets/assets/recipes_for_the_open/images_recipes_for_open/IMG_1612.jpg');
+}
+.proj22{
+  background-image: url('assets/assets/repetition/thumbnails/33617117_10155430418996218_7516054856600125440_n.jpg');
+}
+.proj23{
+  background-image: url('assets/assets/accesislove/5-_MG_0077.jpg');
+}
+.proj24{
+  /* poet trees */
+  background-image: url('');
+}
+.proj25{
+  /* pandemic paces */
+  background-image: url('');
+}
+.proj26{
+  /* films */
+  background-image: url('');
+}
