@@ -13,15 +13,19 @@ document.querySelector('#rectsnail').addEventListener('click', function(e) {
         });
 document.querySelector('.go-to-start-screen').addEventListener('click', function(e) {
       e.preventDefault();
-      document.querySelector('.newWork').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'center', inline: 'center' });
+      document.querySelector('.newWork').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
 document.querySelector('.go-to-random').addEventListener('click', function(e) {
       e.preventDefault();
-      document.querySelector('.lexicon').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'center', inline: 'center' });
+      document.querySelector('.lexicon').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
 document.querySelector('.dropbtn').addEventListener('click', function(e) {
       e.preventDefault();
-      document.querySelector('.startScreen').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'center', inline: 'center' });
+      document.querySelector('.startScreen').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
+    });
+document.querySelector('.historyandmission').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.startScreen').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
 // document.querySelector('.go-to-pacing').addEventListener('click', function(e) {
 //       e.preventDefault();
@@ -29,11 +33,11 @@ document.querySelector('.dropbtn').addEventListener('click', function(e) {
 //     });
 document.querySelector('.go-to-publications').addEventListener('click', function(e) {
       e.preventDefault();
-      document.querySelector('.publications').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'center', inline: 'center' });
+      document.querySelector('.publications').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
 document.querySelector('.go-to-participants').addEventListener('click', function(e) {
       e.preventDefault();
-      document.querySelector('.participants').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'center', inline: 'center' });
+      document.querySelector('.participants').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
 
 ScrollTrigger.batch(".randomElement", {
