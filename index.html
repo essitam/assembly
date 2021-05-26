@@ -48,7 +48,6 @@
 
    <div id="toggle"><img src="../../../images/snail.png" alt="" width="100px"></a></div>
   <div class="dropd go-to-start-screen">New Work</div>
-  <div class="dropd historyandmission"><a style="text-decoration:none; color:white;" href="#historymission">History & Mission</a></div>
   <div onclick="drop()" class="dropd dropbtn">Projects</div>
   <div class="dropdown" id="dropd">
     <div id="myDropdown" class=" dropdown-content">
@@ -81,8 +80,10 @@
     </div>
     </div>
   <div class="dropd go-to-publications">Publications</div>
+  <div class="dropd historyandmission"><a style="text-decoration:none; color:white;" href="#historymission">History & Mission</a></div>
   <div class="dropd go-to-participants">Participants</div>
-  <div class=" dropd">Jump</div>
+  <div class="jump dropd" id="jump">Jump</div>
+  <div id="pos"></div>
 
       <div class="">
         <button class="circle cc1" id="changeColor"></button>
@@ -131,7 +132,7 @@
 
             <div class="lexicon" id="parentChild">
               <!-- slanting lexicon -->
-              <div id="canvasParent" style="position:fixed;left:200px">  </div>
+              <div id="canvasParent" style="left:200px">  </div>
             </div>
 
             <div class="participants" id="participant">
@@ -296,7 +297,7 @@
           </div>
 
           <div class="pacing11">
-            <iframe style="pointer-events: none;max-width:80%;" src="pacing/collatz-text2.html" width="1000px" height="800px;"></iframe>
+            <!-- <iframe style="pointer-events: none;max-width:80%;" src="pacing/collatz-text2.html" width="1000px" height="800px;"></iframe> -->
           </div>
 
           <div class="pacing13">
@@ -306,6 +307,8 @@
           <div class="pacing14">
             <b>Bringing the Rallying Feeling Together</b><br><br>The thinking is pacing language<br>of nature that is languaging the way<br>we live in the world. Language is<br>my answer to the way pace<br>if it moves like the affects<br>jumps in my mind body.<br><br>Having good city of noises<br>and very calm breezes<br>are like game of feeling<br>and rally of atmospheres.<br>Game of the easy rally is<br>like the inspiring unconscious.<br><br>Varied man paces the multiplicity<br>making sense of rallying atmospheres<br>like bathing currents that sometimes dance<br>with me. Go to the man of autism’s movements<br>to feel the multiplicity that names having tics<br>a pathology but that is the weak way to think<br><br>about autism because it thinks that sensing<br>is about language of categories and in that<br>I eagerly want the people to know that I<br>sense more than feeling and pace is<br>feeling the rally that is the moving<br>multiplicity. The multiplicity has<br><br>open ingredients like names<br>of need in which the language<br>can’t capture but making bathing<br>baking dance must move buttressing<br>face of the need to care and to live.<br>The naming of need and support<br><br>does not jump into the favorite<br>languaging of forces that move<br>us and I easily feel rally like the way<br>mean calm good hate love bathes<br>to gether because making chance<br>of me can remember the amazing<br><br>ways the call to feel can be<br>and the walks that assemble<br>long paces that the world is<br>full of. The chance is the making<br>the way easy changes can vary<br>and the way paces are god naming<br><br>the call to rally with the easy earth<br>and the god I name is the feeling.<br>Feeling is the waiting the risk<br>walking together being together<br>gaming together and pacing<br>the easy rally making together.
           </div>
+
+          <div class="null1"> hi</div>
 
           <div class="soundscrub">
             <input type="range" id="sliderAudio" min="0" max="1" step="0.005" disabled>
@@ -470,6 +473,8 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+
 </script>
 <script type="text/javascript" src="js/backgroundColor.js"></script>
 </body>
