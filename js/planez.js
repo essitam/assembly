@@ -19,12 +19,14 @@ document.querySelector('.go-to-random').addEventListener('click', function(e) {
       e.preventDefault();
       document.querySelector('.lexicon').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
-document.querySelector('.dropbtn').addEventListener('click', function(e) {
+document.querySelector('.projects').addEventListener('click', function(e) {
       e.preventDefault();
+      location.hash = "#projects";
       document.querySelector('.startScreen').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
 document.querySelector('.historyandmission').addEventListener('click', function(e) {
       e.preventDefault();
+      location.hash = "#historymission";
       document.querySelector('.startScreen').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
 // document.querySelector('.go-to-pacing').addEventListener('click', function(e) {

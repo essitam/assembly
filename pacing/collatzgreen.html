@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js"></script>
+    <link rel="stylesheet" href="../css/footer.css">
+    <style media="screen">
+      div{
+        position: absolute;
+        top 0;
+      }
+      .sticks{
+        top:20%;
+        left:20%;
+        color:green;
+        mix-blend-mode: difference;
+        z-index: 300;
+      }
+      .collected{
+        top:50%;
+        left:60%;
+        color: white;
+        /* mix-blend-mode: difference; */
+        z-index: 300;
+      }
+      #canvas{
+        width: 1000px;
+        height: 800px;
+        z-index:2;
+      }
+      a{
+        text-decoration: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- <a href="http://dis-assembly.ca/"><img src="../../../assets/assets/disassembly_logo.jpg" alt="" width="100px"></a> -->
+    <!-- <a href="../pacing/space.html"><img id="footer" style="width:100px" src="../images/snail.png"/></a> -->
+    <div id="snailspot"></div>
+    <script type="text/javascript">
+      let n;
+      let steps = 0;
+      function setup(){
+            var canvas = createCanvas(1000, 800);
+            canvas.parent('canvas');
+            // background('white');
+              background(255);
+      }
+
+      function draw(){
+              // background('black');
+
+                  var angle = PI/6;
+                  var length = 60;
+                  translate(width/2, height);
+                  // for (var i = 1; i < 10000; i++){
+                  // n =+ 500;
+                  n = 500;
+                  do {
+                    n = collatz(n);
+                      if(n % 2 == 0){
+                        rotate(angle);
+                      } else {
+                        rotate(-angle);
+                      }
+                      stroke(0, 160, 100);
+                      fill(255);
+                      line(90,mouseX*sin(millis()/1000),n*sin(millis()/1000),cos(millis()/1000)*-length);
+                      translate(0, -length);
+                      steps++;
+                  } while (n != 1);
+                  // console.log("steps" + steps);
+                // }
+                // console.log("finished");
+
+      }
+      document.body.addEventListener("click", bgWhite);
+
+      function bgWhite(){
+        background(255);
+      }
+
+      function collatz(n) {
+          if(n % 2 == 0){
+            return n / 2;
+          } else {
+            return n * 3 + 1;
+          }
+      }
+    </script>
+    <div id="canvas">
+
+    </div>
+    <div class="sticks">
+      I LOSE MYSELF IN THE STICKS
+      <br>
+      I am thinking a lot about the way I lose
+      <br/>
+      myself in the sticks and how I am
+      <br>
+      thinking amazing things pale and without
+      <br>
+      always the music but the always
+      <br>
+      making movement
+      <br><br>
+      I am thinking the language is the always
+      <br>
+      moving sticks that pass through
+      <br>
+      the air
+      <br><br>
+      I think that I find my way in movement
+      <br>
+      and I am always managing
+      <br>
+      the malware pacing through the network
+      <br>
+      of making noise
+      <br><br>
+      It sounds like a way yes open and going
+      <br>
+      nowhere
+    </div>
+
+    <div class="collected">
+      COLLECTED
+      <br>
+      I love the way the logs always
+      <br>
+      feel like warm rottings
+      <br>
+      of the line pressing my really
+      <br>
+      questions of the want
+      <br>
+      for ballast balling my awesome
+      <br>
+      arms. I am easy to very
+      <br>
+      much be collected when I answer
+      <br>
+      with the logs and I am
+      <br>
+      really about to love myself with them
+    </div>
+  <!-- <script type="text/javascript" src="../js/randomSnail.js"></script> -->
+  </body>
+</html>

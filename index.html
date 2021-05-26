@@ -29,11 +29,12 @@
 </head>
 <body>
   <!-- top bar  -->
-  <div class="topper" style="position:fixed;">
+  <div class="topper">
       <div class="contCentre">
         <!-- dis assembly writing -->
-        <p class="wobblyText disassembly" style="font-size: 28px">
-          dis assembly
+        <br><br>
+        <p class="wobblyText disassembly" style="font-size: 28px;" >
+          disassembly
         </p>
         <!-- logo -->
         <iframe id="circ" class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;background: none transparent;"></iframe>
@@ -47,42 +48,11 @@
 
    <div id="toggle"><img src="../../../images/snail.png" alt="" width="100px"></a></div>
   <div class="dropd go-to-start-screen">New Work</div>
-  <div onclick="drop()" class="dropd dropbtn">Projects</div>
-  <div class="dropdown" id="dropd">
-    <div id="myDropdown" class=" dropdown-content">
-      <a href="#walkingdrawing">Walking-Drawing Machines</a>
-      <a href="#filmspace">the film S/Pace</a>
-      <a href="#poetry">Poetry</a>
-      <a href="#paintingfilm">Painting on Flim</a>
-      <a href="#ticstick">Tic and Stick</a>
-      <a href="#improvisation">Improvisation Work in Studio</a>
-      <a href="#waterrepetition">Water and Repetition Experiments</a>
-      <a href="#biograms">Biograms</a>
-      <a href="#reformingdx">Reforming DX</a>
-      <a href="#movementofthought">The Movement of Thought</a>
-      <a href="#likewateriam">Like Water I Am</a>
-      <a href="#paintingandmovement">Painting and Movement</a>
-      <a href="#drawingaffect">Drawing Affects</a>
-      <a href="#waterandice">Water and Ice</a>
-      <a href="#durationanddetail">Duration and Detail</a>
-      <a href="#notebooks">Notebooks</a>
-      <a href="#mobilewriting">Mobile Writing</a>
-      <a href="#relationshapes">Relationshapes</a>
-      <a href="#rubberbath">Rubber Bath Toys</a>
-      <a href="#autismtoinclusion">Autism to Inclusion Film</a>
-      <a href="#recipesfortheopen">Recipes for the Open</a>
-      <a href="#repetition">Repetition</a>
-      <a href="#accessislove">Access is Love and Love is Complicated</a>
-      <a href="#poettrees">Poet Trees</a>
-      <a href="#pandemicpaces">Pandemic Paces</a>
-      <a href="#films">Films</a>
-    </div>
-    </div>
+  <a href="#projects" class="dropd projects">Projects</a>
   <div class="dropd go-to-publications">Publications</div>
-  <div class="dropd historyandmission"><a style="text-decoration:none; color:white;" href="#historymission">History & Mission</a></div>
+  <a href="#historymission" class="dropd historyandmission" style="text-decoration:none; color:white;">History & Mission</a>
   <div class="dropd go-to-participants">Participants</div>
   <div class="jump dropd" id="jump">Jump</div>
-  <a href="#projects">Projects</a>
   <div id="pos"></div>
 
       <div class="">
@@ -297,6 +267,11 @@
           </div>
 
           <div class="pacing11">
+            <button type="button" class="collapsible" onclick="setup();"><img src="../../../images/snail.png"/ alt="snailbutton" width = "75px;"></button>
+            <div class="content">
+                <iframe style="max-width:80%; width:1000px; height:800px;" src="pacing/collatzgreen.html"></iframe>
+
+            </div>
             <!-- <iframe style="pointer-events: none;max-width:80%;" src="pacing/collatz-text2.html" width="1000px" height="800px;"></iframe> -->
           </div>
 
@@ -308,7 +283,7 @@
             <b>Bringing the Rallying Feeling Together</b><br><br>The thinking is pacing language<br>of nature that is languaging the way<br>we live in the world. Language is<br>my answer to the way pace<br>if it moves like the affects<br>jumps in my mind body.<br><br>Having good city of noises<br>and very calm breezes<br>are like game of feeling<br>and rally of atmospheres.<br>Game of the easy rally is<br>like the inspiring unconscious.<br><br>Varied man paces the multiplicity<br>making sense of rallying atmospheres<br>like bathing currents that sometimes dance<br>with me. Go to the man of autism’s movements<br>to feel the multiplicity that names having tics<br>a pathology but that is the weak way to think<br><br>about autism because it thinks that sensing<br>is about language of categories and in that<br>I eagerly want the people to know that I<br>sense more than feeling and pace is<br>feeling the rally that is the moving<br>multiplicity. The multiplicity has<br><br>open ingredients like names<br>of need in which the language<br>can’t capture but making bathing<br>baking dance must move buttressing<br>face of the need to care and to live.<br>The naming of need and support<br><br>does not jump into the favorite<br>languaging of forces that move<br>us and I easily feel rally like the way<br>mean calm good hate love bathes<br>to gether because making chance<br>of me can remember the amazing<br><br>ways the call to feel can be<br>and the walks that assemble<br>long paces that the world is<br>full of. The chance is the making<br>the way easy changes can vary<br>and the way paces are god naming<br><br>the call to rally with the easy earth<br>and the god I name is the feeling.<br>Feeling is the waiting the risk<br>walking together being together<br>gaming together and pacing<br>the easy rally making together.
           </div>
 
-          <div class="null1"> hi</div>
+          <div class="null1"></div>
 
           <div class="soundscrub">
             <input type="range" id="sliderAudio" min="0" max="1" step="0.005" disabled>
