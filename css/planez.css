@@ -108,6 +108,7 @@ body {
   left: 130em;
   width: 80vmin;
   max-height: 30em;
+  max-width: 30em;
   display: flex;
 }
 .pacing12{
@@ -216,8 +217,8 @@ body {
 
 .pacing3{
   position: absolute;
-  top:3040px;
-  left:5040px;
+  top:3240px;
+  left:5540px;
 }
 
 .pacing4{
@@ -242,6 +243,13 @@ left: 5400px;
   left:5000px;
 }
 
+.pacing8{
+  position:absolute;
+  top: 2783px;
+  left: 6970px;
+  width:300px;
+}
+
 .pacing9{
   position:absolute;
   top: 2500px;
@@ -263,18 +271,19 @@ left: 5400px;
   position: absolute;
   top: 0em;
   left: 0em;
+  width: 3700px;
 }
 
 .pacing13{
   position: absolute;
   top:2240px;
-  left:4590px;
+  left:4750px;
 }
 
 .pacing14{
   position: absolute;
-  top: 125em;
-  left: 100em;
+  top: 1747px;
+  left: 1628px;
 }
 
 .null1{
@@ -282,9 +291,14 @@ left: 5400px;
   top:2240px;
   left:4590px;
 }
-/* 
-.null2{
-  position: absolute;
-  top:2240px;
-  left:4590px;
-} */
+.wrapper2 {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+}
+
+#canvasParent{
+    position: absolute;
+    top:200px;
+    left: 200px;
+    z-index:1000;
+}

@@ -17,10 +17,14 @@ function lexicon(photos_of_artworks){
 $( "#parentChild" ).empty();
 // dissassemble poem code
 for (var i = 0; i< photos_of_artworks.length; i++){
+
   const newDiv = document.createElement("div");
   newDiv.setAttribute("id", "app"+i);
   newDiv.setAttribute("class", "child");
-  newDiv.innerHTML = photos_of_artworks[i];
+  const newDivInner = document.createElement("div");
+  newDivInner.setAttribute("class", "childbg");
+  newDivInner.innerHTML = photos_of_artworks[i];
+  newDiv.appendChild(newDivInner);
   document.getElementById("parentChild").appendChild(newDiv);
   // randomPosition();
 }

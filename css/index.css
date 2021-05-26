@@ -124,8 +124,9 @@ background-image: linear-gradient(to bottom right, #f2f542, #e0c71f, #e3dc07);
   font-size: 18px;
 }
 /* lexicon */
-.child{
-  background-color: rgba(255, 255, 255, 0.8);;
+.childbg{
+  width:auto;
+  background-color: rgba(255, 255, 255, 0.9);;
 }
 /* audio scrubbing */
 input { width: 350px }
