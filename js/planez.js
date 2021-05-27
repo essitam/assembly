@@ -25,10 +25,6 @@ document.querySelector('.historyandmission').addEventListener('click', function(
       location.hash = "#historymission";
       document.querySelector('.startScreen').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
-// document.querySelector('.go-to-pacing').addEventListener('click', function(e) {
-//       e.preventDefault();
-//       document.querySelector('.pacingsnail').scrollIntoView({ behavior: 'smooth' });
-//     });
 document.querySelector('.go-to-publications').addEventListener('click', function(e) {
       e.preventDefault();
       document.querySelector('.publications').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });

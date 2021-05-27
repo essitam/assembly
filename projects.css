@@ -19,15 +19,13 @@ grid-auto-rows: minmax(100px, auto);
   background-image: url('assets/assets/walking-drawing-machines/thumbnails/16427780_10154144552241218_566497657003523939_n.jpg');
 }
 .proj2{
-  /* s/pace film */
-  background-image: url('');
+  background-image: url('assets/assets/films/thumbnails/spacefilm.png');
 }
 .proj3{
   background-image: url('assets/assets/poetry/thumbnails/48380563_10155919141881218_668926072426856448_n.jpg');
 }
 .proj4{
-  /* painting on film */
-  background-image: url('');
+  background-image: url('assets/assets/films/thumbnails/paintingonfilm.png');
 }
 .proj5{
   background-image: url('assets/assets/tic-and-stick/thumbnails/IMG_6713.jpg');
@@ -77,8 +75,7 @@ grid-auto-rows: minmax(100px, auto);
   background-image: url('assets/assets/bathtoys/thumbnails/29573215_10155288911431218_2535219005489214085_n.jpg');
 }
 .proj20{
-  /* autism to inclusion */
-  background-image: url('');
+  background-image: url('assets/assets/films/thumbnails/autismtoinclusion.png');
 }
 .proj21{
   background-image: url('assets/assets/recipes_for_the_open/images_recipes_for_open/IMG_1612.jpg');
