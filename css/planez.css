@@ -293,6 +293,7 @@ left: 5400px;
 }
 .wrapper2 {
 display: grid;
+gap:10px;
 grid-template-columns: repeat(6, 1fr);
 }
 
