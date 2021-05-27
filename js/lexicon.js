@@ -27,8 +27,10 @@ for (var i = 0; i< photos_of_artworks.length; i++){
   newDiv.appendChild(newDivInner);
   document.getElementById("parentChild").appendChild(newDiv);
   // randomPosition();
+
 }
  $( ".child" ).draggable({containment: "planez", stack: ".lexicon div" });
+ $('#parentChild').rdmGrid();
 }
 
 // lexicon(photos_of_artworks);
