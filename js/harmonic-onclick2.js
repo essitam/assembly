@@ -47,17 +47,17 @@ var eld2 = false;;
 var list = ["1", "2", "3"];
 var links = ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'];
 
-  var a = function(){ lexicon(pace);playSound(paceAudio);};
-  var b = function(){ lexicon(water);playSound(waterAudio);};
-  var c = function(){ lexicon(languaging);playSound(languagingAudio);};
-  var d = function(){ lexicon(treasure);playSound(treasuringAudio);};
-  var e = function(){ lexicon(rally);playSound(rallyAudio);};
-  var f = function(){ lexicon(truths);playSound(truthsAudio);};
-  var g = function(){ lexicon(twallowing);playSound(twallowingAudio);};
-  var h = function(){ lexicon(tressing);playSound(tressingAudio);};
-  var i = function(){ lexicon(relation);playSound(relationAudio);};
-  var j = function(){ lexicon(rhythm);playSound(rhythmAudio);};
-  var k = function(){ lexicon(motioning);playSound(motioningAudio);};
+  var a = function(){ lexicon(pace, 'pace');playSound(paceAudio);};
+  var b = function(){ lexicon(water, 'water');playSound(waterAudio);};
+  var c = function(){ lexicon(languaging, 'languaging');playSound(languagingAudio);};
+  var d = function(){ lexicon(treasure, 'treasure');playSound(treasuringAudio);};
+  var e = function(){ lexicon(rally, 'rally');playSound(rallyAudio);};
+  var f = function(){ lexicon(truths, 'truths');playSound(truthsAudio);};
+  var g = function(){ lexicon(twallowing, 'twallowing');playSound(twallowingAudio);};
+  var h = function(){ lexicon(tressing, 'tressing');playSound(tressingAudio);};
+  var i = function(){ lexicon(relation, 'relation');playSound(relationAudio);};
+  var j = function(){ lexicon(rhythm, 'rhythm');playSound(rhythmAudio);};
+  var k = function(){ lexicon(motioning, 'motioning');playSound(motioningAudio);};
 
  var foo = [a,b,c,d,e,f,g,h,i,j,k];
 

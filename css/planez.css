@@ -291,12 +291,12 @@ left: 5400px;
   top:2240px;
   left:4590px;
 }
-.wrapper2 {
-display: grid;
-gap:10px;
-grid-template-columns: repeat(6, 1fr);
+.wrapper2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:3400px;
 }
-
 #canvasParent{
     position: absolute;
     top:200px;
