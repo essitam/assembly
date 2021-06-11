@@ -30,13 +30,7 @@ for (var i = 0; i< photos_of_artworks.length; i++){
   // randomPosition();
 }
  $( ".child" ).draggable({containment: "planez", stack: ".lexicon div" });
-  // $('').packery({
- //   // options
- //   itemSelector: '.child',
- //   gutter: 10
- // });
- // $('#parentChild').rdmGrid();
- console.log(val);
+ // console.log(val);
  if(val === "relation"||"twallowing"){
     gallery();
  }
