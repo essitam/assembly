@@ -303,3 +303,8 @@ left: 5400px;
     left: 200px;
     z-index:1000;
 }
+.contact-us-here{
+  position: absolute;
+  top: 200em;
+  left: 300em;
+}
