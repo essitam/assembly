@@ -5,8 +5,7 @@
     <title></title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js"></script>
-    <link rel="stylesheet" href="/css/footer.css">
-
+    <link rel="stylesheet" href="../css/footer.css">
     <style media="screen">
       div{
         position: absolute;
@@ -37,9 +36,8 @@
   </head>
   <body>
     <!-- <a href="http://dis-assembly.ca/"><img src="../../../assets/assets/disassembly_logo.jpg" alt="" width="100px"></a> -->
-
-    <a href="../pacing/space.html"><img id="footer" style="width:100px" src="../images/snail.png"/></a>
-
+    <!-- <a href="../pacing/space.html"><img id="footer" style="width:100px" src="../images/snail.png"/></a> -->
+    <div id="snailspot"></div>
     <script type="text/javascript">
       let n;
       let steps = 0;
@@ -47,6 +45,7 @@
             var canvas = createCanvas(windowWidth, windowHeight);
             canvas.parent('canvas');
             // background('white');
+              background(255);
       }
 
       function draw(){
@@ -71,13 +70,14 @@
                       translate(0, -length);
                       steps++;
                   } while (n != 1);
-                  console.log("steps" + steps);
+                  // console.log("steps" + steps);
                 // }
-                console.log("finished");
+                // console.log("finished");
 
       }
+      document.body.addEventListener("click", bgWhite);
 
-      function mousePressed(){
+      function bgWhite(){
         background(255);
       }
 
@@ -145,6 +145,6 @@
       <br>
       really about to love myself with them
     </div>
-
+  <!-- <script type="text/javascript" src="../js/randomSnail.js"></script> -->
   </body>
 </html>

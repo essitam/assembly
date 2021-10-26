@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .draggable {
+        max-width: 500px;
+        overflow: hidden;
+        border: 1px solid red;
+        padding: 10px;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: row;
+      }
+
+      nav a {
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="draggable">
+  <div class="nav">
+    <a href="">menu1</a>
+    <a href="">menu2</a>
+    <a href="">menu3</a>
+    <a href="">menu4</a>
+    <a href="">menu5</a>
+    <a href="">menu6</a>
+    <a href="">menu7</a>
+    <a href="">menu8</a>
+    <a href="">menu9</a>
+    <a href="">menu10</a>
+    <a href="">menu11</a>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      var nav = $('nav');
+
+      nav.draggable({
+        // axis: "xy",
+        containment: 'draggable',
+        distance: 10
+      });
+
+      navWidth = 0;
+      navHeight = 0;
+      $('nav a').each(function(index) {
+          navWidth += parseInt($(this).width(), 10);
+          navHeight += parseInt($(this).height(), 10);
+      });
+
+      nav.on( "drag", function( event, ui ) {
+
+        if (ui.offset.left > 10) {
+          ui.position.left = 10;
+        }
+
+        if (ui.position.left < navWidth - nav[0].scrollWidth) {
+          ui.position.left = navWidth - nav[0].scrollWidth + 5;
+        }
+
+        if (ui.offset.top > 10) {
+          ui.position.top = 10;
+        }
+
+        if (ui.position.top < navWidth - nav[0].scrollHeight) {
+          ui.position.top = navWidth - nav[0].scrollHeight + 5;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -2,244 +2,364 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <!-- <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+  <META HTTP-EQUIV="Refresh" CONTENT=...time> -->
   <title>dis assembly</title>
-  <!-- css for logo -->
-  <link rel="stylesheet" href="css/circ.css">
-  <!-- text decoration + font -->
+  <link rel="shortcut icon" href="assets/assets/disassembly.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/index.css">
   <!-- planez for map style nav css -->
-  <link rel="stylesheet" href="./planez/style.css">
-  <!-- dropdown menu -->
-  <link rel="stylesheet" href="css/dropdown.css">
+  <link rel="stylesheet" href="css/planez.css">
   <!-- for wobbly disassembly + history +mission -->
-  <link rel="stylesheet" href="jquery/wobbling/style-wobble.css">
-  <!-- for giving text indents -->
-  <link rel="stylesheet" href="css/margin.css">
+  <link rel="stylesheet" href="css/wobble.css">
   <!-- for the snail footer and the heading to stay fixed -->
   <link rel="stylesheet" href="css/footer.css">
-  <!-- for the snail slider -->
-  <link rel="stylesheet" href="css/slider.css">
+  <!-- wave text snippets-->
+  <link rel="stylesheet" href="css/splitting.css">
+  <!-- image gallery -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/3.3.0/css/blueimp-gallery.min.css" integrity="sha512-ZpixWcgC4iZJV/pBJcyuoyD9sUsW0jRVBBTDge61Fj99r1XQNv0LtVIrCwHcy61iVTM+/1cXXtak8ywIbyvOdw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="projects.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script> -->
+
   <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
-<style media="screen">
-  iframe{
-    height: 100vh;        /* Viewport-relative units */
-   width: 100vw;
-  }
+  <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
 
-  .circle {
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-}
-
-.cc1{
-  background-image: linear-gradient(to bottom right, #98f542, #42f566, #4269f5, #5de8bc, #5da669);
-}
-.cc2{
-  background-image: linear-gradient(to bottom right, #1c239e, #4cb5b3, #6364c2);
-}
-.cc3{
-  background-image:linear-gradient(to bottom right, #adc263, #89c996, #bd9179, #fffa6e);
-}
-.cc4{
-  background-image:linear-gradient(to bottom right, red, blue);
-}
-.cc5{
-  background-color: grey;
-}
-</style>
 </head>
 <body>
   <!-- top bar  -->
-  <div class="topper" style="position:fixed;">
+  <div class="topper">
       <div class="contCentre">
-        <p class="wobblyText disassembly" style="font-size: 28px">
-          dis assembly
+        <!-- dis assembly writing -->
+        <br><br>
+        <p class="wobblyText disassembly" style="font-size: 28px;" >
+          disassembly
         </p>
-        <iframe id="circ" class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;"></iframe>
-
+        <!-- logo -->
+        <iframe id="circ" class="circ" src="p5.js/logo.html" width="200" height="190" style="border:none;background: none transparent;"></iframe>
       </div>
-      <div id="canvasParent" style="position:fixed;left:200px">  </div>
+
       <br><br><br><br><br><br><br>
 </div>
 
-<!-- sidebar -->
+<!-- beginning of menu-->
 <div class="controls">
-  <br><br><br><br><br><br><br>
-  <!-- <div class="dropd go-to-pacing">snail</div> -->
-  <div id="toggle"><img src="../../../images/snail.png" alt="" width="100px"></a></div>
-  <div class="dropd go-to-start-screen">new Work</div>
-  <div class=" dropd go-to-random">lexicon</div>
-  <div class="dropd go-to-participants">participants</div>
-  <div class="dropd go-to-publications">publications</div>
-  <div onclick="drop()" class="dropd dropbtn">projects</div>
-  <div class="dropdown" id="dropd">
-    <div id="myDropdown" class=" dropdown-content">
-      <a href="#walkingdrawing">Walking-Drawing Machines</a>
-      <a href="#filmspace">the film S/Pace</a>
-      <a href="#poetry">Poetry</a>
-      <a href="#paintingfilm">Painting on Flim</a>
-      <a href="#ticstick">Tic and Stick</a>
-      <a href="#improvisaton">Improvisation Work in Studio</a>
-      <a href="#waterrepetition">Water and Repetition Experiments</a>
-      <a href="#biograms">Biograms</a>
-      <a href="#reformingdx">Reforming DX</a>
-      <a href="#movementofthought">The Movement of Thought</a>
-      <a href="#likewateriam">Like Water I Am</a>
-      <a href="#paintingandmovement">Painting and Movement</a>
-      <a href="#drawingaffect">Drawing Affects</a>
-      <a href="#waterandice">Water and Ice</a>
-      <a href="#durationanddetail">Duration and Detail</a>
-      <a href="#notebooks">Notebooks</a>
-      <a href="#mobilewriting">Mobile Writing</a>
-      <a href="#relationshapes">Relationshapes</a>
-      <a href="#rubberbath">rubber bath toys</a>
-      <a href="#autismtoinclusion">Autism to Inclusion Film</a>
-      <a href="#recipesfortheopen">Recipes for the Open</a>
-      <a href="#repetition">Repetition</a>
-      <a href="#accessislove">Access is Love and Loce is Complicated</a>
-      <a href="#artclass">Process Photos from Art Class</a>
-    </div>
-      <button class="circle cc1" id="changeColor"></button>
-      <button class="circle cc2" id="changeColor2"></button>
-      <button class="circle cc3" id="changeColor3"></button>
-      <button class="circle cc4" id="changeColor4"></button><br>
-      <button class="circle cc5" id="changeColor5"></button><br>
-  </div>
+  <img class="snaillexicon" src="../../../images/snail.png" alt="" width="100px"></a>
+  <div class="dropd go-to-start-screen">New Work</div>
+  <a href="#projects" class="dropd projects">Projects</a>
+  <div class="dropd go-to-publications">Publications</div>
+  <a href="#historymission" class="dropd historyandmission" style="text-decoration:none; color:white;">History & Mission</a>
+  <div class="dropd go-to-participants">Participants</div>
+  <div class="jump dropd" id="jump">Jump</div>
+  <!-- <div alt="contact">&#9432;</div> -->
+  <!-- <div id="pos"></div> -->
+
+      <div class="">
+        <div class="contact-us-info" alt="contact">&#9432; contact us</div><br>
+        <button class="circle cc1" id="changeColor"></button>
+        <button class="circle cc2" id="changeColor2"></button>
+        <button class="circle cc3" id="changeColor3"></button><br>
+        <button class="circle cc4" id="changeColor4"></button>
+        <button class="circle cc5" id="changeColor5"></button>
+        <button class="circle cc6" id="changeColor6"></button>
+      </div>
 </div>
-<div id="slider" class="pacingsnail">
-  <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Chain2-text.html" width="" height=""></iframe>
-</div>
+<!-- end of menu -->
+
 <div class="planeWrapper">
-  <div class="planez" data-zoom="10">
+  <div class="planez draggable" id="playn" data-zoom="10">
       <div class="planeContent">
-        <div class="startScreen">
-          <div id="app"></div>
-        </div>
-
-        <div class="pacingistheway ball">
-          <p style="color:green;">pacing </p>
-          <p style="color:blue;margin-left:20%;">is </p>
-          <p style="color:blue;margin-left:20%;">the</p>
-          <p style="color:red;margin-left:40%;">way</p>
-          <p style="color:blue;margin-left:67%;">of</p>
-          <p style="color:blue;margin-left:67%;">the</p>
-          <p style="color:yellow;margin-left:79%;">relation</p>
-          <br/>
-        </div>
-
-        <div class="newWork">
-          <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Smoothing-text-moves-nologo.html" width="" height="1000px" frameBorder="0"></iframe>
-          <video width="320" height="240" controls>
-            <source src="assets/assets/water_book/IMG_2861.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="ball">
-                  <div class="">
-                    Learning to be
-                  </div>
-                  <br>
-                  <img src="assets/assets/pacingimages/image21.png" alt="" width="100px">
-                  <div class="">
-                    a ball of thinking
-                  </div>
-                  <div class="">
-                    we answer by
-                  </div>
-                  <div class="">
-                    pacing open
-                  </div>
-                  <div class="">
-                    facing each  but not really facing… joining and dis-jointing
-                  </div>
-                  <div class="">
-                    Like breathing in and out
-                  </div>
-                  <div class="">
-                    assembly
-                  </div>
+            <div class="startScreen">
+              <div id="app"></div>
             </div>
-        </div>
 
-        <div class="importantmov" style="font-family:impact">
-          <span>i</span> want words of important movement to want the pace knowing wanting neurodiversity to question ways the people talk about autism
-        </div>
+            <div class="pacingistheway ball">
+              <p style="color:#6aa84f;">pacing </p>
+              <p style="color:#6d9eeb;margin-left:20%;">is </p>
+              <p style="color:#6d9eeb;margin-left:20%;">the</p>
+              <p style="color:#e06666;margin-left:40%;">way</p>
+              <p style="color:#6d9eeb;margin-left:67%;">of</p>
+              <p style="color:#6d9eeb;margin-left:67%;">the</p>
+              <p style="color:#f1c232;margin-left:79%;">relation</p>
+              <br/>
+            </div>
 
-        <div class="chooseadventure" style="background-color:blue;">
-          <!-- <iframe class="chooseadv" src="chooseadventure.html"></iframe> -->
-        </div>
+            <div class="newWork">
+              <!-- <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Smoothing-text-moves-nologo.html" width="" height="1000px" frameBorder="0"></iframe> -->
+              <video width="320" height="240" controls>
+                <source src="assets/assets/water_book/IMG_2861.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="ball">
+                <div class=""> Learning to be </div> <br> <img src="assets/assets/pacingimages/image21.png" alt="" width="100px"> <div class=""> a ball of thinking </div> <div class=""> we answer by </div> <div class=""> pacing open </div> <div class=""> facing each but not really facing… joining and dis-jointing </div> <div class=""> Like breathing in and out </div> <div class=""> assembly </div>
+                </div>
+            </div>
 
-        <!-- <div class="pacingsnail">
-          <iframe src="paperjs-v0.12.11/examples/Paperjs.org/Chain2-text.html" width="" height=""></iframe>
-        </div> -->
+            <div class="contact-us-here">
+              <h3>Contact</h3><br><br>
+              info@dis-assembly.ca<br><br>
+              Artscape Youngplace<br>
+              180 Shaw St. Studio 109<br>
+              Toronto, Ontario<br>
+              M6J 2W5<br>
+            </div>
 
-        <div class="lexicon" id="parentChild">
-        </div>
 
-        <div class="participants">
-          <h1>Participants</h1><br>
-          Estee Klar <br>
-          Jessamyn Polson <br>
-          Ellen Bleiwas <br>
-          Jean Malig <br>
-          Chris Martin <br>
-          Adam Wolfond <br>
-          Matisse A-M <br>
-          Erin McKean <br>
-          Eva Kolcze <br>
-          Pascal Cheng <br>
-          Aviv Nisinzweig <br>
-          Imane Boukeila <br>
-          Rachida Boukeila <br>
-          Rid N  <br>
-          Lucas Maddog  <br>
-          Sparkle <br>
-          Carmine Closs <br>
-          Aiden Frazer <br>
-          Jacob Frazer <br>
-          Y.P. <br>
-          Raya Shields <br>
-        </div>
+            <div class="chooseadventure" style="background-color:blue;">
+            </div>
 
-        <div class="publications">
-          <div class="">
-          <h1>Publications</h1> <br>
-          <a href="https://yorkspace.library.yorku.ca/xmlui/handle/10315/37776"><b>Neurodiversity in Relation: An Artistic Intraethnography</b></a> <br>
-          <a href="https://poets.org/poet/adam-wolfond">Poetry</a> <br>
-          <a href="http://www.unrestrictedinterest.com/mission/unrestricted-writer-adam-wolfond-the-academy-of-american-poets/2019/10/1"><b>Tall Ideas</b> <i>by Adam Wolfond</i></a> <br>
-          <a href="http://www.unrestrictedinterest.com/"><b>Unrestricted Interest</b></a> <br>
-          <a href="http://www.unrestrictedinterest.com/store/in-way-of-music-water-answers-toward-questions-other-than-what-is-autism-by-adam-wolfond"><img width="200px" src="assets/assets/publications/IMG_7407.jpeg" alt="In Way of Music Water Answers Toward Questions Other Than What Is Autism by Adam Wolfond">In Way of Music Water Answers Toward Questions Other Than What Is Autism by Adam Wolfond</a> <br>
-          <a href="http://www.unrestrictedinterest.com/store/there-is-too-music-in-my-ears"><img width="200px" src="assets/assets/publications/IMG_7446.jpeg" alt="There Is Too Music In My Ears by Adam Wolfond"> There Is Too Music In My Ears by Adam Wolfond</a> <br>
-          <a href="https://poetrysociety.org/features/on-poetry/on-the-listenting-world"><b>The Listening World: Neurodivergent Poets from Unrestricted Interest</b> <i>by Chris Martin<i></a> <br>
-          <a href="https://www.criticaldistance.ca/program/critical-distance-at-edition-toronto/"><b>Critical Distance at Edition Toronto 2019</b></a> <br>
-          <a href="https://chrismartin.substack.com/p/the-maker-of-wanting-space"><b>The Maker of Wanting Space</b><i>by Chris Martin</i> </a> <br>
-          <a href="https://brooklynrail.org/events/2020/12/09/radical-poetry-reading-with-chris-martin/"><b>Radical Poetry Reading with Chris Martin</b><i>Featuring Hannah Emerson, Adam Wolfond, Lauren Russell, and Farid Matuk.</i></a> <br>
-          <a href="https://www.restoryingautism.com/publications/mad-mothering-learning-from-the-intersections-of-madness-mothering-and-disability-hawmn"><b>Arguments in autism debate in Ontario have missed the mark</b></a> <br>
-          <a href="https://www.researchgate.net/publication/276319084_Review_of_the_Film_Wretches_and_Jabberers"><b>Review of the Film Wretches and Jabberers</b><i>Estée Klar</i></a> <br>
-          <a href="https://atrium.lib.uoguelph.ca/xmlui/handle/10214/16258"><b>Re-storying autism: A body becoming disability studies in education approach</b></a> <br>
-          <a href="https://www.liebertpub.com/doi/full/10.1089/aut.2020.29014.njw"><b>Toward a Neuroqueer Future: An Interview with Nick Walker</b></a> <br>
-          <a href="https://dsq-sds.org/article/view/1074/1223"><b>Disability Studies Quarterly</b></a> <br>
-          <a href="https://read.dukeupress.edu/social-text/article-abstract/36/3%20(136)/1/135656/Me-Lo-Dijo-un-PajaritoNeurodiversity-Black-Life?redirectedFrom=fulltext"><b>Me Lo Dijo un Pajarito: Neurodiversity, Black Life, and the University as We Know It </b><i>Erin Manning</i></a> <br>
-          <a href="https://www.restoryingautism.com/publications/beyond-disordered-brains-and-mother-blame-critical-issues-in-autism-and-mothering"><b>Beyond disordered brains and mother blame: Critical issues in autism and mothering</b></a> <br>
-          <a href="https://www.routledge.com/The-Routledge-Companion-to-Motherhood/Hallstein-OReilly-Giles/p/book/9781138052413"><b>The Routledge Companion to Motherhood</b></a> <br>
-          <a href="https://irp-cdn.multiscreensite.com/c987fdaf/files/uploaded/Session%202%20-%20A%20New%20View%20of%20Autism-%20Douglas-Shields.pdf"><b>A New View of Autism: 5 Principles of Inclusive Practice & Design</b></a> <br>
-          <a href="https://bodiesintranslation.ca/outside-the-lines/"><b>outside the lines</b></a> <br>
-          <a href="https://yorkspace.library.yorku.ca/xmlui/handle/10315/33677"><b>outside the lines</b></a> <br>
-          <a href="https://www.amazon.com/Concepts-Normality-Autistic-Typical-Spectrum/dp/1843106043"><b>Concepts of Normality: The Autistic and Typical Spectrum</b></a> <br>
-          <a href="https://www.amazon.ca/Between-Interruptions-Women-Truth-Motherhood/dp/1554701023"><b>Between Interruptions: 30 Women Tell the Truth About Motherhood </b></a> <br>
-          <a href="https://www.cbc.ca/news/more-information-links-and-interview-transcript-for-estee-klar-wolfond-1.782718"><b>More information, links and interview transcript for Estee Klar-Wolfond</b></a> <br>
-          <a href="http://inflexions.org/diversityindiversity/index.html"><b>Inflexions: Diversity in Diversity</b></a> <br>
-        </div>
-      </div>
+            <div class="lexicon">
+              <!-- slanting lexicon -->
+              <div id="canvasParent">  </div>
+              <!-- where lexicon is included -->
+              <div id="parentChild" class="wrapper2">
+              </div>
 
-      <div class="planeBackground">
-        <!-- <canvas id="canvas" resize></canvas> -->
-      </div>
+            </div>
+
+            <div class="participants" id="participant">
+              <h1>Participants</h1><br>
+              Adam Wolfond <br>
+              Aiden Frazer <br>
+              Aviv Nisinzweig <br>
+              Carmine Closs <br>
+              Chris Martin <br>
+              Ellen Bleiwas <br>
+              Erin MacKeen <br>
+              Estée Klar <br>
+              Eva Kolcze <br>
+              Imane Boukaila <br>
+              Jacob Frazer <br>
+              Jean Malig <br>
+              Jessamyn Polson <br>
+              Lucas Maddog  <br>
+              Matisse A-M <br>
+              Pascal Cheng <br>
+              Rachida Boukaila <br>
+              Raya Shields <br>
+              Rid N  <br>
+              Sparkle <br>
+              Y.P. <br>
+            </div>
+
+            <div class="publications">
+              <div class="">
+              <h1>Publications</h1> <br>
+              <a href="https://yorkspace.library.yorku.ca/xmlui/handle/10315/37776"><b>Neurodiversity in Relation: An Artistic Intraethnography</b></a> <br>
+              <a href="https://poets.org/poet/adam-wolfond">Poetry</a> <br>
+              <a href="http://www.unrestrictedinterest.com/mission/unrestricted-writer-adam-wolfond-the-academy-of-american-poets/2019/10/1"><b>Tall Ideas</b> <i>by Adam Wolfond</i></a> <br>
+              <a href="http://www.unrestrictedinterest.com/"><b>Unrestricted Interest</b></a> <br>
+              <a href="http://www.unrestrictedinterest.com/store/in-way-of-music-water-answers-toward-questions-other-than-what-is-autism-by-adam-wolfond"><img width="200px" src="assets/assets/publications/IMG_7407.jpeg" alt="In Way of Music Water Answers Toward Questions Other Than What Is Autism by Adam Wolfond">In Way of Music Water Answers Toward Questions Other Than What Is Autism by Adam Wolfond</a> <br>
+              <a href="http://www.unrestrictedinterest.com/store/there-is-too-music-in-my-ears"><img width="200px" src="assets/assets/publications/IMG_7446.jpeg" alt="There Is Too Music In My Ears by Adam Wolfond"> There Is Too Music In My Ears by Adam Wolfond</a> <br>
+              <a href="https://poetrysociety.org/features/on-poetry/on-the-listenting-world"><b>The Listening World: Neurodivergent Poets from Unrestricted Interest</b> <i>by Chris Martin</i></a> <br>
+              <a href="https://www.criticaldistance.ca/program/critical-distance-at-edition-toronto/"><b>Critical Distance at Edition Toronto 2019</b></a> <br>
+              <a href="https://chrismartin.substack.com/p/the-maker-of-wanting-space"><b>The Maker of Wanting Space</b><i>by Chris Martin</i> </a> <br>
+              <a href="https://brooklynrail.org/events/2020/12/09/radical-poetry-reading-with-chris-martin/"><b>Radical Poetry Reading with Chris Martin</b><i>Featuring Hannah Emerson, Adam Wolfond, Lauren Russell, and Farid Matuk.</i></a> <br>
+              <a href="https://www.restoryingautism.com/publications/mad-mothering-learning-from-the-intersections-of-madness-mothering-and-disability-hawmn"><b>Arguments in autism debate in Ontario have missed the mark</b></a> <br>
+              <a href="https://www.researchgate.net/publication/276319084_Review_of_the_Film_Wretches_and_Jabberers"><b>Review of the Film Wretches and Jabberers</b><i>Estée Klar</i></a> <br>
+              <a href="https://atrium.lib.uoguelph.ca/xmlui/handle/10214/16258"><b>Re-storying autism: A body becoming disability studies in education approach</b></a> <br>
+              <a href="https://www.liebertpub.com/doi/full/10.1089/aut.2020.29014.njw"><b>Toward a Neuroqueer Future: An Interview with Nick Walker</b></a> <br>
+              <a href="https://dsq-sds.org/article/view/1074/1223"><b>Disability Studies Quarterly</b></a> <br>
+              <a href="https://read.dukeupress.edu/social-text/article-abstract/36/3%20(136)/1/135656/Me-Lo-Dijo-un-PajaritoNeurodiversity-Black-Life?redirectedFrom=fulltext"><b>Me Lo Dijo un Pajarito: Neurodiversity, Black Life, and the University as We Know It </b><i>Erin Manning</i></a> <br>
+              <a href="https://www.restoryingautism.com/publications/beyond-disordered-brains-and-mother-blame-critical-issues-in-autism-and-mothering"><b>Beyond disordered brains and mother blame: Critical issues in autism and mothering</b></a> <br>
+              <a href="https://www.routledge.com/The-Routledge-Companion-to-Motherhood/Hallstein-OReilly-Giles/p/book/9781138052413"><b>The Routledge Companion to Motherhood</b></a> <br>
+              <a href="https://irp-cdn.multiscreensite.com/c987fdaf/files/uploaded/Session%202%20-%20A%20New%20View%20of%20Autism-%20Douglas-Shields.pdf"><b>A New View of Autism: 5 Principles of Inclusive Practice & Design</b></a> <br>
+              <a href="https://bodiesintranslation.ca/outside-the-lines/"><b>outside the lines</b></a> <br>
+              <a href="https://yorkspace.library.yorku.ca/xmlui/handle/10315/33677"><b>outside the lines</b></a><br>
+              <a href="https://www.amazon.com/Concepts-Normality-Autistic-Typical-Spectrum/dp/1843106043"><b>Concepts of Normality: The Autistic and Typical Spectrum</b></a> <br>
+              <a href="https://www.amazon.ca/Between-Interruptions-Women-Truth-Motherhood/dp/1554701023"><b>Between Interruptions: 30 Women Tell the Truth About Motherhood </b></a> <br>
+              <a href="https://www.cbc.ca/news/more-information-links-and-interview-transcript-for-estee-klar-wolfond-1.782718"><b>More information, links and interview transcript for Estee Klar-Wolfond</b></a> <br>
+              <a href="http://inflexions.org/diversityindiversity/index.html"><b>Inflexions: Diversity in Diversity</b></a> <br><br>
+              <a href="https://anchor.fm/dis-assembly">Podcasts: dis assembly inter views</a>
+            </div>
+          </div>
+
+          <div class="newstartScreen">
+                <div>
+                  <br><br><br><br> <br> Rambling movement is how I feel my way through to language so the way opens the man of autism's meaning for many ways of understanding. Good languaging is making the pace of things that I feel and open the somatic walking to that way of flooding the questions, rallying man of autism's moving language. Go to the places that binge on diversity and think about how language defines identity and you will understand instead what language means.
+                  <br><br> I open the world to think about gaming the space. We invite you into this languaging site. Click on snails, and move your way through to feel the way of neurodiversity.
+              </div>
+          </div>
+
+          <div class="pacing12">
+            <div class="" style="color:white;">
+              The world as we are is pacing <br> ease in the invitation toward <br> <img src="assets/assets/pacingimages/image15.png" alt="">
+            </div> <br><br>
+          </div>
+
+          <div class="answeropenly">
+            <div data-splitting class="datasplit"> answer openly </div> <div data-splitting class="datasplit"> openly assemble </div> <div class="datasplit" data-splitting> ball of thinking </div> <div class="datasplit" data-splitting> thinking toward the </div> <div class="datasplit" data-splitting> world neurodiversely </div>
+          </div>
+
+          <div class="spiral">
+            <div data-splitting class="datasplit">A springboard </div> <br>
+            <div data-splitting class="datasplit">for the tongue</div> <br>
+            <div data-splitting class="datasplit">snailing a spiral </div><br>
+            <div data-splitting class="datasplit">toward words </div><br>
+          </div>
+
+          <div class="planedroplets">
+           <div data-splitting class="datasplit">The way people need to you </div><br>
+           <div data-splitting class="datasplit">question is the way open</div><br>
+           <div data-splitting class="datasplit">book is reading making at</div><br>
+           <div data-splitting class="datasplit">once at raining thoughts</div><br>
+           <div data-splitting class="datasplit">droplets problems droplets opulent droplets</div><br>
+           <div data-splitting class="datasplit">pleat and throb through weathering thoughts</div><br>
+          </div>
+
+          <div class="importantmov ball">
+            i want words of important movement to want the pace knowing wanting neurodiversity to question ways the people talk about autism
+          </div>
+
+          <div class="joy" style="font-family:arial;">
+            <span style="margin-left: 40%;color:#bf9000">sparking</span> <br><br><br><br><br><br> <span style="font-size:53px;color:#ea9999;"><b>JOY</b></span>
+          </div>
+
+          <div class="pacing1" style="color:#a64d79;font-family:serif;">
+            <span style="font-size: 24px;"> <div class=""> Assemblages assembling… dendrites blossoming </div> <div class="indentfifteen"> Becoming more than </div> <div class=""> We are more than individual. We individuate in relation. We are our own surplus </div> <div class=""> Transforming identities </div> </span>
+          </div>
+
+          <div class="pacing2 datasplit" style="color:#c27ba0; font-family:serif">
+            <div data-splitting class="datasplit">Ball of thinking pacing</div>
+            <div data-splitting class="datasplit">A web of pliancy</div>
+            <div data-splitting class="datasplit">A dear thread read</div>
+            <div data-splitting class="datasplit">in all directions</div>
+            <div data-splitting class="datasplit">by the ear most of all</div>
+          </div>
+
+          <div class="pacing3">
+            <div style="font-family:arial;font-size:20px;">
+                <div style="color:#d9ead3;"> Color the tricking text into </div>
+                <div style="color:#ea9999;"> reds open <span style="color:#d9d2e9;">good purple</span> <span style="color:#6aa84f;">answer</span> </div>
+                <div style="color:#434343;"> with ways others daintily </div>
+                <span style="color:#b45f06;"> <div> watching the ways of unfolding. </div><br><br> <div class=""> Snailing the tendriled paths to somewhere </div><br><br> <div class=""> Gathering </div> </span>
+            </div>
+          </div>
+
+          <div class="pacing4">
+            <span style="font-family:Brush Script MT;font-size:41px;color:#f1c232;"> Way <br><br><br><br> The <br><br>open <br><br>wanting <br><br>way of <br><br>words <br><br>wayfar<br><br>ing </span>
+          </div>
+
+          <div class="pacing5 ball" style="color:#4c1130;">
+            <div class="" data-splitting> The how </div><br><br> <div class="" data-splitting> emerges </div><br><br> <div class="" data-splitting> the open </div><br><br><div class="" data-splitting> hand </div><br><br> <div class="" data-splitting> extends </div><br><br> <div class="" data-splitting> not knowing </div>
+          </div>
+
+          <div class="pacing6 ball" style="font-family:arial;color:#e6b8af;">
+        <div class=""> Moving…. Movement listening expressing </div> <div class=""> hesitating/ticcing is a move in the process of moving… </div> <br><br> <div class=""> Slanting </div> <div class="indentten"> Waves of slanting light </div>
+          </div>
+
+          <div class="pacing7 ball" style="color:#d1d7e0;">
+            Ball of thinking about the rugged capability places learning to be neurodiversely pacing the easy way I answer openly toward the thinking about facing the world as I am.
+          </div>
+
+          <div class="pacing8">
+            <div class="contCentre" style="background-color:darkBlue;color:white;">  <p style="margin-left:10%;"> How to connect in the <span class="wobblyText">open s/pace? </span> </p> <p> The project that does </p><p> not demand </p><p> to know </p><p> what it is </p><p> doing </p><p> It does </p><p> the open </p><p> way </p><p> activating </p><p> inviting </p><p> moving </p><p style="margin-left:50%;"> The spider swallows </p><p> back up </p><p style="margin-left:50%;"> its thread </p><p> Doing </p><p style="margin-left:30%;"> and undoing </p>
+            </div>
+          </div>
+
+          <div class="pacing9">
+            <button type="button" class="collapsible"><img src="../../../images/snail.png"/ alt="snailbutton" width = "75px;"></button>
+            <div class="content">
+              <iframe src="pacing/Chain2-textwave.html" style="max-width:80%;" width="1000px" height="800px"></iframe>
+            </div>
+          </div>
+
+          <!-- <div class="pacing10">
+            <button type="button" class="collapsible"><img src="../../../images/snail.png"/ alt="snailbutton" width = "75px;"></button>
+            <div class="content">
+              <iframe src="pacing/Smoothing-text-moves.html" style="max-width:80%;" width="1000px" height="800px"></iframe>
+            </div>
+          </div> -->
+
+          <div class="pacing10">
+            <button type="button" class="collapsible"><img src="../../../images/snail.png"/ alt="snailbutton" width = "75px;"></button>
+            <div class="content">
+              <iframe src="pacing/Chain2-text.html" style="max-width:80%;" width="1000px" height="800px"></iframe>
+            </div>
+          </div>
+
+          <div class="pacing11">
+            <button type="button" class="collapsible" onclick="setup();"><img src="../../../images/snail.png"/ alt="snailbutton" width = "75px;"></button>
+            <div class="content">
+                <iframe style="max-width:80%; width:1000px; height:800px;" src="pacing/collatzgreen.html"></iframe>
+
+            </div>
+            <!-- <iframe style="pointer-events: none;max-width:80%;" src="pacing/collatz-text2.html" width="1000px" height="800px;"></iframe> -->
+          </div>
+
+          <div class="pacing13">
+            <b>Yes I Ache to Answer the Call (a manifesto of yes)</b> <br> <br> <br> The call of the talking people <br> to answer about autism <br> is one I avoid <br> <br> like the way people avoid me <br> in all my autistic wonder <br> <br> Say yes to pacing my way <br> <br> Say yes to pacing the way <br> of the atmospheres <br> <br> Say yes to the way of bathing <br> in neurodiverse ways <br> <br> Say yes to the way of difference <br> <br> Say yes to the good movements <br> that are stims and tics <br> the way open atmospheres <br> calm my needs <br> <br> Say yes the way I do <br> to the other people <br> who ask me to peacefully <br> understand them <br> needing support <br> <br> Say yes to sour candy <br> <br> Easy ways to say yes <br> are the ways of love <br> and openness to all types <br> of doing and being <br> and peaceful ways pacing others <br> call the ways to say yes <br> <br> Say yes to the languaging <br> that comes with the atmospheres <br> and the movement <br> <br> Say yes to the very reasons <br> of non-reason <br> <br> Say yes to the wanting sounds <br> that hum without words <br> <br> Say yes to inspiring art <br> that makes deeper tankful thinking <br> to be in autistic perception <br> <br> Say yes to thinking about how <br> same ways of cadence <br> is not the face of thinking <br> but a myth of how <br> we should face each other <br> <br> Say yes to socializing <br> with the home of things <br> and the things that feel <br> pleasing <br> <br> Game the yes <br> like the game of no <br> but the calm yes <br> is the way of making <br> pace of movement <br> the agency <br> of the dance itself <br> not the age-appropriate agency <br> of the way we should consent <br> and the way to say yes <br> is always with love <br> not the way of force <br> and that way is the way we need <br> to question the consent <br> and not the disabled person <br> <br> <br> The waning way of language <br> is the mobility to walk in ways <br> that flood the senses like when <br> I make people think much about <br> names of things because things <br> <br> are more open through their <br> relations and that language’s <br> varied rambling connections <br> that game movement and <br> having the pace always <br> <br> brings different meanings. <br> Rambling movement is how <br> I feel my way through to language <br> so the way opens the man <br> of autism’s meaning for many <br> <br> ways of understanding. <b>Good</b> <br> languaging is making the <b>pace</b> <br> of things that I feel and <b>open</b> <br> the somatic walk to that <b>way</b> <br> of flooding the questions <br> <br> rallying man of autism’s <br> moving language. Gaming <br> genders are like making <br> dances of man of autism’s <br> feelings about being about <br> <br> masculinity when we all have <br> different energies that know <br> bringing the should to the movement. <br> Vatican of religion is the suppression <br> of movement and I think all domination <br> <br> must ease <br> for the life to live as it dances. <br> Go to the places that binge on <br> diversity and think about how <br> language defines identity <br> <br> and you will understand what <br> languaging instead means.
+          </div>
+
+          <div class="pacing14 ball" style="color:lightyellow;">
+            <b>Bringing the Rallying Feeling Together</b><br><br>The thinking is pacing language<br>of nature that is languaging the way<br>we live in the world. Language is<br>my answer to the way pace<br>if it moves like the affects<br>jumps in my mind body.<br><br>Having good city of noises<br>and very calm breezes<br>are like game of feeling<br>and rally of atmospheres.<br>Game of the easy rally is<br>like the inspiring unconscious.<br><br>Varied man paces the multiplicity<br>making sense of rallying atmospheres<br>like bathing currents that sometimes dance<br>with me. Go to the man of autism’s movements<br>to feel the multiplicity that names having tics<br>a pathology but that is the weak way to think<br><br>about autism because it thinks that sensing<br>is about language of categories and in that<br>I eagerly want the people to know that I<br>sense more than feeling and pace is<br>feeling the rally that is the moving<br>multiplicity. The multiplicity has<br><br>open ingredients like names<br>of need in which the language<br>can’t capture but making bathing<br>baking dance must move buttressing<br>face of the need to care and to live.<br>The naming of need and support<br><br>does not jump into the favorite<br>languaging of forces that move<br>us and I easily feel rally like the way<br>mean calm good hate love bathes<br>to gether because making chance<br>of me can remember the amazing<br><br>ways the call to feel can be<br>and the walks that assemble<br>long paces that the world is<br>full of. The chance is the making<br>the way easy changes can vary<br>and the way paces are god naming<br><br>the call to rally with the easy earth<br>and the god I name is the feeling.<br>Feeling is the waiting the risk<br>walking together being together<br>gaming together and pacing<br>the easy rally making together.
+          </div>
+
+          <div class="null1"></div>
+
+          <div class="soundscrub">
+            <input type="range" id="sliderAudio" min="0" max="1" step="0.005" disabled>
+          </div>
+
+          <!-- giant swirl start -->
+          <svg viewBox="0 0 500 500">
+            <path d="M-3.26,76.727 C-1.16,71.027 49.6872,66.93372 111.9417,65.39276 149.2944,64.46818 215.509,41.352 228.254,65.579 254.454,115.382 331.84856,71.45876 343.064,78.878 348.246,82.308 527.698,222.598 440.864,253.116 436.6843,254.58391 410.14468,280.16807 387.94627,311.90561 380.68133,322.29244 61.069,286.9 55.678,297.987 47.598,314.604 320.107,403.501 356.802,392.326 408.811,376.487 453.3685,472.337 439.304,472.155 411.155,471.78 286.485,298.052 278.756,252.901 257.082,126.286 4.0629,204.30525 10,204.224 33.755,204.224 28.134,202.226 20.213,296.624 15.909,347.422 85.5063,429.58065 74.349,459.891 63.706,488.745 1.3845,371.66175 2.261,395.281 4.136,446.144 136.1563,446.23755 145.257,456.04 178.251,490.035 215.352,159.543 264.372,159.543 351.356,159.543 485.74,71.727 492.74,48.727 " stroke="#d1d7e0"
+            stroke-width="0.1" fill="none" />
+            <path id="path" d="M174.959,157.538 C181.935,138.517 266.181,57.654 339.193,56.654 365.9989,56.654 341.736,158.606 362.553,232.892 379.577,293.65 317.95,284.311 270.039,319.996 212.649,362.669 176.116,211.205 164.223,205.092 103.294,173.801 112.988,190.124 127.116,143.223 133.854,120.768 190.758,62.49 272.656,40.722 309.781,30.835 357.603,3.424 434.639,28.254 497.648,48.566 412.2367,77.1389 447.01,99.917 472.2932,116.4746 525.485,288.419 438.861,333.828 373.879,367.8795 127.925,517.377 46.712,439.648 -34.549,361.868 48.975,56.8825 50.944,60.862" stroke="yellow"
+            stroke-width="0.1" fill="none" />
+            <g id="rectsnail" class="go-to-random">
+               <image href="../../../images/snail.png" height="10px" width="10px"/>
+              </g>
+          </svg>
+<!-- giant swirl end -->
+
+          <div class="planeBackground">
+          </div>
+
   </div>
+</div>
 </div>
 <!-- partial -->
+<!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
+<div
+  id="blueimp-gallery"
+  class="blueimp-gallery blueimp-gallery-controls blueimp-gallery-contain"
+  aria-label="image gallery"
+  aria-modal="true"
+  role="dialog"
+>
+  <div class="slides" aria-live="polite"></div>
+  <h3 class="title"></h3>
+  <a
+    class="prev"
+    aria-controls="blueimp-gallery"
+    aria-label="previous slide"
+    aria-keyshortcuts="ArrowLeft"
+  ></a>
+  <a
+    class="next"
+    aria-controls="blueimp-gallery"
+    aria-label="next slide"
+    aria-keyshortcuts="ArrowRight"
+  ></a>
+  <a
+    class="close"
+    aria-controls="blueimp-gallery"
+    aria-label="close"
+    aria-keyshortcuts="Escape"
+  ></a>
+  <a
+    class="play-pause"
+    aria-controls="blueimp-gallery"
+    aria-label="play slideshow"
+    aria-keyshortcuts="Space"
+    aria-pressed="false"
+    role="button"
+  ></a>
+  <ol class="indicator"></ol>
+</div>
+<!-- end of Gallery code -->
+<!-- necessary javascript -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/Draggable.min.js'></script>
@@ -248,7 +368,12 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-<script  src="./planez/script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/draggable.js"></script>
+<script  src="./js/planez.js"></script>
+<!-- project replacement script -->
 <script type="text/javascript" src="main.js"></script>
 <script src="jquery/Lettering.js-master/jquery.lettering.js"></script>
 <script type="text/javascript" src="js/randomPosition.js"></script>
@@ -257,9 +382,13 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/randomPosition.js"></script>
 <script type="text/javascript" src="js/lexicon.js"></script>
-<script type="text/javascript" src="p5.js/harmonic-onclick2.js"></script>
-<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/harmonic-onclick2.js"></script>
+<script src='https://unpkg.com/splitting@1.0.6/dist/splitting.min.js'></script>
+<script type="text/javascript" src="js/splitting.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/3.3.0/js/blueimp-gallery.min.js" integrity="sha512-ou+HAocCH7k3ASCmn1jxK14HyDl7Ff0jci4skAEWcGKoLx32MPNOnLWaLh08XodPcaG59N9YsDyYN5+qPrR7Ag==" crossorigin="anonymous"></script>
+
 <script type="text/javascript">
+
 var tl = gsap.timeline ()
 .to('.ball',{
   // x: "random(-20, 20, 5)", //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
@@ -270,7 +399,81 @@ var tl = gsap.timeline ()
   repeat:-1,
   repeatRefresh:true // gets a new random x and y value on each repeat
 })
+
+gsap.registerPlugin(MotionPathPlugin);
+
+gsap.to("#rectsnail", {
+  duration: 200,
+  repeat: 12,
+  // repeatDelay: 3,
+  yoyo: true,
+  ease: "power1.inOut",
+  motionPath:{
+    path: "#path",
+    align: "#path",
+    autoRotate: true,
+    alignOrigin: [0.5, 0.5]
+  }
+});
+
+const slider = document.getElementById('sliderAudio');
+const ctx = new AudioContext();
+
+fetch("assets/assets/sound/101 Yorkville Place 21.mp3")
+  .then( resp => resp.arrayBuffer() )
+  .then( buf => ctx.decodeAudioData(buf) )
+  .then( prepareUI )
+  .catch( console.error );
+
+  fetch("assets/assets/Sound Stuff/Water.mp3")
+    .then( resp => resp.arrayBuffer() )
+    .then( buf => ctx.decodeAudioData(buf) )
+    .then( prepareUI )
+    .catch( console.error );
+
+function prepareUI( audioBuf ) {
+  let source;
+  slider.oninput = e => {
+    if( source ) { source.stop(0); }
+    source = ctx.createBufferSource();
+    source.buffer = audioBuf;
+    source.connect(ctx.destination);
+    const offset = slider.value * audioBuf.duration;
+    const duration = 0.1;
+    source.start(0, offset, duration);
+  };
+  slider.disabled = false;
+}
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+
 </script>
 <script type="text/javascript" src="js/backgroundColor.js"></script>
+<!-- <script src="js/rdmgrid.min.js"></script> -->
+<!-- <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script> -->
+
+
+<script>
+// $('body').mosaicElements({
+//         });
+//   // Initialize a grid
+  // $('#parentChild').rdmGrid({
+  //   columns: 6
+  // });
+</script>
 </body>
 </html>

@@ -25,7 +25,10 @@
       // }
       function draw() {
         // background(252, 248, 182);
-        background(249, 249, 249)
+        // background(249, 249, 249);
+        fill(249, 249, 249);
+        noStroke();
+        ellipse(75, 75, 150, 150);
         angleMode(RADIANS); // Change the mode to DEGREES
         let a = atan2(mouseY - height / 2, mouseX - width / 2);
         let b = atan2(mouseX - height, mouseX - width );
@@ -35,7 +38,7 @@
         translate(width / 2, height / 2);
         push();
         rotate(a/3);
-        rect(-20, -5, 100, 10); // Larger rectangle is rotating in degrees
+        rect(-20, -5, 90, 10); // Larger rectangle is rotating in degrees
         pop();
         angleMode(RADIANS); // Change the mode to RADIANS
         rotate(a); // variable a stays the same

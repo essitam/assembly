@@ -1,0 +1,310 @@
+@font-face {
+    font-family: OpenDyslexic;
+    font-style:normal;
+    font-weight: 400;
+    src: url("../assets/font/OpenDyslexic-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: OpenDyslexic;
+    font-style:normal;
+    font-weight: 700;
+    src: url("../assets/font/OpenDyslexic-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: OpenDyslexic;
+    font-style:italic;
+    font-weight: 400;
+    src: url("../assets/font/OpenDyslexic-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: OpenDyslexic;
+    font-style:italic;
+    font-weight: 700;
+    src: url("../assets/font/OpenDyslexic-BoldItalic.otf") format("opentype");
+}
+
+body {
+  font-family: 'OpenDyslexic';
+  /* font-weight: 300; */
+  margin: 0;
+  padding: 0;
+}
+
+.planeWrapper {
+  position: fixed;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  overflow: scroll;
+  z-index: 0;
+}
+
+.planeBackground {
+  z-index: 0;
+}
+
+#playn {
+  transition: top 0.5s ease-out, left 0.5s ease-out;
+}
+
+.planez {
+  position: relative;
+  width: 406.25em;
+  height: 406.25em;
+  z-index: 0;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  font-size: 1em;
+  margin: auto;
+  background-image: linear-gradient(to bottom right, #98f542, #42f566, #4269f5, #5de8bc, #5da669);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: -webkit-grab; cursor: grab;
+}
+.planez:active{
+  cursor: -webkit-grabbing; cursor: grabbing;
+
+}
+.planez > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.planeContent {
+  z-index: 1;
+}
+
+/* controls */
+.controls {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom:0;
+  display: flex;
+  z-index: 2;
+  padding: 0 0 0 1em;
+  flex-direction: column;
+  overflow-y: scroll;
+  cursor: pointer;
+
+}
+.controls > * {
+  padding: 1em;
+  margin: 1em 1em 0 0;
+  border: 1px grey solid;
+  cursor: pointer;
+  color: white;
+}
+/* positioning for different sections */
+
+.newstartScreen {
+  position: absolute;
+  top: 125em;
+  left: 130em;
+  width: 80vmin;
+  max-height: 30em;
+  max-width: 30em;
+  display: flex;
+}
+.pacing12{
+  position: absolute;
+  top: 115em;
+  left: 160em;
+  /* width: 80vmin; */
+  max-height: 30em;
+  display: flex;
+}
+.startScreen {
+  position: absolute;
+  top: 100em;
+  left: 200em;
+  width: 80vmin;
+  max-width: 60em;
+  display: flex;
+}
+
+.newWork{
+  position: absolute;
+  top: 300em;
+  left: 300em;
+  width: 80vmin;
+  height: 30em;
+  display: flex;
+}
+
+.participants{
+  position: absolute;
+  top: 200em;
+  left: 350em;
+  width: 80vmin;
+  height: 30em;
+  display: flex;
+}
+
+.publications{
+  position: absolute;
+  top: 50em;
+  left: 300em;
+  width: 80vmin;
+  height: 30em;
+  display: flex;
+}
+
+.pacingistheway{
+  position: absolute;
+  top: 200em;
+  left: 170em;
+}
+.importantmov{
+  position: absolute;
+  top: 255em;
+  left: 80em;
+  color:white;
+  /* font-family: impact; */
+}
+.chooseadventure{
+  position: absolute;
+  top: 100em;
+  left: 50em;
+}
+.pacingsnail{
+  position:absolute;
+  top: 200em;
+  left: 50em;
+}
+
+.answeropenly{
+  position: absolute;
+  top: 150em;
+  left: 170em;
+  color: white;
+}
+
+.spiral{
+  position: absolute;
+  top: 300em;
+  left: 40em;
+  color: white;
+}
+
+.planedroplets{
+  position: absolute;
+  top: 200em;
+  left: 40em;
+  color: #c27ba0;
+}
+.joy{
+    position: absolute;
+    top: 278em;
+    left:75em;
+}
+.pacing1{
+    position: absolute;
+    top: 358em;
+    left:111em;
+}
+
+.pacing2{
+  position:absolute;
+  top: 6410px;
+  left: 300px;
+}
+
+.pacing3{
+  position: absolute;
+  top:3240px;
+  left:5540px;
+}
+
+.pacing4{
+  position:absolute;
+  top: 20px;
+  left: 6900px;
+}
+.pacing5{
+position: absolute;
+top: 4000px;
+left: 5400px;
+}
+.pacing6{
+  position:absolute;
+  top: 5000px;
+  left:5800px;
+}
+
+.pacing7{
+    position:absolute;
+  top: 500px;
+  left:5000px;
+}
+
+.pacing8{
+  position:absolute;
+  top: 2783px;
+  left: 6970px;
+  width:300px;
+}
+
+.pacing9{
+  position:absolute;
+  top: 2500px;
+  left: 6000px;
+}
+
+.pacing10{
+  position:absolute;
+  top:4000px;
+  left: 2000px;
+}
+.pacing11{
+  position: absolute;
+  top: 278em;
+  left:125em;
+}
+
+.lexicon{
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  width: 3700px;
+}
+
+.pacing13{
+  position: absolute;
+  top:2240px;
+  left:4750px;
+}
+
+.pacing14{
+  position: absolute;
+  top: 1747px;
+  left: 1628px;
+}
+
+.null1{
+  position: absolute;
+  top:2240px;
+  left:4590px;
+}
+.wrapper2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:3400px;
+}
+#canvasParent{
+    position: absolute;
+    top:200px;
+    left: 200px;
+    z-index:1000;
+}
+.contact-us-here{
+  position: absolute;
+  top: 200em;
+  left: 300em;
+}
