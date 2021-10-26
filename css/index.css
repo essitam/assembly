@@ -156,3 +156,10 @@ input { width: 350px }
   overflow: hidden;
   background-color: #f1f1f1;
 }
+.positionsavailable{
+  border-radius:50%;
+  font-size: 24px;
+  margin-left: -25%;
+  background-color: lightyellow;
+  color:black;
+}

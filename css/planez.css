@@ -111,6 +111,17 @@ body {
   max-width: 30em;
   display: flex;
 }
+.ramblingMovement{
+    position: absolute;
+    top: 80em;
+    left: 130em;
+    width: 80vmin;
+    max-height: 30em;
+    max-width: 30em;
+    display: flex;
+    color: darkBlue;
+
+}
 .pacing12{
   position: absolute;
   top: 115em;
