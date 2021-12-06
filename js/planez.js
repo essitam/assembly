@@ -41,7 +41,10 @@ document.querySelector('.snaillexicon').addEventListener('click', function(e) {
       e.preventDefault();
       document.querySelector('.contact-us-here').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
     });
-
+    document.querySelector('.openstudio').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('.pacing15').scrollIntoView({ behavior: 'smooth', easing: 'ease-in;', block: 'start', inline: 'center' });
+      });
 ScrollTrigger.batch(".randomElement", {
   scroller: planeWrapper,
   interval: 0.1,

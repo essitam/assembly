@@ -296,7 +296,12 @@ left: 5400px;
   top: 1747px;
   left: 1628px;
 }
-
+.pacing15{
+  position: absolute;
+  top: 200em;
+  left: 150em;
+  max-width: 30em;
+}
 .null1{
   position: absolute;
   top:2240px;

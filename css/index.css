@@ -157,9 +157,15 @@ input { width: 350px }
   background-color: #f1f1f1;
 }
 .positionsavailable{
-  border-radius:50%;
+  border-radius:30%;
   font-size: 24px;
   margin-left: -25%;
   background-color: lightyellow;
   color:black;
+  padding:20px;
+  background-image: url('../assets/assets/disassembly_OpenStudioPanel_PromoImage.jpg');
+}
+
+.positionsavailable:hover{
+  color: blue;
 }
